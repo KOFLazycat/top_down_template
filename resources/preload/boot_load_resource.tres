@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PreloadResource" load_steps=3 format=3 uid="uid://bk0svoela4oim"]
 
 [ext_resource type="Script" uid="uid://bbnccrapnv54n" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="1_xiu2r"]
-[ext_resource type="Script" uid="uid://bhpf4jwuw63vi" path="res://resource_scripts/preload/preload_resource.gd" id="2_08rmo"]
+[ext_resource type="Script" uid="uid://bhpf4jwuw63vi" path="res://scripts/resource/preload/preload_resource.gd" id="2_08rmo"]
 
 [resource]
 script = ExtResource("2_08rmo")
