@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global/action_resource.tres" id="15_p6f66"]
 [ext_resource type="Script" uid="uid://crmqtxo3ru8qj" path="res://addons/great_games_library/resources/SaveableResource/SaveableResource.gd" id="17_80w5b"]
 [ext_resource type="Resource" uid="uid://bx61rbuwillgh" path="res://resources/global/graphics_resource.tres" id="19_n170m"]
-[ext_resource type="Resource" path="res://resources/global/audio_settings_resource.tres" id="20_kawqs"]
+[ext_resource type="Resource" uid="uid://0ghwdk05y7am" path="res://resources/global/audio_settings_resource.tres" id="20_kawqs"]
 
 [node name="PersistentData" type="Node"]
 script = ExtResource("1_qc15f")
