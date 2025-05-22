@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://coo2v3kkwxwhl" path="res://scripts/ui/title_screen/graphics_manager.gd" id="8_qldew"]
 [ext_resource type="Resource" uid="uid://bx61rbuwillgh" path="res://resources/global_resources/graphics_resource.tres" id="9_k4dwo"]
 [ext_resource type="Script" uid="uid://cbn8pyx6qooxf" path="res://scripts/ui/title_screen/change_scene_button.gd" id="10_cf1fa"]
-[ext_resource type="Script" uid="uid://cbx2pgnhlotpq" path="res://scripts/ui/title_screen/quit.gd" id="11_taoq5"]
+[ext_resource type="Script" path="res://scripts/ui/title_screen/quit_manager.gd" id="11_taoq5"]
 [ext_resource type="Script" uid="uid://cuv10g46asj42" path="res://scripts/game/music_setter.gd" id="12_f6vdp"]
 [ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://scenes/ui/elements/menu_button.tscn" id="13_of6ax"]
 [ext_resource type="Script" uid="uid://bh8wwwil37avb" path="res://scripts/ui/menu_back_button.gd" id="14_334kw"]
