@@ -1,9 +1,10 @@
+class_name Quit
 extends Node
 
 @export var button:Button
 
 func _ready()->void:
-	button.pressed.connect(pressed)
+	button.pressed.connect(pressed, CONNECT_ONE_SHOT)
 
 func pressed()->void:
 	Log.stop_session()

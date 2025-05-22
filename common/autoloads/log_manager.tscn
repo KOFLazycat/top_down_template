@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b87bwbdq7ujsh"]
+
+[ext_resource type="Script" uid="uid://dw5qlysvuggb2" path="res://scripts/autoloads/log_manager.gd" id="1_qkvf0"]
+
+[node name="LogManager" type="Node"]
+script = ExtResource("1_qkvf0")

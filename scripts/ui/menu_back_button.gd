@@ -1,3 +1,4 @@
+class_name MenuBackButton
 extends Button
 
 @export var menu_traverse_manager:MenuTraverseManager

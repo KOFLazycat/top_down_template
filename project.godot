@@ -23,6 +23,7 @@ Music="*res://common/autoloads/music.tscn"
 TransitionManager="*res://common/autoloads/transition_manager.tscn"
 PersistentData="*res://common/autoloads/persistent_data.tscn"
 Log="*res://addons/GoLogger/Log.tscn"
+LogManager="*res://common/autoloads/log_manager.tscn"
 
 [display]
 

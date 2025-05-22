@@ -7,16 +7,16 @@
 [ext_resource type="Resource" uid="uid://b1hy8aowwa5hq" path="res://resources/sounds/menu_back.tres" id="5_ekhdx"]
 [ext_resource type="Script" uid="uid://bskcrqv3id8rt" path="res://scripts/ui/title_screen/audio_manager.gd" id="6_31tnb"]
 [ext_resource type="Resource" uid="uid://0ghwdk05y7am" path="res://resources/global_resources/audio_settings_resource.tres" id="7_3wuwh"]
-[ext_resource type="Script" uid="uid://coo2v3kkwxwhl" path="res://scripts/ui/title_screen/GraphicsManager.gd" id="8_qldew"]
+[ext_resource type="Script" uid="uid://coo2v3kkwxwhl" path="res://scripts/ui/title_screen/graphics_manager.gd" id="8_qldew"]
 [ext_resource type="Resource" uid="uid://bx61rbuwillgh" path="res://resources/global_resources/graphics_resource.tres" id="9_k4dwo"]
-[ext_resource type="Script" uid="uid://cbn8pyx6qooxf" path="res://scripts/ui/title_screen/ChangeSceneButton.gd" id="10_cf1fa"]
-[ext_resource type="Script" uid="uid://cbx2pgnhlotpq" path="res://scripts/ui/title_screen/Quit.gd" id="11_taoq5"]
-[ext_resource type="Script" uid="uid://cuv10g46asj42" path="res://scripts/game/MusicSetter.gd" id="12_f6vdp"]
-[ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://addons/top_down/scenes/ui/menu_button.tscn" id="13_of6ax"]
+[ext_resource type="Script" uid="uid://cbn8pyx6qooxf" path="res://scripts/ui/title_screen/change_scene_button.gd" id="10_cf1fa"]
+[ext_resource type="Script" uid="uid://cbx2pgnhlotpq" path="res://scripts/ui/title_screen/quit.gd" id="11_taoq5"]
+[ext_resource type="Script" uid="uid://cuv10g46asj42" path="res://scripts/game/music_setter.gd" id="12_f6vdp"]
+[ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://scenes/ui/elements/menu_button.tscn" id="13_of6ax"]
 [ext_resource type="Script" uid="uid://bh8wwwil37avb" path="res://scripts/ui/menu_back_button.gd" id="14_334kw"]
-[ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://addons/top_down/scenes/ui/audio_slider.tscn" id="15_7kksn"]
+[ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://scenes/ui/elements/audio_slider.tscn" id="15_7kksn"]
 [ext_resource type="Material" uid="uid://chv0fg62cs0ou" path="res://resources/materials/h_split.material.tres" id="16_w55a0"]
-[ext_resource type="PackedScene" uid="uid://cs0pkiltyswgv" path="res://addons/top_down/scenes/ui/screens/control_rebinding.tscn" id="17_hf0gf"]
+[ext_resource type="PackedScene" uid="uid://cs0pkiltyswgv" path="res://scenes/ui/screens/control_rebinding.tscn" id="17_hf0gf"]
 
 [node name="Title" type="ColorRect"]
 anchors_preset = 15
@@ -56,19 +56,17 @@ slider_container = [NodePath("../MarginContainer/Control/Body/AudioMenu/Master")
 audio_settings_resource = ExtResource("7_3wuwh")
 save_button = NodePath("../MarginContainer/Control/Body/AudioMenu/Back/Button")
 
-[node name="GraphicsManager" type="Node" parent="." node_paths=PackedStringArray("fullscreen_button", "fullscreen_label", "save_button_button")]
+[node name="GraphicsManager" type="Node" parent="." node_paths=PackedStringArray("fullscreen_button", "fullscreen_label", "save_button")]
 script = ExtResource("8_qldew")
 graphics_resource = ExtResource("9_k4dwo")
 fullscreen_button = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Fullscreen/Button")
 fullscreen_label = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Fullscreen/Label")
-save_button_button = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Back/Button")
-
-[node name="ContinueComponent" type="Node" parent="."]
+save_button = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Back/Button")
 
 [node name="NewGameComponent" type="Node" parent="." node_paths=PackedStringArray("button")]
 script = ExtResource("10_cf1fa")
 button = NodePath("../MarginContainer/Control/Body/TitleMenu/NewGame/Button")
-scene_path = "res://addons/top_down/scenes/levels/room_start.tscn"
+scene_path = &"res://addons/top_down/scenes/levels/room_start.tscn"
 
 [node name="QuitComponent" type="Node" parent="." node_paths=PackedStringArray("button")]
 script = ExtResource("11_taoq5")
@@ -190,7 +188,7 @@ theme_override_constants/separation = 0
 layout_mode = 2
 
 [node name="Label" parent="MarginContainer/Control/Body/GraphicsMenu/Fullscreen" index="1"]
-text = "Fullscreen: OFF"
+text = "FULLSCREEN_ON"
 
 [node name="Back" parent="MarginContainer/Control/Body/GraphicsMenu" instance=ExtResource("13_of6ax")]
 layout_mode = 2

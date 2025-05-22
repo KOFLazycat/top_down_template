@@ -1,3 +1,4 @@
+class_name SaveControlsEvent
 extends Node
 
 @export var rebinding_panel:Control

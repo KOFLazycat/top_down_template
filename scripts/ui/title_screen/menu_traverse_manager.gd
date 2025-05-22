@@ -71,7 +71,8 @@ func directory_grab_focus(value: String) -> void:
 		return
 	
 	var node_path: NodePath = focused_node[value]
-	assert(has_node(node_path), "焦点节点路径不存在: %s" % node_path)  # 调试断言
+	if !has_node(node_path):
+		Log.entry("焦点节点路径不存在: %s" % node_path, LogManager.LogLevel.ERROR)
 	var node: Control = get_node(node_path)
 	if node != null:
 		node.set_focus_mode(Control.FOCUS_ALL)
