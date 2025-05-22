@@ -12,4 +12,4 @@ func pressed()->void:
 	# Deffered because this function is called by that signal
 	button.pressed.disconnect.call_deferred(pressed)
 	
-	Transition.change_scene(scene_path)
+	TransitionManager.change_scene(scene_path)

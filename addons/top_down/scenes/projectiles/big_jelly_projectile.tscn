@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://d0v4aiksdadhp"]
 
 [ext_resource type="Script" uid="uid://dpa82ostefa32" path="res://addons/top_down/scripts/weapon_system/projectile/Projectile2D.gd" id="1_124n8"]
-[ext_resource type="Resource" uid="uid://dedx0gi4fowby" path="res://addons/top_down/resources/global_resources/axis_multiplication_resource.tres" id="2_olfc0"]
+[ext_resource type="Resource" uid="uid://dedx0gi4fowby" path="res://resources/global_resources/axis_multiplication_resource.tres" id="2_olfc0"]
 [ext_resource type="Script" uid="uid://dj1n3llg8eer0" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileSetup.gd" id="3_4xqfo"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://addons/top_down/scripts/damage/properties/DamageTypeResource.gd" id="3_ppetm"]
 [ext_resource type="Script" uid="uid://xqvgdt8ts4c2" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileMover.gd" id="4_o10bp"]
@@ -13,15 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://c1ke5idusq612" path="res://addons/top_down/assets/images/characters/slime_16x16_strip8.png" id="8_d4ddn"]
 [ext_resource type="Script" uid="uid://c0rlarvn6k2xk" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileRotation.gd" id="9_msmb4"]
 [ext_resource type="Script" uid="uid://dmxb4fk0c8r25" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileImpact.gd" id="10_3acil"]
-[ext_resource type="Resource" uid="uid://s3oxaww7qjgi" path="res://addons/top_down/resources/InstanceResources/vfx/impact_instance_resource.tres" id="11_rsty3"]
+[ext_resource type="Resource" uid="uid://s3oxaww7qjgi" path="res://resources/InstanceResources/vfx/impact_instance_resource.tres" id="11_rsty3"]
 [ext_resource type="Script" uid="uid://cnuohxqf70gpv" path="res://addons/top_down/scripts/weapon_system/projectile/HitLimit.gd" id="12_x0fyw"]
 [ext_resource type="Script" uid="uid://us7f4xcg15qt" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileLifetime.gd" id="13_xcyht"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="14_0ovxv"]
 [ext_resource type="Script" uid="uid://b1wpp2syfxb5w" path="res://addons/top_down/scripts/weapon_system/projectile/LerpProjectileTrajectory.gd" id="17_b78gi"]
-[ext_resource type="Resource" uid="uid://lm63dcddpjhf" path="res://addons/top_down/resources/InstanceResources/vfx/dead/slime_dead_instance_resource.tres" id="18_7elpp"]
+[ext_resource type="Resource" uid="uid://lm63dcddpjhf" path="res://resources/InstanceResources/vfx/dead/slime_dead_instance_resource.tres" id="18_7elpp"]
 [ext_resource type="Resource" uid="uid://pvw6k1ntsles" path="res://addons/top_down/resources/sounds/zombie_split.tres" id="19_628eu"]
 [ext_resource type="Script" uid="uid://bbei488f1hm54" path="res://addons/top_down/scripts/actor/boss/BigJellySlimeSpawner.gd" id="21_dshqe"]
-[ext_resource type="Resource" uid="uid://bwaqqrp3vlmbc" path="res://addons/top_down/resources/InstanceResources/actors/slime_small_instance_resource.tres" id="22_cwnqt"]
+[ext_resource type="Resource" uid="uid://bwaqqrp3vlmbc" path="res://resources/InstanceResources/actors/slime_small_instance_resource.tres" id="22_cwnqt"]
 
 [sub_resource type="Resource" id="Resource_crd4l"]
 script = ExtResource("3_ppetm")

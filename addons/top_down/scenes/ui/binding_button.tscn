@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://xoehlofj3mru" path="res://addons/top_down/resources/ControlTextureResource/keyboard_textures.tres" id="3_xjfrb"]
 [ext_resource type="Resource" uid="uid://c2l3mopok8331" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_xbox.tres" id="4_xdqvi"]
 [ext_resource type="Resource" uid="uid://co1epfd4a3l5r" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_ps.tres" id="5_3vbb3"]
-[ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://addons/top_down/resources/global_resources/action_resource.tres" id="5_drqok"]
+[ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global_resources/action_resource.tres" id="5_drqok"]
 [ext_resource type="Resource" uid="uid://cryn1snloyh7f" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_switch.tres" id="6_7hfhl"]
 [ext_resource type="Resource" uid="uid://crxpln7xah5hj" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_generic.tres" id="7_bkuvk"]
 

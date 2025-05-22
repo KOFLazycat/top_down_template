@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bexuovggtjg8n" path="res://addons/top_down/assets/images/weapon/sword_0.png" id="3_ah0df"]
 [ext_resource type="Script" uid="uid://bdbat3453sctq" path="res://addons/top_down/scripts/damage/properties/DamageDataResource.gd" id="3_h2w8s"]
 [ext_resource type="Script" uid="uid://dg5sc14fyjex4" path="res://addons/top_down/scripts/damage/properties/DamageStatusResource.gd" id="4_3xvip"]
-[ext_resource type="Resource" uid="uid://djdgiocrbvmt8" path="res://addons/top_down/resources/InstanceResources/projectiles/sword_slash_instance_resource.tres" id="5_88188"]
+[ext_resource type="Resource" uid="uid://djdgiocrbvmt8" path="res://resources/InstanceResources/projectiles/sword_slash_instance_resource.tres" id="5_88188"]
 
 [sub_resource type="Resource" id="Resource_h373d"]
 script = ExtResource("3_h2w8s")

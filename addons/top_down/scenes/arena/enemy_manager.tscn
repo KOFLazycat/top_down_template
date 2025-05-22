@@ -8,12 +8,12 @@
 [ext_resource type="Resource" uid="uid://cjmecrxyvujlx" path="res://addons/top_down/resources/arena_resources/enemy_count_resource.tres" id="5_o2pmf"]
 [ext_resource type="Script" uid="uid://vf6048kffsmm" path="res://addons/top_down/scripts/arena/EnemySpawner.gd" id="6_lu2ax"]
 [ext_resource type="Resource" uid="uid://ct10qlb66mijl" path="res://addons/top_down/resources/arena_resources/spawn_point_resource.tres" id="7_82w7a"]
-[ext_resource type="Resource" uid="uid://cd4jt13gwv8bs" path="res://addons/top_down/resources/InstanceResources/vfx/enemy_spawn_mark.tres" id="8_jcw48"]
-[ext_resource type="Resource" uid="uid://way0xfgx53ix" path="res://addons/top_down/resources/InstanceResources/vfx/spawn_dust_instance.tres" id="9_lne6j"]
+[ext_resource type="Resource" uid="uid://cd4jt13gwv8bs" path="res://resources/InstanceResources/vfx/enemy_spawn_mark.tres" id="8_jcw48"]
+[ext_resource type="Resource" uid="uid://way0xfgx53ix" path="res://resources/InstanceResources/vfx/spawn_dust_instance.tres" id="9_lne6j"]
 [ext_resource type="Script" uid="uid://cbvyvkv711p1y" path="res://addons/top_down/scripts/arena/DropManager.gd" id="11_dyj0j"]
-[ext_resource type="Resource" uid="uid://btqugjrcxhbgl" path="res://addons/top_down/resources/InstanceResources/pickups/coin_instance_resource.tres" id="12_g7mjn"]
-[ext_resource type="Resource" uid="uid://bc5djwa8gc2df" path="res://addons/top_down/resources/InstanceResources/pickups/health_pickup_instance_resource.tres" id="13_78ysf"]
-[ext_resource type="Resource" uid="uid://dcq3sgut7k6dh" path="res://addons/top_down/resources/global_resources/luck_resource.tres" id="14_87rq8"]
+[ext_resource type="Resource" uid="uid://btqugjrcxhbgl" path="res://resources/InstanceResources/pickups/coin_instance_resource.tres" id="12_g7mjn"]
+[ext_resource type="Resource" uid="uid://bc5djwa8gc2df" path="res://resources/InstanceResources/pickups/health_pickup_instance_resource.tres" id="13_78ysf"]
+[ext_resource type="Resource" uid="uid://dcq3sgut7k6dh" path="res://resources/global_resources/luck_resource.tres" id="14_87rq8"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_agrht")

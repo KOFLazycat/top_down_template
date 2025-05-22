@@ -35,4 +35,4 @@ func on_scene_transition()->void:
 	var _player:Node = player_reference.node
 	_parent.remove_child.call_deferred(_player)
 	scene_transition_resource.change_scene.disconnect(on_scene_transition)
-	Transition.change_scene(scene_transition_resource.next_scene_path)
+	TransitionManager.change_scene(scene_transition_resource.next_scene_path)

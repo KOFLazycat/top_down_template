@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dcon4vj7ampja" path="res://addons/top_down/scenes/obstacles/door.tscn" id="2_udm57"]
 [ext_resource type="Script" uid="uid://cp731snddafu0" path="res://addons/top_down/scripts/arena/StartingWeaponSpawner.gd" id="3_oaxvf"]
 [ext_resource type="Resource" uid="uid://bytbvhnnajqxd" path="res://addons/top_down/resources/ItemCollectionResource/weapon_database.tres" id="4_8dsll"]
-[ext_resource type="Resource" uid="uid://b6mldf5iax3rj" path="res://addons/top_down/resources/InstanceResources/pickups/item_pickup_instance_resource.tres" id="4_vo3ax"]
+[ext_resource type="Resource" uid="uid://b6mldf5iax3rj" path="res://resources/InstanceResources/pickups/item_pickup_instance_resource.tres" id="4_vo3ax"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dg6si"]
 points = PackedVector2Array(0, 8, 16, 0, 0, -8, -16, 0)

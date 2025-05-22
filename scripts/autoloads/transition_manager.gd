@@ -1,4 +1,3 @@
-class_name TransitionManager
 extends CanvasLayer
 
 @export var texture_rect:TextureRect
