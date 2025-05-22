@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ControlTextureResource" load_steps=75 format=3 uid="uid://cryn1snloyh7f"]
 
-[ext_resource type="Script" uid="uid://b8n5lx625dmjm" path="res://addons/top_down/scripts/input/ControlTextureResource.gd" id="1_51bih"]
-[ext_resource type="Script" uid="uid://dvfe0la871tgy" path="res://addons/top_down/scripts/input/InputTextureResource.gd" id="2_alb5k"]
+[ext_resource type="Script" uid="uid://b8n5lx625dmjm" path="res://scripts/input/ControlTextureResource.gd" id="1_51bih"]
+[ext_resource type="Script" uid="uid://dvfe0la871tgy" path="res://scripts/input/InputTextureResource.gd" id="2_alb5k"]
 [ext_resource type="Texture2D" uid="uid://hatfrej6acqq" path="res://addons/top_down/assets/images/kenney_input_prompt/Nintendo Switch/Double/switch_button_a.png" id="3_e26sc"]
 [ext_resource type="Texture2D" uid="uid://cvg2yme7b7e8a" path="res://addons/top_down/assets/images/kenney_input_prompt/Nintendo Switch/Double/switch_button_y.png" id="4_rfw38"]
 [ext_resource type="Texture2D" uid="uid://yneju6oq454w" path="res://addons/top_down/assets/images/kenney_input_prompt/Nintendo Switch/Double/switch_button_x.png" id="5_35mi7"]

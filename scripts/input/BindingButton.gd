@@ -86,7 +86,7 @@ func _label_fallback(event:InputEvent)->void:
 	# TODO: this is bad way to parse information by using the first word
 	label.text = event.as_text().split(" ")[0]
 
-func _on_focus_changed(value:bool)->void:
+func _on_focus_changed(_value:bool)->void:
 	queue_redraw()
 
 ## TODO: Take in account which gamepad is used for each player

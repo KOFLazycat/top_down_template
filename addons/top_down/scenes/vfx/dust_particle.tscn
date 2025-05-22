@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cu8id4u5oip7v"]
 
 [ext_resource type="Material" uid="uid://dh55irc80dvm7" path="res://resources/materials/dust_particle_material.tres" id="1_70pxo"]
-[ext_resource type="Material" uid="uid://corlu7mpg0puk" path="res://resources/ParticleProcessMaterial/dust_process_material.tres" id="1_yop27"]
+[ext_resource type="Material" uid="uid://corlu7mpg0puk" path="res://resources/particle_process_material/dust_process_material.tres" id="1_yop27"]
 [ext_resource type="Texture2D" uid="uid://dbhoifnsfjl6l" path="res://addons/top_down/assets/images/vfx/dust_4_strip.png" id="2_i3vp2"]
 [ext_resource type="Script" uid="uid://ya0li557whrl" path="res://addons/top_down/scripts/vfx/ParticleStarter.gd" id="3_ecp2f"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="3_k8uuh"]

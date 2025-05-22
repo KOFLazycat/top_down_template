@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://cnuohxqf70gpv" path="res://addons/top_down/scripts/weapon_system/projectile/HitLimit.gd" id="6_pkcss"]
 [ext_resource type="Script" uid="uid://b0uw7wkj5ulcm" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="6_qxuc4"]
 [ext_resource type="Script" uid="uid://us7f4xcg15qt" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileLifetime.gd" id="8_dsjh1"]
-[ext_resource type="Resource" uid="uid://s3oxaww7qjgi" path="res://resources/InstanceResources/vfx/impact_instance_resource.tres" id="11_27w5u"]
+[ext_resource type="Resource" uid="uid://s3oxaww7qjgi" path="res://resources/instance_resources/vfx/impact_instance_resource.tres" id="11_27w5u"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="13_40h1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4a7g"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ControlTextureResource" load_steps=75 format=3 uid="uid://c2l3mopok8331"]
 
-[ext_resource type="Script" uid="uid://b8n5lx625dmjm" path="res://addons/top_down/scripts/input/ControlTextureResource.gd" id="1_w76cf"]
-[ext_resource type="Script" uid="uid://dvfe0la871tgy" path="res://addons/top_down/scripts/input/InputTextureResource.gd" id="2_jju4t"]
+[ext_resource type="Script" uid="uid://b8n5lx625dmjm" path="res://scripts/input/ControlTextureResource.gd" id="1_w76cf"]
+[ext_resource type="Script" uid="uid://dvfe0la871tgy" path="res://scripts/input/InputTextureResource.gd" id="2_jju4t"]
 [ext_resource type="Texture2D" uid="uid://cw13fwumjuvii" path="res://addons/top_down/assets/images/kenney_input_prompt/Xbox Series/Double/xbox_button_color_a.png" id="3_gtu1h"]
 [ext_resource type="Texture2D" uid="uid://bgn80pnbma8fs" path="res://addons/top_down/assets/images/kenney_input_prompt/Xbox Series/Double/xbox_button_color_b.png" id="4_sttgi"]
 [ext_resource type="Texture2D" uid="uid://cf2h8hbq6tny6" path="res://addons/top_down/assets/images/kenney_input_prompt/Xbox Series/Double/xbox_button_color_x.png" id="5_5w22n"]

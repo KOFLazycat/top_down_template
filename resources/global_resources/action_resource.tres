@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ActionResource" load_steps=24 format=3 uid="uid://dsk5usbvnbqi3"]
 
-[ext_resource type="Script" uid="uid://dejsgrsf4wniy" path="res://addons/top_down/scripts/input/ActionResource.gd" id="2_l8ve6"]
+[ext_resource type="Script" uid="uid://dejsgrsf4wniy" path="res://scripts/input/action_resource.gd" id="2_l8ve6"]
 
 [sub_resource type="InputEventJoypadMotion" id="InputEventJoypadMotion_ugoik"]
 axis = 5

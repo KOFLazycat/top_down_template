@@ -7,9 +7,9 @@
 [ext_resource type="Script" uid="uid://dljbkbweueqrv" path="res://addons/top_down/scripts/arena/SpawnQueueResource.gd" id="4_dd1v5"]
 [ext_resource type="Script" uid="uid://b82gi6nils34f" path="res://addons/top_down/scripts/arena/SpawnWaveList.gd" id="5_7frwm"]
 [ext_resource type="Script" uid="uid://c4vi4hfp1xokj" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="6_t3b7o"]
-[ext_resource type="Resource" uid="uid://cwxx7lc1yjet4" path="res://resources/InstanceResources/actors/slime_instance_resource.tres" id="7_8b3ag"]
-[ext_resource type="Resource" uid="uid://c05ys7ybsfv4u" path="res://resources/InstanceResources/actors/zomby_instance_resource.tres" id="8_vssl0"]
-[ext_resource type="Resource" uid="uid://bnupsvhj8s0d5" path="res://resources/InstanceResources/actors/boss_slime_instance_resource.tres" id="9_j0tke"]
+[ext_resource type="Resource" uid="uid://cwxx7lc1yjet4" path="res://resources/instance_resources/actors/slime_instance_resource.tres" id="7_8b3ag"]
+[ext_resource type="Resource" uid="uid://c05ys7ybsfv4u" path="res://resources/instance_resources/actors/zomby_instance_resource.tres" id="8_vssl0"]
+[ext_resource type="Resource" uid="uid://bnupsvhj8s0d5" path="res://resources/instance_resources/actors/boss_slime_instance_resource.tres" id="9_j0tke"]
 
 [sub_resource type="Resource" id="Resource_avoxj"]
 script = ExtResource("5_7frwm")
