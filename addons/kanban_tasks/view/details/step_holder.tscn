@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjg5vyxx4g48"]
+
+[ext_resource type="Script" uid="uid://cj5nieo64r8h4" path="res://addons/kanban_tasks/view/details/step_holder.gd" id="1_exd17"]
+
+[sub_resource type="Theme" id="Theme_1hs0w"]
+StepHolder/base_type = &"VBoxContainer"
+StepHolder/colors/step_move_review_color = Color(0.439216, 0.729412, 0.980392, 0.501961)
+
+[sub_resource type="SVGTexture" id="SVGTexture_bpcvf"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#ff5d5d\" d=\"M2 1v8.586l1.293-1.293a1 1 0 0 1 1.414 0L7 10.587l2.293-2.293a1 1 0 0 1 1.414 0L13 10.586l1-1V6H9V1H2zm8 0v4h4zm-6 9.414-2 2V15h12v-2.586l-.293.293a1 1 0 0 1-1.414 0L10 10.414l-2.293 2.293a1 1 0 0 1-1.414 0L4 10.414z\"/></svg>
+"
+
+[node name="StepHolder" type="VBoxContainer"]
+offset_right = 326.0
+offset_bottom = 500.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_1hs0w")
+theme_type_variation = &"StepHolder"
+script = ExtResource("1_exd17")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="StepList" type="VBoxContainer" parent="ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RemoveSeparator" type="HSeparator" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="RemoveArea" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 8
+focus_mode = 0
+mouse_filter = 2
+button_mask = 0
+icon = SubResource("SVGTexture_bpcvf")
+flat = true
+icon_alignment = 1
