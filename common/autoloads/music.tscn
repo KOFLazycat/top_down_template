@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dp7n1yyvy0b0i"]
 
-[ext_resource type="Script" uid="uid://buuhih72oh3nl" path="res://addons/great_games_library/autoload/Music.gd" id="1_rto2p"]
-[ext_resource type="AudioStream" uid="uid://b77j1j3jrk5q7" path="res://assets/sounds/musics/Deeper Into the Dungeon.ogg" id="1_s2jed"]
-[ext_resource type="Script" uid="uid://dnawyou442xpu" path="res://addons/great_games_library/resources/ValueResource/DictionaryResource.gd" id="2_p7i5f"]
+[ext_resource type="Script" uid="uid://c0uct7gmnatok" path="res://addons/great_games_library/autoload/Music.gd" id="1_rto2p"]
+[ext_resource type="AudioStream" uid="uid://drxjg4aix3kov" path="res://assets/sounds/musics/Deeper Into the Dungeon.ogg" id="1_s2jed"]
+[ext_resource type="Script" uid="uid://dvs5yu23nrmgp" path="res://addons/great_games_library/resources/ValueResource/DictionaryResource.gd" id="2_p7i5f"]
 [ext_resource type="Resource" uid="uid://ini50pn76erv" path="res://resources/global_resources/pause_resource.tres" id="4_rp7y3"]
 
 [sub_resource type="Resource" id="Resource_y148u"]

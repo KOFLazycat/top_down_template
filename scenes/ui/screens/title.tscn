@@ -1,0 +1,286 @@
+[gd_scene load_steps=18 format=3 uid="uid://dpv4epw1i5b4g"]
+
+[ext_resource type="Theme" uid="uid://yctjuhnen1br" path="res://resources/theme/game_gui_theme.theme" id="1_wt2ni"]
+[ext_resource type="Script" uid="uid://bungt2viu3qa6" path="res://scripts/ui/title_screen/menu_back.gd" id="2_riktu"]
+[ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global_resources/action_resource.tres" id="3_g0bix"]
+[ext_resource type="Script" uid="uid://852okmivevs" path="res://scripts/ui/title_screen/menu_traverse_manager.gd" id="4_l6cuo"]
+[ext_resource type="Resource" uid="uid://b1hy8aowwa5hq" path="res://resources/sounds/menu_back.tres" id="5_ekhdx"]
+[ext_resource type="Script" uid="uid://bskcrqv3id8rt" path="res://scripts/ui/title_screen/audio_manager.gd" id="6_31tnb"]
+[ext_resource type="Resource" uid="uid://0ghwdk05y7am" path="res://resources/global_resources/audio_settings_resource.tres" id="7_3wuwh"]
+[ext_resource type="Script" uid="uid://coo2v3kkwxwhl" path="res://scripts/ui/title_screen/GraphicsManager.gd" id="8_qldew"]
+[ext_resource type="Resource" uid="uid://bx61rbuwillgh" path="res://resources/global_resources/graphics_resource.tres" id="9_k4dwo"]
+[ext_resource type="Script" uid="uid://cbn8pyx6qooxf" path="res://scripts/ui/title_screen/ChangeSceneButton.gd" id="10_cf1fa"]
+[ext_resource type="Script" uid="uid://cbx2pgnhlotpq" path="res://scripts/ui/title_screen/Quit.gd" id="11_taoq5"]
+[ext_resource type="Script" uid="uid://cuv10g46asj42" path="res://scripts/game/MusicSetter.gd" id="12_f6vdp"]
+[ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://addons/top_down/scenes/ui/menu_button.tscn" id="13_of6ax"]
+[ext_resource type="Script" uid="uid://bh8wwwil37avb" path="res://scripts/ui/menu_back_button.gd" id="14_334kw"]
+[ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://addons/top_down/scenes/ui/audio_slider.tscn" id="15_7kksn"]
+[ext_resource type="Material" uid="uid://chv0fg62cs0ou" path="res://resources/materials/h_split.material.tres" id="16_w55a0"]
+[ext_resource type="PackedScene" uid="uid://cs0pkiltyswgv" path="res://addons/top_down/scenes/ui/screens/control_rebinding.tscn" id="17_hf0gf"]
+
+[node name="Title" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wt2ni")
+color = Color(0.0985668, 0.17073, 0.164749, 1)
+
+[node name="MenuBack" type="Node" parent="." node_paths=PackedStringArray("menu_traverse_manager")]
+script = ExtResource("2_riktu")
+menu_traverse_manager = NodePath("../MenuTraverseManager")
+action_resource = ExtResource("3_g0bix")
+
+[node name="MenuTraverseManager" type="Node" parent="."]
+script = ExtResource("4_l6cuo")
+menu_path = Dictionary[String, NodePath]({
+".": NodePath("../MarginContainer/Control/Body/TitleMenu"),
+"./options": NodePath("../MarginContainer/Control/Body/OptionMenu"),
+"./options/audio": NodePath("../MarginContainer/Control/Body/AudioMenu"),
+"./options/controls": NodePath("../InputRebinding"),
+"./options/graphics": NodePath("../MarginContainer/Control/Body/GraphicsMenu")
+})
+focused_node = Dictionary[String, NodePath]({
+".": NodePath("../MarginContainer/Control/Body/TitleMenu/NewGame/Button"),
+"audio": NodePath("../MarginContainer/Control/Body/AudioMenu/Back"),
+"controls": NodePath("../InputRebinding/MarginContainer/VBoxContainer/MenuButton/Button"),
+"graphics": NodePath("../MarginContainer/Control/Body/GraphicsMenu/Fullscreen/Button"),
+"options": NodePath("../MarginContainer/Control/Body/OptionMenu/Graphics/Button")
+})
+back_sound = ExtResource("5_ekhdx")
+
+[node name="AudioManager" type="Node" parent="." node_paths=PackedStringArray("slider_container", "save_button")]
+script = ExtResource("6_31tnb")
+slider_container = [NodePath("../MarginContainer/Control/Body/AudioMenu/Master"), NodePath("../MarginContainer/Control/Body/AudioMenu/Music"), NodePath("../MarginContainer/Control/Body/AudioMenu/Sounds")]
+audio_settings_resource = ExtResource("7_3wuwh")
+save_button = NodePath("../MarginContainer/Control/Body/AudioMenu/Back/Button")
+
+[node name="GraphicsManager" type="Node" parent="." node_paths=PackedStringArray("fullscreen_button", "fullscreen_label", "save_button_button")]
+script = ExtResource("8_qldew")
+graphics_resource = ExtResource("9_k4dwo")
+fullscreen_button = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Fullscreen/Button")
+fullscreen_label = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Fullscreen/Label")
+save_button_button = NodePath("../MarginContainer/Control/Body/GraphicsMenu/Back/Button")
+
+[node name="ContinueComponent" type="Node" parent="."]
+
+[node name="NewGameComponent" type="Node" parent="." node_paths=PackedStringArray("button")]
+script = ExtResource("10_cf1fa")
+button = NodePath("../MarginContainer/Control/Body/TitleMenu/NewGame/Button")
+scene_path = "res://addons/top_down/scenes/levels/room_start.tscn"
+
+[node name="QuitComponent" type="Node" parent="." node_paths=PackedStringArray("button")]
+script = ExtResource("11_taoq5")
+button = NodePath("../MarginContainer/Control/Body/TitleMenu/Quit/Button")
+
+[node name="MusicSetter" type="Node" parent="."]
+script = ExtResource("12_f6vdp")
+music_name = "title"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Control" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="CenterContainer" parent="MarginContainer/Control"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "COOL GAME"
+
+[node name="Body" type="MarginContainer" parent="MarginContainer/Control"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 20
+
+[node name="TitleMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 0
+
+[node name="Continue" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("13_of6ax")]
+visible = false
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Continue" index="1"]
+text = "Continue"
+
+[node name="NewGame" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/NewGame" index="1"]
+text = "New Game"
+
+[node name="Options" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Options" index="1"]
+text = "Options"
+
+[node name="Quit" parent="MarginContainer/Control/Body/TitleMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/TitleMenu/Quit" index="1"]
+text = "Quit"
+
+[node name="OptionMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 0
+
+[node name="Graphics" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Graphics" index="1"]
+text = "Graphics"
+
+[node name="Audio" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Audio" index="1"]
+text = "Audio"
+
+[node name="Controls" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Controls" index="1"]
+text = "Controls"
+
+[node name="Back" parent="MarginContainer/Control/Body/OptionMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Button" parent="MarginContainer/Control/Body/OptionMenu/Back" index="0" node_paths=PackedStringArray("menu_traverse_manager")]
+script = ExtResource("14_334kw")
+menu_traverse_manager = NodePath("../../../../../../MenuTraverseManager")
+
+[node name="Label" parent="MarginContainer/Control/Body/OptionMenu/Back" index="1"]
+text = "Back"
+
+[node name="ButtonAnimation" parent="MarginContainer/Control/Body/OptionMenu/Back" index="2"]
+pressed_sound = null
+
+[node name="GraphicsMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 0
+
+[node name="Fullscreen" parent="MarginContainer/Control/Body/GraphicsMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/GraphicsMenu/Fullscreen" index="1"]
+text = "Fullscreen: OFF"
+
+[node name="Back" parent="MarginContainer/Control/Body/GraphicsMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Button" parent="MarginContainer/Control/Body/GraphicsMenu/Back" index="0" node_paths=PackedStringArray("menu_traverse_manager")]
+script = ExtResource("14_334kw")
+menu_traverse_manager = NodePath("../../../../../../MenuTraverseManager")
+
+[node name="Label" parent="MarginContainer/Control/Body/GraphicsMenu/Back" index="1"]
+text = "Back"
+
+[node name="ButtonAnimation" parent="MarginContainer/Control/Body/GraphicsMenu/Back" index="2"]
+pressed_sound = null
+
+[node name="AudioMenu" type="VBoxContainer" parent="MarginContainer/Control/Body"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_constants/separation = 0
+
+[node name="Master" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("15_7kksn")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Master" index="0"]
+text = "Master Volume"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("16_w55a0")
+layout_mode = 2
+
+[node name="Music" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("15_7kksn")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Music" index="0"]
+text = "Music Volume"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("16_w55a0")
+layout_mode = 2
+
+[node name="Sounds" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("15_7kksn")]
+layout_mode = 2
+
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Sounds" index="0"]
+text = "Sounds Volume"
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/Control/Body/AudioMenu"]
+material = ExtResource("16_w55a0")
+layout_mode = 2
+
+[node name="Back" parent="MarginContainer/Control/Body/AudioMenu" instance=ExtResource("13_of6ax")]
+layout_mode = 2
+
+[node name="Button" parent="MarginContainer/Control/Body/AudioMenu/Back" index="0" node_paths=PackedStringArray("menu_traverse_manager")]
+script = ExtResource("14_334kw")
+menu_traverse_manager = NodePath("../../../../../../MenuTraverseManager")
+
+[node name="Label" parent="MarginContainer/Control/Body/AudioMenu/Back" index="1"]
+text = "Back"
+
+[node name="ButtonAnimation" parent="MarginContainer/Control/Body/AudioMenu/Back" index="2"]
+pressed_sound = null
+
+[node name="InputRebinding" parent="." instance=ExtResource("17_hf0gf")]
+visible = false
+layout_mode = 1
+
+[node name="Button" parent="InputRebinding/MarginContainer/VBoxContainer/MenuButton" index="0" node_paths=PackedStringArray("menu_traverse_manager")]
+script = ExtResource("14_334kw")
+menu_traverse_manager = NodePath("../../../../../MenuTraverseManager")
+
+[connection signal="pressed" from="MarginContainer/Control/Body/TitleMenu/Options/Button" to="MenuTraverseManager" method="open" binds= ["options"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Graphics/Button" to="MenuTraverseManager" method="open" binds= ["graphics"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Audio/Button" to="MenuTraverseManager" method="open" binds= ["audio"]]
+[connection signal="pressed" from="MarginContainer/Control/Body/OptionMenu/Controls/Button" to="MenuTraverseManager" method="open" binds= ["controls"]]
+
+[editable path="MarginContainer/Control/Body/TitleMenu/Continue"]
+[editable path="MarginContainer/Control/Body/TitleMenu/NewGame"]
+[editable path="MarginContainer/Control/Body/TitleMenu/Options"]
+[editable path="MarginContainer/Control/Body/TitleMenu/Quit"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Graphics"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Audio"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Controls"]
+[editable path="MarginContainer/Control/Body/OptionMenu/Back"]
+[editable path="MarginContainer/Control/Body/GraphicsMenu/Fullscreen"]
+[editable path="MarginContainer/Control/Body/GraphicsMenu/Back"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Master"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Music"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Sounds"]
+[editable path="MarginContainer/Control/Body/AudioMenu/Back"]
+[editable path="InputRebinding"]
+[editable path="InputRebinding/MarginContainer/VBoxContainer/MenuButton"]

@@ -2,9 +2,9 @@
 
 [ext_resource type="Material" uid="uid://dh55irc80dvm7" path="res://resources/materials/dust_particle_material.tres" id="1_t0b6u"]
 [ext_resource type="Material" uid="uid://b74m5kvy3piav" path="res://resources/particle_process_material/slime_dead_process_material.tres" id="2_pqhl8"]
-[ext_resource type="Texture2D" uid="uid://dbhoifnsfjl6l" path="res://addons/top_down/assets/images/vfx/dust_4_strip.png" id="3_5qtud"]
+[ext_resource type="Texture2D" uid="uid://ckmofnflkalvc" path="res://addons/top_down/assets/images/vfx/dust_4_strip.png" id="3_5qtud"]
 [ext_resource type="Script" uid="uid://ya0li557whrl" path="res://addons/top_down/scripts/vfx/ParticleStarter.gd" id="4_a7iwj"]
-[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="5_6wrjg"]
+[ext_resource type="Script" uid="uid://c0aipoimc2hru" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="5_6wrjg"]
 
 [node name="SlimeDead" type="GPUParticles2D"]
 material = ExtResource("1_t0b6u")

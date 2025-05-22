@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InstanceResource" load_steps=3 format=3 uid="uid://weoefubhnbf"]
 
 [ext_resource type="Resource" uid="uid://bnmup4gi1ft42" path="res://addons/top_down/resources/RoomResources/behind_reference.tres" id="1_ydyv6"]
-[ext_resource type="Script" uid="uid://c4vi4hfp1xokj" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="2_icsa7"]
+[ext_resource type="Script" uid="uid://bbnccrapnv54n" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="2_icsa7"]
 
 [resource]
 resource_name = "Slime Small dead"

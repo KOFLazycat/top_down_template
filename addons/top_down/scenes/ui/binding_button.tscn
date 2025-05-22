@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cvx2xmr86fa7b"]
 
-[ext_resource type="Texture2D" uid="uid://b38rld5woxsob" path="res://addons/top_down/assets/images/kenney_input_prompt/Keyboard & Mouse/Double/keyboard_w.png" id="1_do8rq"]
+[ext_resource type="Texture2D" uid="uid://ctajn3orusgqb" path="res://addons/top_down/assets/images/kenney_input_prompt/Keyboard & Mouse/Double/keyboard_w.png" id="1_do8rq"]
 [ext_resource type="Script" uid="uid://cd1xnhchu4kak" path="res://scripts/input/BindingButton.gd" id="2_c7cq0"]
 [ext_resource type="Resource" uid="uid://xoehlofj3mru" path="res://addons/top_down/resources/ControlTextureResource/keyboard_textures.tres" id="3_xjfrb"]
 [ext_resource type="Resource" uid="uid://c2l3mopok8331" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_xbox.tres" id="4_xdqvi"]

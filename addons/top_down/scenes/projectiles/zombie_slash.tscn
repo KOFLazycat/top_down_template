@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://addons/top_down/scenes/projectiles/projectile.tscn" id="1_5ra58"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://addons/top_down/scripts/damage/properties/DamageTypeResource.gd" id="2_0t18r"]
-[ext_resource type="Texture2D" uid="uid://dggjjoqh2vy1d" path="res://addons/top_down/assets/images/vfx/slash_2_strip5.png" id="2_eg08h"]
+[ext_resource type="Texture2D" uid="uid://c2nunltmorsky" path="res://addons/top_down/assets/images/vfx/slash_2_strip5.png" id="2_eg08h"]
 
 [sub_resource type="Resource" id="Resource_4ckad"]
 script = ExtResource("2_0t18r")

@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://addons/top_down/scenes/projectiles/projectile.tscn" id="1_3klw8"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://addons/top_down/scripts/damage/properties/DamageTypeResource.gd" id="2_4v4mc"]
-[ext_resource type="Texture2D" uid="uid://rlue3ap0e845" path="res://addons/top_down/assets/images/shadow.png" id="2_jihd4"]
+[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="2_jihd4"]
 [ext_resource type="PackedScene" uid="uid://djobi3eqlcjvo" path="res://addons/top_down/scenes/vfx/trail_particle.tscn" id="3_icwgt"]
-[ext_resource type="Texture2D" uid="uid://dng4l612f2i6v" path="res://addons/top_down/assets/images/vfx/slash_1_strip4.png" id="4_7va1q"]
+[ext_resource type="Texture2D" uid="uid://cpfuic0i0lo2w" path="res://addons/top_down/assets/images/vfx/slash_1_strip4.png" id="4_7va1q"]
 
 [sub_resource type="Resource" id="Resource_eslri"]
 script = ExtResource("2_4v4mc")

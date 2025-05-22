@@ -118,7 +118,7 @@ color = Color(0.000325259, 0.000827362, 0.000775444, 1)
 
 [node name="BootScreenManager" type="Node" parent="." node_paths=PackedStringArray("animation_player", "boot_preloader")]
 script = ExtResource("2_gbueq")
-next_screen = "res://addons/top_down/scenes/ui/screens/title.tscn"
+next_screen = "res://scenes/ui/screens/title.tscn"
 animation_player = NodePath("../AnimationPlayer")
 boot_preloader = NodePath("../BootPreloader")
 

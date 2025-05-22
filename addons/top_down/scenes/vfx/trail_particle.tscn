@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://djobi3eqlcjvo"]
 
 [ext_resource type="Material" uid="uid://by1613lxovtnf" path="res://resources/particle_process_material/bullet_process_material.tres" id="1_2red8"]
-[ext_resource type="Texture2D" uid="uid://gq3ivo8k474p" path="res://addons/top_down/assets/images/vfx/vfx_particle_0_strip10.png" id="1_a5878"]
+[ext_resource type="Texture2D" uid="uid://dtntuo7444ons" path="res://addons/top_down/assets/images/vfx/vfx_particle_0_strip10.png" id="1_a5878"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nnjo6"]
 atlas = ExtResource("1_a5878")

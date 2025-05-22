@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwfixtyy5lpin"]
 
-[ext_resource type="Texture2D" uid="uid://cc5f6n4mm86ln" path="res://addons/kanban_tasks/view/documentation/1.svg" id="1_inmy7"]
-[ext_resource type="Texture2D" uid="uid://5640rgdjed4w" path="res://addons/kanban_tasks/view/documentation/2.svg" id="2_1g6ul"]
-[ext_resource type="Texture2D" uid="uid://llav8yhxy5km" path="res://addons/kanban_tasks/view/documentation/3.svg" id="3_e3hha"]
-[ext_resource type="Texture2D" uid="uid://ck3oj610ovd3l" path="res://addons/kanban_tasks/view/documentation/4.svg" id="4_ic0nh"]
+[ext_resource type="Texture2D" uid="uid://cgsp4p0fodh7g" path="res://addons/kanban_tasks/view/documentation/1.svg" id="1_inmy7"]
+[ext_resource type="Texture2D" uid="uid://csm4an7586kiy" path="res://addons/kanban_tasks/view/documentation/2.svg" id="2_1g6ul"]
+[ext_resource type="Texture2D" uid="uid://6ap075fxhlab" path="res://addons/kanban_tasks/view/documentation/3.svg" id="3_e3hha"]
+[ext_resource type="Texture2D" uid="uid://c0ni6vghbefmp" path="res://addons/kanban_tasks/view/documentation/4.svg" id="4_ic0nh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cmnk1"]
 font_size = 20
