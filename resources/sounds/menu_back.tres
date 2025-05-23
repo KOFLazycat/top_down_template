@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SoundResource" load_steps=3 format=3 uid="uid://b1hy8aowwa5hq"]
 
-[ext_resource type="Script" uid="uid://bmrpiu8cmr12w" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="1_bnses"]
+[ext_resource type="Script" uid="uid://crafwqb5pfm8h" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="1_bnses"]
 [ext_resource type="AudioStream" uid="uid://dmdpkjkwg7t2i" path="res://assets/sounds/sfx/menu_back.wav" id="2_271ce"]
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IntResource" load_steps=2 format=3 uid="uid://dmefbqytsy6x0"]
 
-[ext_resource type="Script" uid="uid://fr2efgjvklki" path="res://addons/great_games_library/resources/ValueResource/IntResource.gd" id="1_2uf4n"]
+[ext_resource type="Script" uid="uid://bw7q1kirorfuh" path="res://addons/great_games_library/resources/ValueResource/IntResource.gd" id="1_2uf4n"]
 
 [resource]
 resource_name = "Remaining Wave Count"
