@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://3betq3gbp57h"]
 
-[ext_resource type="PackedScene" uid="uid://cpjckxc4g3s0w" path="res://addons/top_down/scenes/levels/room_template.tscn" id="1_y7b64"]
+[ext_resource type="PackedScene" uid="uid://cpjckxc4g3s0w" path="res://scenes/levels/room_template.tscn" id="1_y7b64"]
 [ext_resource type="PackedScene" uid="uid://dcon4vj7ampja" path="res://addons/top_down/scenes/obstacles/door.tscn" id="2_udm57"]
 [ext_resource type="Script" uid="uid://cp731snddafu0" path="res://addons/top_down/scripts/arena/StartingWeaponSpawner.gd" id="3_oaxvf"]
 [ext_resource type="Resource" uid="uid://bytbvhnnajqxd" path="res://addons/top_down/resources/ItemCollectionResource/weapon_database.tres" id="4_8dsll"]
@@ -18,7 +18,7 @@ tile_map_data = PackedByteArray("AAAJAP3/AQAAAAAAAAAJAP7/AQAAAAEAAAAJAP//AQAAAAE
 position = Vector2(207, 119)
 tag = "center"
 connect_tag = "south"
-scene_path = "res://addons/top_down/scenes/levels/room_0.tscn"
+scene_path = "res://scenes/levels/room_0.tscn"
 
 [node name="WallLayer_Ysorted" parent="." index="2"]
 tile_map_data = PackedByteArray("AAAIAPz/AAAAAAAAAAASAPz/AAACAAAAAAAIAAYAAAADAAAAAAAJAAYAAAABAAIAAAAKAAYAAAABAAIAAAALAAYAAAABAAIAAAAMAAYAAAABAAIAAAANAAYAAAABAAIAAAAOAAYAAAABAAIAAAAPAAYAAAABAAIAAAAQAAYAAAABAAIAAAARAAYAAAABAAIAAAASAAUAAAAAAAIAAAASAAQAAAAAAAIAAAASAAMAAAAAAAIAAAASAAIAAAAAAAIAAAASAAEAAAAAAAIAAAASAAAAAAAAAAIAAAASAP//AAAAAAIAAAASAP7/AAAAAAIAAAASAP3/AAAAAAIAAAASAAYAAAABAAAAAAAIAAUAAAAAAAEAAAAIAAQAAAAAAAEAAAAIAAMAAAAAAAEAAAAIAAIAAAAAAAEAAAAIAAEAAAAAAAEAAAAIAAAAAAAAAAEAAAAIAP//AAAAAAEAAAAIAP7/AAAAAAEAAAAIAP3/AAAAAAEAAAAJAPz/AAABAAEAAAAKAPz/AAABAAEAAAALAPz/AAABAAEAAAAMAPz/AAABAAEAAAANAPz/AAABAAEAAAAOAPz/AAABAAEAAAAPAPz/AAABAAEAAAAQAPz/AAABAAEAAAARAPz/AAABAAEAAAA=")
