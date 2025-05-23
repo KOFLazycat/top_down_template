@@ -1,4 +1,4 @@
-#class_name CameraFollow2D
+class_name CameraFollow2D
 extends Camera2D
 
 @export var follow:bool = true

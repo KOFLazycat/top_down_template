@@ -9,6 +9,6 @@ func _ready()->void:
 	fight_mode.changed_true.connect(owner.queue_free.call_deferred)
 	area.body_entered.connect(_on_body_entered)
 
-func _on_body_entered(body:Node2D)->void:
+func _on_body_entered(_body:Node2D)->void:
 	# defered is thread safe, since this is called on physics thread
 	fight_mode.set_value.call_deferred(true)

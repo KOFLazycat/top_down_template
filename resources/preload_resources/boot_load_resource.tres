@@ -32,7 +32,7 @@
 [ext_resource type="Resource" uid="uid://cirgsoc2387p2" path="res://resources/instance_resources/vfx/after_image_vfx.tres" id="30_m6me5"]
 [ext_resource type="Material" uid="uid://by1613lxovtnf" path="res://resources/particle_process_material/bullet_process_material.tres" id="31_sxu3u"]
 [ext_resource type="Material" uid="uid://corlu7mpg0puk" path="res://resources/particle_process_material/dust_process_material.tres" id="32_1na28"]
-[ext_resource type="Script" uid="uid://c28f6dth50ow1" path="res://scripts/game/PreloadResource.gd" id="33_b3n25"]
+[ext_resource type="Script" uid="uid://c28f6dth50ow1" path="res://scripts/game/preload_resource.gd" id="33_b3n25"]
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="34_tdlis"]
 [ext_resource type="Shader" uid="uid://si4t10w2cqho" path="res://scripts/shaders/control_shader.gdshader" id="35_xoxns"]
 [ext_resource type="Shader" uid="uid://c8rtyrl6etviu" path="res://scripts/shaders/dust_partickle.gdshader" id="36_j5fwk"]

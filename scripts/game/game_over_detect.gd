@@ -1,3 +1,4 @@
+class_name GameOverDetect
 extends Node
 
 @export var player_reference:ReferenceNodeResource

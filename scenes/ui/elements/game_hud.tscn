@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cdfnlxijhmk2f" path="res://addons/top_down/scenes/ui/screens/pause.tscn" id="5_iipjt"]
 [ext_resource type="Resource" uid="uid://cjmecrxyvujlx" path="res://addons/top_down/resources/arena_resources/enemy_count_resource.tres" id="6_yicht"]
 [ext_resource type="Resource" uid="uid://c05ys7ybsfv4u" path="res://resources/instance_resources/actors/zomby_instance_resource.tres" id="7_i0f1q"]
-[ext_resource type="Script" uid="uid://b7eud1pk6inc0" path="res://scripts/game/VisibilityComponent.gd" id="10_lso8u"]
+[ext_resource type="Script" uid="uid://b7eud1pk6inc0" path="res://scripts/game/visibility_component.gd" id="10_lso8u"]
 [ext_resource type="Script" uid="uid://di3hcenboiiny" path="res://addons/top_down/scenes/ui/wave_label.gd" id="13_pcln8"]
 [ext_resource type="Resource" uid="uid://be8s05nqt2y5d" path="res://addons/top_down/resources/arena_resources/wave_number_resource.tres" id="14_7r27p"]
 [ext_resource type="Texture2D" uid="uid://oqxhxfh71xq1" path="res://addons/top_down/assets/images/gui/slot_frame_2.png" id="15_5kgus"]
