@@ -1,7 +1,7 @@
 class_name SpawnPoint
 extends Marker2D
 
-const resource_path:String = "res://addons/top_down/resources/arena_resources/spawn_point_resource.tres"
+const resource_path:String = "res://resources/arena_resources/spawn_point_resource.tres"
 
 @export var boss_position:bool
 
