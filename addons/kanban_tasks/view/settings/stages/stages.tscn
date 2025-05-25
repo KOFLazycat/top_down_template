@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dapkpnkm8sow8"]
 
-[ext_resource type="Script" uid="uid://hrvpcjiy0x37" path="res://addons/kanban_tasks/view/settings/stages/stages.gd" id="1_1yycq"]
+[ext_resource type="Script" uid="uid://b1nr7qxrh7a0r" path="res://addons/kanban_tasks/view/settings/stages/stages.gd" id="1_1yycq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cqkc"]
 content_margin_left = 4.0

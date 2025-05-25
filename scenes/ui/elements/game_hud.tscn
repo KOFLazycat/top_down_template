@@ -1,10 +1,10 @@
 [gd_scene load_steps=20 format=3 uid="uid://deuehdcbbm5c1"]
 
-[ext_resource type="Script" uid="uid://16m7ntlgjpv7" path="res://scripts/ui/InfoTracker.gd" id="1_4rtxu"]
-[ext_resource type="Script" uid="uid://dwr6yciyxhajf" path="res://scripts/ui/game_screen/HealthPanel.gd" id="1_d7qi2"]
+[ext_resource type="Script" uid="uid://16m7ntlgjpv7" path="res://scripts/ui/info_tracker.gd" id="1_4rtxu"]
+[ext_resource type="Script" uid="uid://dwr6yciyxhajf" path="res://scripts/ui/game_screen/health_panel.gd" id="1_d7qi2"]
 [ext_resource type="Material" uid="uid://buxjwi6yhg10o" path="res://resources/materials/progress_bar_material.tres" id="1_kllii"]
 [ext_resource type="Resource" uid="uid://5emqdks7qgbm" path="res://resources/global_resources/score_resource.tres" id="2_i7k27"]
-[ext_resource type="Resource" uid="uid://c61lm3lfv4u6h" path="res://addons/top_down/resources/health_resource/player_health.tres" id="3_mc5ua"]
+[ext_resource type="Resource" uid="uid://c61lm3lfv4u6h" path="res://resources/health_resource/player_health.tres" id="3_mc5ua"]
 [ext_resource type="Resource" uid="uid://ini50pn76erv" path="res://resources/global_resources/pause_resource.tres" id="4_4g1vf"]
 [ext_resource type="Resource" uid="uid://c7ckp7i2820tg" path="res://resources/arena_resources/fight_mode_resource.tres" id="4_bm84l"]
 [ext_resource type="Resource" uid="uid://dmefbqytsy6x0" path="res://resources/arena_resources/remaining_wave_count_resource.tres" id="5_gcfem"]

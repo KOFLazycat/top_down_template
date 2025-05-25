@@ -22,7 +22,7 @@ func _ready()->void:
 	tree_exiting.connect(_damage_resource.report_damage.disconnect.bind(_on_damage_report), CONNECT_ONE_SHOT)
 
 
-func _on_damaged()->void:
+func _on_damaged(_d: float)->void:
 	assert(screen_flash_animation_player.node != null, "reference is not set")
 	# TODO: find a way to expose what functions are available
 	screen_flash_animation_player.node.play("white_flash")

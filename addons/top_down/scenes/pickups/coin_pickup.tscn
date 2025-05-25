@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://bvfkka3li031y"]
 
 [ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="1_mf3v2"]
-[ext_resource type="Script" uid="uid://c3030jaje6g72" path="res://addons/great_games_library/nodes/utility/FixSpawnOverlap.gd" id="1_tigs2"]
+[ext_resource type="Script" uid="uid://c4v5w6gc7kac7" path="res://addons/great_games_library/nodes/utility/FixSpawnOverlap.gd" id="1_tigs2"]
 [ext_resource type="Texture2D" uid="uid://ja8loev7vel6" path="res://addons/top_down/assets/images/items/coin_8x8_strip3.png" id="2_yn7v4"]
-[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="3_b48eg"]
+[ext_resource type="Script" uid="uid://c0aipoimc2hru" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="3_b48eg"]
 [ext_resource type="Script" uid="uid://bcylbnspdoksh" path="res://addons/top_down/scripts/pickups/CollectingPoint.gd" id="4_rl642"]
 [ext_resource type="Resource" uid="uid://5emqdks7qgbm" path="res://resources/global_resources/score_resource.tres" id="5_2nwea"]
 [ext_resource type="Resource" uid="uid://b8o2o4evevl8k" path="res://addons/top_down/resources/ReferenceNodeResources/player_reference.tres" id="5_lp18v"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://isy7r8fpiqyw" path="res://scripts/autoloads/persistent_data.gd" id="1_qc15f"]
 [ext_resource type="Resource" uid="uid://bk0svoela4oim" path="res://resources/preload_resources/boot_load_resource.tres" id="6_n3xuc"]
 [ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global_resources/action_resource.tres" id="15_p6f66"]
-[ext_resource type="Script" uid="uid://b20l8rl531is8" path="res://addons/great_games_library/resources/SaveableResource/SaveableResource.gd" id="17_80w5b"]
+[ext_resource type="Script" uid="uid://crmqtxo3ru8qj" path="res://addons/great_games_library/resources/SaveableResource/SaveableResource.gd" id="17_80w5b"]
 [ext_resource type="Resource" uid="uid://bx61rbuwillgh" path="res://resources/global_resources/graphics_resource.tres" id="19_n170m"]
 [ext_resource type="Resource" uid="uid://0ghwdk05y7am" path="res://resources/global_resources/audio_settings_resource.tres" id="20_kawqs"]
 

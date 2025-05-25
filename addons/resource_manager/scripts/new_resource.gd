@@ -27,11 +27,11 @@ var parent_reference_resource_picker:EditorResourcePicker
 var previous_resource_picker:EditorResourcePicker
 
 var parent_reference_array:Array[ReferenceNodeResource] = [
-	preload("res://addons/top_down/resources/RoomResources/floor_tilemap_reference.tres"),
-	preload("res://addons/top_down/resources/RoomResources/obstacle_reference.tres"),
-	preload("res://addons/top_down/resources/RoomResources/behind_reference.tres"),
-	preload("res://addons/top_down/resources/RoomResources/ysort_reference.tres"),
-	preload("res://addons/top_down/resources/RoomResources/front_reference.tres"),
+	preload("res://resources/room_resources/floor_tilemap_reference.tres"),
+	preload("res://resources/room_resources/obstacle_reference.tres"),
+	preload("res://resources/room_resources/behind_reference.tres"),
+	preload("res://resources/room_resources/ysort_reference.tres"),
+	preload("res://resources/room_resources/front_reference.tres"),
 ]
 
 func _set_state(new_state:StateType)->void:

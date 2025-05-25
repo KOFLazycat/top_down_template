@@ -20,12 +20,13 @@ func _ready()->void:
 	request_ready()
 	tree_exiting.connect(health_resource.damaged.disconnect.bind(_start_cooldown), CONNECT_ONE_SHOT)
 
-func _start_cooldown()->void:
+func _start_cooldown(_d: float)->void:
 	if cooldown_time == 0.0:
 		return
 	damage_resource.set_can_receive_damage(false)
 	var _tween:Tween = create_tween()
 	_tween.tween_callback(_on_cooldown_finish).set_delay(cooldown_time)
+	cooldown_started.emit()
 
 ## Called from tween
 func _on_cooldown_finish()->void:

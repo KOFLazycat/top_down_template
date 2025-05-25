@@ -29,7 +29,7 @@ func _remove_connections(health_resource:HealthResource)->void:
 	# remove character
 	health_resource.dead.disconnect(_play_dead)
 
-func _play_damaged()->void:
+func _play_damaged(_d: float)->void:
 	flash_animation_player.stop()
 	flash_animation_player.play(flash_animation)
 	sound_resource_damage.play_managed()
