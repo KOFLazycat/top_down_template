@@ -10,7 +10,7 @@
 [ext_resource type="Resource" uid="uid://ct10qlb66mijl" path="res://resources/arena_resources/spawn_point_resource.tres" id="7_82w7a"]
 [ext_resource type="Resource" uid="uid://cd4jt13gwv8bs" path="res://resources/instance_resources/vfx/enemy_spawn_mark.tres" id="8_jcw48"]
 [ext_resource type="Resource" uid="uid://way0xfgx53ix" path="res://resources/instance_resources/vfx/spawn_dust_instance.tres" id="9_lne6j"]
-[ext_resource type="Script" uid="uid://cbvyvkv711p1y" path="res://scripts/items/drop_items/DropManager.gd" id="11_dyj0j"]
+[ext_resource type="Script" uid="uid://cbvyvkv711p1y" path="res://scripts/items/drop_items/drop_manager.gd" id="11_dyj0j"]
 [ext_resource type="Resource" uid="uid://btqugjrcxhbgl" path="res://resources/instance_resources/pickups/coin_instance_resource.tres" id="12_g7mjn"]
 [ext_resource type="Resource" uid="uid://bc5djwa8gc2df" path="res://resources/instance_resources/pickups/health_pickup_instance_resource.tres" id="13_78ysf"]
 [ext_resource type="Resource" uid="uid://dcq3sgut7k6dh" path="res://resources/global_resources/luck_resource.tres" id="14_87rq8"]

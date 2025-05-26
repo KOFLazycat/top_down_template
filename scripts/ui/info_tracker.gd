@@ -38,7 +38,7 @@ extends Node  # 继承自 Godot 基础节点类
 # 定义常量存储标签文本（可根据需求调整或通过翻译资源替换）
 const SCORE_SUFFIX:String = "G"
 const FIGHT_MODE_PREFIX:String = "Fight Mode: "
-const WAVE_PREFIX:String = "Waves: "
+const WAVE_PREFIX:String = "Remaining Waves: "
 const ENEMY_PREFIX:String = "Remaining Enemies: "
 const ACTIVE_PREFIX:String = "Active: "
 
