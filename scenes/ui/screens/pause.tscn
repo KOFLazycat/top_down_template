@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://yctjuhnen1br" path="res://resources/theme/game_gui_theme.theme" id="1_x1p1w"]
 [ext_resource type="Script" uid="uid://852okmivevs" path="res://scripts/ui/title_screen/menu_traverse_manager.gd" id="2_0jy2c"]
-[ext_resource type="Script" uid="uid://cmj3gae3y6wxo" path="res://scripts/ui/pause_screen/PausingManager.gd" id="2_c7vpd"]
+[ext_resource type="Script" uid="uid://cmj3gae3y6wxo" path="res://scripts/ui/pause_screen/pausing_manager.gd" id="2_c7vpd"]
 [ext_resource type="Resource" uid="uid://ini50pn76erv" path="res://resources/global_resources/pause_resource.tres" id="3_f7x5r"]
 [ext_resource type="Script" uid="uid://bskcrqv3id8rt" path="res://scripts/ui/title_screen/audio_manager.gd" id="3_udjr5"]
 [ext_resource type="Resource" uid="uid://0ghwdk05y7am" path="res://resources/global_resources/audio_settings_resource.tres" id="4_jh7so"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b3ww0jqqy1eq7" path="res://scenes/ui/elements/menu_button.tscn" id="8_j4n7a"]
 [ext_resource type="PackedScene" uid="uid://c4jwvw17x6fwl" path="res://scenes/ui/elements/audio_slider.tscn" id="10_mm5xm"]
 [ext_resource type="Material" uid="uid://chv0fg62cs0ou" path="res://resources/materials/h_split.material.tres" id="11_d24wq"]
-[ext_resource type="Script" uid="uid://bn6ulw6lpu3ub" path="res://scripts/ui/pause_screen/GamepadDisconnectPause.gd" id="12_1fkcd"]
+[ext_resource type="Script" uid="uid://bn6ulw6lpu3ub" path="res://scripts/ui/pause_screen/gamepad_disconnect_pause.gd" id="12_1fkcd"]
 [ext_resource type="PackedScene" uid="uid://cs0pkiltyswgv" path="res://scenes/ui/screens/control_rebinding.tscn" id="15_ophkm"]
 [ext_resource type="Script" uid="uid://bh8wwwil37avb" path="res://scripts/ui/menu_back_button.gd" id="16_k1wvn"]
 

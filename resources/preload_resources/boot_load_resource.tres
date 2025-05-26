@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="PreloadResource" load_steps=41 format=3 uid="uid://bk0svoela4oim"]
 
 [ext_resource type="Material" uid="uid://dh55irc80dvm7" path="res://resources/materials/dust_particle_material.tres" id="1_sxu3u"]
-[ext_resource type="Script" uid="uid://bbnccrapnv54n" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="2_1na28"]
+[ext_resource type="Script" uid="uid://c4vi4hfp1xokj" path="res://addons/great_games_library/resources/InstanceResource/InstanceResource.gd" id="2_1na28"]
 [ext_resource type="Resource" uid="uid://ceuk0khv7rbvr" path="res://resources/instance_resources/actors/player_instance_resource.tres" id="3_tc463"]
 [ext_resource type="Resource" uid="uid://dyfuc7bon78d" path="res://resources/instance_resources/vfx/dead/player_dead_instance_resource.tres" id="4_pb05a"]
 [ext_resource type="Resource" uid="uid://c05ys7ybsfv4u" path="res://resources/instance_resources/actors/zomby_instance_resource.tres" id="5_nc5a8"]

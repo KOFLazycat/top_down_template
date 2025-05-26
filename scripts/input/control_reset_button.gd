@@ -1,3 +1,4 @@
+class_name ControlResetButton
 extends Button
 
 @export var action_resource:ActionResource

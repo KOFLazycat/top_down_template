@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://buhogrlodgroj"]
 
 [ext_resource type="Script" uid="uid://csou6rod24ytl" path="res://addons/top_down/scripts/vfx/AfterImageVFX.gd" id="1_maexv"]
-[ext_resource type="Script" uid="uid://c0aipoimc2hru" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="2_cw31y"]
+[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="2_cw31y"]
 [ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://addons/top_down/assets/images/characters/plumber_16x16_strip8.png" id="2_f3rjh"]
 
 [sub_resource type="Animation" id="Animation_ikoyn"]
