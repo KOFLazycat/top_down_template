@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Health pickup"
 script = ExtResource("2_8s5l6")
-scene_path = "res://addons/top_down/scenes/pickups/health_pickup.tscn"
+scene_path = "res://scenes/pickups/health_pickup.tscn"
 parent_reference_resource = ExtResource("1_3lo5d")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cm475mndno581"]
 
 [ext_resource type="Texture2D" uid="uid://oiakuatgkqpc" path="res://addons/top_down/assets/images/misc/block_strip4.png" id="1_bk066"]
-[ext_resource type="Script" uid="uid://cljau6n1vgctu" path="res://addons/top_down/scripts/obstackles/ArenaDoorBlock.gd" id="2_ljggu"]
+[ext_resource type="Script" uid="uid://cljau6n1vgctu" path="res://scripts/obstackles/arena_door_block.gd" id="2_ljggu"]
 [ext_resource type="Resource" uid="uid://dfx5wg7nqxg5b" path="res://resources/arena_resources/obstacle_astargrid_resource.tres" id="3_on1cq"]
 [ext_resource type="Resource" uid="uid://c7ckp7i2820tg" path="res://resources/arena_resources/fight_mode_resource.tres" id="4_r1cw6"]
 

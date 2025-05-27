@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcon4vj7ampja"]
 
-[ext_resource type="Script" uid="uid://u2jjluaagvi4" path="res://addons/top_down/scripts/obstackles/SceneEntry.gd" id="1_5v2au"]
+[ext_resource type="Script" uid="uid://u2jjluaagvi4" path="res://scripts/obstackles/scene_entry.gd" id="1_5v2au"]
 [ext_resource type="Resource" uid="uid://c5cbxaiec2jk1" path="res://resources/global_resources/scene_transition_resource.tres" id="2_6cjvb"]
 [ext_resource type="Texture2D" uid="uid://5g60jwwy5q4o" path="res://addons/top_down/assets/images/misc/stairs_strip2.png" id="2_8brmw"]
 

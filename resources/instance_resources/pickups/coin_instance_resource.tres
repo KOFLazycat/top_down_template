@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Coin pickup"
 script = ExtResource("2_yt2ea")
-scene_path = "res://addons/top_down/scenes/pickups/coin_pickup.tscn"
+scene_path = "res://scenes/pickups/coin_pickup.tscn"
 parent_reference_resource = ExtResource("1_cwbog")

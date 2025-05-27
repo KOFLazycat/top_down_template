@@ -5,7 +5,7 @@ extends Node  # 继承自 Godot 基础节点类
 # -------------------- 导出变量（编辑器可视化配置） --------------------
 @export var player_reference:ReferenceNodeResource  # 玩家引用资源（动态跟踪玩家节点）
 @export var game_over_scene_path:String  # 游戏结束场景的文件路径（如 "res://scenes/GameOver.tscn"）
-@export var wait_time:float = 0.5  # 玩家死亡后延迟切换场景的时间（单位：秒）
+@export var wait_time:float = 1.0  # 玩家死亡后延迟切换场景的时间（单位：秒）
 
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
