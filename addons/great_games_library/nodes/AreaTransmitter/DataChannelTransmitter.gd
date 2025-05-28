@@ -78,6 +78,9 @@ func on_try_next_frame(receiver:AreaReceiver2D)->void:
 
 # -------------------- 辅助逻辑：触发接收方校验 --------------------
 func test_receiver(receiver:AreaReceiver2D)->void:
+	if receiver is not AreaReceiver2D:
+		Log.entry("receiver 类型不正确", LogManager.LogLevel.ERROR)
+		return
 	check_receiver.emit(receiver)  # 发射校验信号（通知外部校验接收方是否有效）
 
 

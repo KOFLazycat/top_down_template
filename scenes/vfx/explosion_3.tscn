@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4rxidnuvn5s7"]
 
-[ext_resource type="Texture2D" uid="uid://bv7f160gfoedt" path="res://assets/images/vfx/explosion_3_strip7.png" id="1_cqqt7"]
-[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="2_s8sgw"]
+[ext_resource type="Texture2D" uid="uid://bv7f160gfoedt" path="res://assets/images/vfx/explosion_3_strip7.png" id="1_ppmau"]
+[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="2_o3346"]
 
 [sub_resource type="Animation" id="Animation_3bcbr"]
 resource_name = "animate"
@@ -42,9 +42,8 @@ _data = {
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
-texture = ExtResource("1_cqqt7")
+texture = ExtResource("1_ppmau")
 hframes = 7
-frame = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -53,6 +52,6 @@ libraries = {
 autoplay = "animate"
 
 [node name="PoolNode" type="Node" parent="." node_paths=PackedStringArray("ready_nodes", "animation_player_list")]
-script = ExtResource("2_s8sgw")
+script = ExtResource("2_o3346")
 ready_nodes = [NodePath("../AnimationPlayer")]
 animation_player_list = [NodePath("../AnimationPlayer")]

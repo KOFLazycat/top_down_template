@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bmurrqosq7bec" path="res://resources/sounds/kill_zombie.tres" id="7_uiw1f"]
 [ext_resource type="Script" uid="uid://drjowwxypperd" path="res://scripts/damage/DamageResource.gd" id="8_3mtk0"]
 [ext_resource type="PackedScene" uid="uid://cenq1bawfywu8" path="res://addons/top_down/scenes/actors/ai/enemy_ai.tscn" id="9_4t8nd"]
-[ext_resource type="Resource" uid="uid://h86cdxneli8u" path="res://resources/instance_resources/vfx/dead/zomby_dead_instance_resource.tres" id="12_bo37y"]
+[ext_resource type="Resource" uid="uid://h86cdxneli8u" path="res://resources/instance_resources/vfx/dead/zomby_dead_instance.tres" id="12_bo37y"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="16_brvnb"]
 [ext_resource type="Script" uid="uid://3648iq5jm56a" path="res://addons/top_down/scripts/actor/bots/CriticalDamageReplace.gd" id="18_bt2ks"]
 [ext_resource type="Resource" uid="uid://ddp7qf0qghy82" path="res://resources/instance_resources/actors/zomby_crawler_instance_resource.tres" id="19_p8daw"]

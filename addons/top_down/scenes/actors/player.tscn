@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://djauem3ggp3vq" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelReceiver.gd" id="11_qswmv"]
 [ext_resource type="Script" uid="uid://dq852r7lc8xbb" path="res://addons/great_games_library/resources/ReferenceNodeResource/ReferenceNodeSetter.gd" id="11_r4axh"]
 [ext_resource type="Resource" uid="uid://b8o2o4evevl8k" path="res://resources/reference_node_resources/player_reference.tres" id="12_l6ujm"]
-[ext_resource type="Resource" uid="uid://dyfuc7bon78d" path="res://resources/instance_resources/vfx/dead/player_dead_instance_resource.tres" id="12_yuaod"]
+[ext_resource type="Resource" uid="uid://dyfuc7bon78d" path="res://resources/instance_resources/vfx/dead/player_dead_instance.tres" id="12_yuaod"]
 [ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global_resources/action_resource.tres" id="13_ju15f"]
 [ext_resource type="Script" uid="uid://cif6c34dli3w" path="res://addons/top_down/scripts/actor/DashAbility.gd" id="16_vooxc"]
 [ext_resource type="Script" uid="uid://cs774r70sg3ph" path="res://addons/top_down/scripts/actor/player/PlayerJuice.gd" id="17_32qwh"]

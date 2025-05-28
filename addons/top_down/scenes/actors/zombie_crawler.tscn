@@ -11,7 +11,7 @@
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="9_j1lvb"]
 [ext_resource type="Texture2D" uid="uid://ba7tpfexk0vla" path="res://assets/images/characters/zombie_crawler_16x16_strip6-sheet.png" id="10_1uw86"]
 [ext_resource type="Resource" uid="uid://bmurrqosq7bec" path="res://resources/sounds/kill_zombie.tres" id="11_e1dok"]
-[ext_resource type="Resource" uid="uid://bx3gvcma6vvg" path="res://resources/instance_resources/vfx/dead/zomby_crawler_dead_instance_resource.tres" id="12_m3r33"]
+[ext_resource type="Resource" uid="uid://bx3gvcma6vvg" path="res://resources/instance_resources/vfx/dead/zomby_crawler_dead_instance.tres" id="12_m3r33"]
 [ext_resource type="PackedScene" uid="uid://cenq1bawfywu8" path="res://addons/top_down/scenes/actors/ai/enemy_ai.tscn" id="13_wn0lf"]
 [ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://addons/top_down/scenes/weapons/zombie_attack.tscn" id="14_4rg71"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="17_4fh8m"]
