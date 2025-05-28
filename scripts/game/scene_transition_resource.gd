@@ -21,7 +21,7 @@ func set_next_scene(scene_path:String, entry:String)->void:
 		Log.entry("玩家引用资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if player_reference.node == null:
-		Log.entry("玩家节点为空", LogManager.LogLevel.ERROR)
+		Log.entry("玩家节点为空，无法完成切换场景", LogManager.LogLevel.ERROR)
 		return
 	if scene_path.is_empty():
 		Log.entry("下一场景路径为空", LogManager.LogLevel.ERROR)

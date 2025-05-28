@@ -24,7 +24,7 @@ func _ready()->void:
 func on_reference_changed()->void:
 	# 玩家节点为空时返回（避免空引用）
 	if player_reference.node == null:
-		Log.entry("玩家节点为空", LogManager.LogLevel.ERROR)
+		Log.entry("玩家节点为空，无法绑定健康状态监听", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取玩家节点的资源节点（假设玩家节点包含名为 "ResourceNode" 的子节点）
