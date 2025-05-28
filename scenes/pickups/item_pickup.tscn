@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0f2wib8tyow0"]
 
 [ext_resource type="PackedScene" uid="uid://bm0cdv63uc8am" path="res://scenes/pickups/pickup.tscn" id="1_ffask"]
-[ext_resource type="Script" uid="uid://dbibryglaw126" path="res://addons/top_down/scripts/pickups/ItemPickup.gd" id="2_r0an6"]
-[ext_resource type="Script" uid="uid://bmrpiu8cmr12w" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="3_4bbay"]
-[ext_resource type="Script" uid="uid://dcfkccjnmfyiy" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="3_fay7m"]
+[ext_resource type="Script" uid="uid://dbibryglaw126" path="res://scripts/pickups/item_pickup.gd" id="2_r0an6"]
+[ext_resource type="Script" uid="uid://crafwqb5pfm8h" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="3_4bbay"]
+[ext_resource type="Script" uid="uid://b0uw7wkj5ulcm" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="3_fay7m"]
 [ext_resource type="AudioStream" uid="uid://c2xlbyainyqad" path="res://assets/sounds/sfx/pickup_5.wav" id="4_25psd"]
 [ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="4_r0lbw"]
 

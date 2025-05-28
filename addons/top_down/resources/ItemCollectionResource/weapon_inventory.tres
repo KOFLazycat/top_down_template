@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemCollectionResource" load_steps=3 format=3 uid="uid://btej3lqnjytbl"]
 
-[ext_resource type="Script" uid="uid://d1l7717tvwgi8" path="res://addons/top_down/scripts/pickups/ItemResource.gd" id="1_wqjr1"]
-[ext_resource type="Script" uid="uid://b0rh7heimm7yq" path="res://addons/top_down/scripts/pickups/ItemCollectionResource.gd" id="2_ctn56"]
+[ext_resource type="Script" uid="uid://d1l7717tvwgi8" path="res://scripts/pickups/item_resource.gd" id="1_wqjr1"]
+[ext_resource type="Script" uid="uid://b0rh7heimm7yq" path="res://scripts/pickups/item_collection_resource.gd" id="2_ctn56"]
 
 [resource]
 resource_name = "Player Weapon Inventory"

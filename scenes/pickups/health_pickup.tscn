@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://8fmycery7url"]
 
 [ext_resource type="PackedScene" uid="uid://bm0cdv63uc8am" path="res://scenes/pickups/pickup.tscn" id="1_1ysqb"]
-[ext_resource type="Script" uid="uid://cwvmb3x2idoy8" path="res://addons/top_down/scripts/pickups/HealthTransmision.gd" id="3_7bghr"]
+[ext_resource type="Script" uid="uid://cwvmb3x2idoy8" path="res://scripts/pickups/health_transmission.gd" id="3_7bghr"]
 [ext_resource type="Script" uid="uid://b0uw7wkj5ulcm" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="3_srqx2"]
 [ext_resource type="Texture2D" uid="uid://bsfmeikofbgwj" path="res://addons/top_down/assets/images/items/pickup_0_strip6.png" id="4_nxqq3"]
 [ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="4_sqyfq"]
-[ext_resource type="Script" uid="uid://tvsaxfel7w1e" path="res://addons/great_games_library/nodes/AnimationHelper/AnimationHelper.gd" id="5_c4f4r"]
-[ext_resource type="Script" uid="uid://dex2a17qkpmuc" path="res://addons/top_down/scripts/pickups/EffectConsume.gd" id="6_t3qtp"]
+[ext_resource type="Script" uid="uid://vy1s562jywtt" path="res://addons/great_games_library/nodes/AnimationHelper/AnimationHelper.gd" id="5_c4f4r"]
+[ext_resource type="Script" uid="uid://dex2a17qkpmuc" path="res://scripts/pickups/effect_consume.gd" id="6_t3qtp"]
 [ext_resource type="Resource" uid="uid://ctthh78bun1bh" path="res://resources/sounds/health_pickup.tres" id="7_hgu74"]
 
 [sub_resource type="Resource" id="Resource_1euvd"]
@@ -250,7 +250,6 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_sqyfq")
 
 [node name="Visuals" type="Node2D" parent="." index="2"]
-scale = Vector2(0.75, 1.5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Visuals" index="0"]
 modulate = Color(0.831373, 0.117647, 0.235294, 1)
