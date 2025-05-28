@@ -39,6 +39,7 @@ func process(resource_node:ResourceNode)->void:
 	
 	# 检查目标健康状态：是否已满（如生命值已满）或已死亡（如生命值为0）
 	if _health_resource.is_full() || _health_resource.is_dead:
+		Log.entry("目标健康状态是已满或者死亡，不再接受生命处理", LogManager.LogLevel.ERROR)
 		failed()  # 健康状态不允许修改，标记传输失败
 		return
 	

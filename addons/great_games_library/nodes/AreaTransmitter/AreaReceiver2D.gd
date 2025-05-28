@@ -12,6 +12,14 @@ var callbacks:Dictionary = {}  # 存储格式：{StringName: Callable}
 func _ready()->void:
 	process_mode = PROCESS_MODE_ALWAYS  # 设置节点处理模式为始终处理（确保回调逻辑及时执行）
 	monitoring = false  # 初始禁用区域监控（需手动调用 `set_monitoring(true)` 启用碰撞检测）
+	
+	# 遍历子节点，收集 DataChannelReceiver 的 send 回调
+	for child:Node in get_children():
+		if !(child is DataChannelReceiver) || child == null:  # 仅处理 DataChannelReceiver 类型的子节点
+			continue
+		var data_receiver:DataChannelReceiver = child as DataChannelReceiver
+		# 存储子节点的 receive 方法到列表
+		add_receiver(data_receiver.transmission_name, data_receiver.receive)
 
 
 # -------------------- 核心逻辑：接收数据传输请求 --------------------

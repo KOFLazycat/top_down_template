@@ -30,6 +30,7 @@ func send(receiver:AreaReceiver2D)->void:
 		return
 	
 	if !enabled:  # 若传输被禁用，直接返回
+		Log.entry("传输被禁用，直接返回", LogManager.LogLevel.INFO)
 		return
 	
 	# 确保传输资源已配置（调试模式生效）
