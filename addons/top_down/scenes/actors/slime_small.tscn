@@ -1,11 +1,11 @@
 [gd_scene load_steps=40 format=3 uid="uid://wx0lrqm8jjh2"]
 
 [ext_resource type="PackedScene" uid="uid://botai66n8rwt3" path="res://addons/top_down/scenes/actors/actor.tscn" id="1_6nai7"]
-[ext_resource type="Script" uid="uid://chy848pcntvu2" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNodeItem.gd" id="2_lpgfe"]
+[ext_resource type="Script" uid="uid://bfrujoe7b8kfv" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNodeItem.gd" id="2_lpgfe"]
 [ext_resource type="Script" uid="uid://du71kf2skajm5" path="res://addons/top_down/scripts/actor/ActorStatsResource.gd" id="3_rqueo"]
 [ext_resource type="Script" uid="uid://c4mj55eumewsg" path="res://scripts/damage/health_resource.gd" id="4_oc823"]
 [ext_resource type="Script" uid="uid://0cwd4fq8k1sb" path="res://addons/top_down/scripts/actor/PushResource.gd" id="5_kmu82"]
-[ext_resource type="Script" uid="uid://b22fpyvusjwgn" path="res://addons/great_games_library/resources/ValueResource/BoolResource.gd" id="6_8m40n"]
+[ext_resource type="Script" uid="uid://bywrj5osehdeq" path="res://addons/great_games_library/resources/ValueResource/BoolResource.gd" id="6_8m40n"]
 [ext_resource type="Script" uid="uid://umnrjhg4tkx8" path="res://scripts/input/InputResource.gd" id="7_gxrd0"]
 [ext_resource type="Script" uid="uid://drjowwxypperd" path="res://scripts/damage/DamageResource.gd" id="8_hotxp"]
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="9_tba0g"]

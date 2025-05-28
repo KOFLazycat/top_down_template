@@ -37,7 +37,7 @@ func _on_success()->void:
 	data_transmitter.set_enabled(false)
 	
 	# 播放消耗音效（自动管理音效生命周期）
-	if sounds_resource == null || !sounds_resource.is_loaded():
+	if sounds_resource == null:
 		Log.entry("音效资源未加载或路径错误，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	else:

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SoundResource" load_steps=3 format=3 uid="uid://htqn5bygvbq5"]
 
-[ext_resource type="Script" uid="uid://crafwqb5pfm8h" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="1_cbclt"]
+[ext_resource type="Script" uid="uid://bmrpiu8cmr12w" path="res://addons/great_games_library/resources/SoundResource/SoundResource.gd" id="1_cbclt"]
 [ext_resource type="AudioStream" uid="uid://duags3ajw21uf" path="res://assets/sounds/sfx/slime_throw_1.wav" id="2_btcjo"]
 
 [resource]

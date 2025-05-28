@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cenq1bawfywu8"]
 
 [ext_resource type="Script" uid="uid://dmmywux6xtn57" path="res://addons/top_down/scripts/actor/bots/BotInput.gd" id="1_qo7hy"]
-[ext_resource type="Script" uid="uid://bjwdp5ihpinoe" path="res://addons/great_games_library/nodes/Navigation/TileNavigationGetter.gd" id="2_kpufw"]
+[ext_resource type="Script" uid="uid://dote2k6bf8ftm" path="res://addons/great_games_library/nodes/Navigation/TileNavigationGetter.gd" id="2_kpufw"]
 [ext_resource type="Resource" uid="uid://dedx0gi4fowby" path="res://resources/global_resources/axis_multiplication_resource.tres" id="2_s6bq5"]
 [ext_resource type="Script" uid="uid://dccd2dpi1lmre" path="res://addons/top_down/scripts/actor/bots/ProximityAttack.gd" id="3_4n00q"]
 [ext_resource type="Resource" uid="uid://dfx5wg7nqxg5b" path="res://resources/arena_resources/obstacle_astargrid_resource.tres" id="3_54ctl"]
