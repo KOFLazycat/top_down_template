@@ -6,5 +6,5 @@
 [resource]
 resource_name = "After Image VFX"
 script = ExtResource("2_nwnhl")
-scene_path = "res://addons/top_down/scenes/vfx/after_image_vfx.tscn"
+scene_path = "res://scenes/vfx/after_image_vfx.tscn"
 parent_reference_resource = ExtResource("1_4iy7a")

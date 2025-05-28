@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://buhogrlodgroj"]
 
-[ext_resource type="Script" uid="uid://csou6rod24ytl" path="res://addons/top_down/scripts/vfx/AfterImageVFX.gd" id="1_maexv"]
-[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="2_cw31y"]
-[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://assets/images/characters/plumber_16x16_strip8.png" id="2_f3rjh"]
+[ext_resource type="Script" uid="uid://csou6rod24ytl" path="res://scripts/vfx/after_image_vfx.gd" id="1_oeemh"]
+[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://assets/images/characters/plumber_16x16_strip8.png" id="2_bt44b"]
+[ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="3_bo80x"]
 
 [sub_resource type="Animation" id="Animation_ikoyn"]
 length = 0.001
@@ -42,7 +42,7 @@ _data = {
 }
 
 [node name="AfterImageVFX" type="Node2D" node_paths=PackedStringArray("sprite", "animation_player", "pool_node")]
-script = ExtResource("1_maexv")
+script = ExtResource("1_oeemh")
 sprite = NodePath("Sprite2D")
 animation_player = NodePath("AnimationPlayer")
 animation = &"fade"
@@ -50,7 +50,7 @@ pool_node = NodePath("PoolNode")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.816667, 0, 1, 0.00784314)
-texture = ExtResource("2_f3rjh")
+texture = ExtResource("2_bt44b")
 hframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -59,4 +59,4 @@ libraries = {
 }
 
 [node name="PoolNode" type="Node" parent="."]
-script = ExtResource("2_cw31y")
+script = ExtResource("3_bo80x")
