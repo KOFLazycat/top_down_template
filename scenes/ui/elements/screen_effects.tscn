@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqh7iwpl0s1ha"]
 
 [ext_resource type="Script" uid="uid://dq852r7lc8xbb" path="res://addons/great_games_library/resources/ReferenceNodeResource/ReferenceNodeSetter.gd" id="1_qdpw6"]
-[ext_resource type="Resource" uid="uid://diqvd4u0lbw7h" path="res://resources/command_node_resource/color_flash.tres" id="2_x72oy"]
+[ext_resource type="Resource" uid="uid://diqvd4u0lbw7h" path="res://resources/command_node_resources/color_flash.tres" id="2_x72oy"]
 
 [sub_resource type="Animation" id="Animation_bpyts"]
 resource_name = "RESET"
