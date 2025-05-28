@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://umnrjhg4tkx8" path="res://scripts/input/InputResource.gd" id="7_gxrd0"]
 [ext_resource type="Script" uid="uid://drjowwxypperd" path="res://scripts/damage/DamageResource.gd" id="8_hotxp"]
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="9_tba0g"]
-[ext_resource type="Texture2D" uid="uid://dikm8dgeksuoe" path="res://addons/top_down/assets/images/characters/slime_small_16x16_strip7.png" id="10_7og58"]
+[ext_resource type="Texture2D" uid="uid://dikm8dgeksuoe" path="res://assets/images/characters/slime_small_16x16_strip7.png" id="10_7og58"]
 [ext_resource type="Resource" uid="uid://pvw6k1ntsles" path="res://resources/sounds/zombie_split.tres" id="11_3ifc4"]
 [ext_resource type="Resource" uid="uid://weoefubhnbf" path="res://resources/instance_resources/vfx/dead/slime_small_dead_instance_resource.tres" id="12_ue07f"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="13_p075e"]

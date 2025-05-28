@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://csjmqrrduxorv"]
 
-[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="1_r0qid"]
-[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://addons/top_down/assets/images/characters/plumber_16x16_strip8.png" id="3_2l255"]
+[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://assets/images/shadows/shadow.png" id="1_r0qid"]
+[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://assets/images/characters/plumber_16x16_strip8.png" id="3_2l255"]
 
 [sub_resource type="Animation" id="Animation_wsv66"]
 length = 0.001

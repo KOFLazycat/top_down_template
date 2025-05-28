@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://6ems2fnw63sl" path="res://addons/top_down/assets/images/weapon/gun_1.png" id="3_1j2rw"]
 [ext_resource type="Texture2D" uid="uid://hvvhfycd2fie" path="res://addons/top_down/assets/images/weapon/gun_3.png" id="4_fglbe"]
 [ext_resource type="Texture2D" uid="uid://c4m1l0lwr32sh" path="res://addons/top_down/assets/images/weapon/sword_0.png" id="5_n1on6"]
-[ext_resource type="Texture2D" uid="uid://c2nunltmorsky" path="res://addons/top_down/assets/images/vfx/slash_2_strip5.png" id="6_ot0bc"]
+[ext_resource type="Texture2D" uid="uid://c2nunltmorsky" path="res://assets/images/vfx/slash_2_strip5.png" id="6_ot0bc"]
 
 [sub_resource type="Resource" id="Resource_q51dg"]
 resource_name = "Gun"

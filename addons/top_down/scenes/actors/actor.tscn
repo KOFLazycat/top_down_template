@@ -1,8 +1,8 @@
 [gd_scene load_steps=46 format=3 uid="uid://botai66n8rwt3"]
 
-[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://addons/top_down/assets/images/shadow.png" id="1_1xdx7"]
+[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://assets/images/shadows/shadow.png" id="1_1xdx7"]
 [ext_resource type="Script" uid="uid://dg7x1bfsyq76u" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNode.gd" id="1_atd7g"]
-[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://addons/top_down/assets/images/characters/plumber_16x16_strip8.png" id="1_s6o32"]
+[ext_resource type="Texture2D" uid="uid://cjrdqemacjuc0" path="res://assets/images/characters/plumber_16x16_strip8.png" id="1_s6o32"]
 [ext_resource type="Script" uid="uid://cke22g3r77rke" path="res://addons/great_games_library/nodes/AreaTransmitter/AreaReceiver2D.gd" id="1_vf4rt"]
 [ext_resource type="Script" uid="uid://bfrujoe7b8kfv" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNodeItem.gd" id="2_riryq"]
 [ext_resource type="Script" uid="uid://0cwd4fq8k1sb" path="res://addons/top_down/scripts/actor/PushResource.gd" id="3_q65r3"]

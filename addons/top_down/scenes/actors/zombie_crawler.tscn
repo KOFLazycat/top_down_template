@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://umnrjhg4tkx8" path="res://scripts/input/InputResource.gd" id="7_nocrv"]
 [ext_resource type="Script" uid="uid://drjowwxypperd" path="res://scripts/damage/DamageResource.gd" id="8_rjgwi"]
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="9_j1lvb"]
-[ext_resource type="Texture2D" uid="uid://ba7tpfexk0vla" path="res://addons/top_down/assets/images/characters/zombie_crawler_16x16_strip6-sheet.png" id="10_1uw86"]
+[ext_resource type="Texture2D" uid="uid://ba7tpfexk0vla" path="res://assets/images/characters/zombie_crawler_16x16_strip6-sheet.png" id="10_1uw86"]
 [ext_resource type="Resource" uid="uid://bmurrqosq7bec" path="res://resources/sounds/kill_zombie.tres" id="11_e1dok"]
 [ext_resource type="Resource" uid="uid://bx3gvcma6vvg" path="res://resources/instance_resources/vfx/dead/zomby_crawler_dead_instance_resource.tres" id="12_m3r33"]
 [ext_resource type="PackedScene" uid="uid://cenq1bawfywu8" path="res://addons/top_down/scenes/actors/ai/enemy_ai.tscn" id="13_wn0lf"]

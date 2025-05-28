@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cvx2xmr86fa7b"]
 
-[ext_resource type="Texture2D" uid="uid://ctajn3orusgqb" path="res://addons/top_down/assets/images/kenney_input_prompt/Keyboard & Mouse/Double/keyboard_w.png" id="1_do8rq"]
+[ext_resource type="Texture2D" uid="uid://ctajn3orusgqb" path="res://assets/images/kenney_input_prompt/Keyboard & Mouse/Double/keyboard_w.png" id="1_do8rq"]
 [ext_resource type="Script" uid="uid://cd1xnhchu4kak" path="res://scripts/input/binding_button.gd" id="2_c7cq0"]
-[ext_resource type="Resource" uid="uid://xoehlofj3mru" path="res://addons/top_down/resources/ControlTextureResource/keyboard_textures.tres" id="3_xjfrb"]
-[ext_resource type="Resource" uid="uid://c2l3mopok8331" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_xbox.tres" id="4_xdqvi"]
-[ext_resource type="Resource" uid="uid://co1epfd4a3l5r" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_ps.tres" id="5_3vbb3"]
+[ext_resource type="Resource" uid="uid://xoehlofj3mru" path="res://resources/control_texture_resources/keyboard_textures.tres" id="3_xjfrb"]
+[ext_resource type="Resource" uid="uid://c2l3mopok8331" path="res://resources/control_texture_resources/gamepad_textures_xbox.tres" id="4_xdqvi"]
+[ext_resource type="Resource" uid="uid://co1epfd4a3l5r" path="res://resources/control_texture_resources/gamepad_textures_ps.tres" id="5_3vbb3"]
 [ext_resource type="Resource" uid="uid://dsk5usbvnbqi3" path="res://resources/global_resources/action_resource.tres" id="5_drqok"]
-[ext_resource type="Resource" uid="uid://cryn1snloyh7f" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_switch.tres" id="6_7hfhl"]
-[ext_resource type="Resource" uid="uid://crxpln7xah5hj" path="res://addons/top_down/resources/ControlTextureResource/gamepad_textures_generic.tres" id="7_bkuvk"]
+[ext_resource type="Resource" uid="uid://cryn1snloyh7f" path="res://resources/control_texture_resources/gamepad_textures_switch.tres" id="6_7hfhl"]
+[ext_resource type="Resource" uid="uid://crxpln7xah5hj" path="res://resources/control_texture_resources/gamepad_textures_generic.tres" id="7_bkuvk"]
 
 [node name="BindingButton" type="TextureButton" node_paths=PackedStringArray("label")]
 custom_minimum_size = Vector2(0, 16)

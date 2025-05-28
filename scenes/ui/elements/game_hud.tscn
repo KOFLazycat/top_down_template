@@ -14,10 +14,10 @@
 [ext_resource type="Script" uid="uid://b7eud1pk6inc0" path="res://scripts/game/visibility_component.gd" id="10_lso8u"]
 [ext_resource type="Script" uid="uid://di3hcenboiiny" path="res://scripts/ui/wave_panel.gd" id="13_pcln8"]
 [ext_resource type="Resource" uid="uid://be8s05nqt2y5d" path="res://resources/arena_resources/wave_number_resource.tres" id="14_7r27p"]
-[ext_resource type="Texture2D" uid="uid://oqxhxfh71xq1" path="res://addons/top_down/assets/images/gui/slot_frame_2.png" id="15_5kgus"]
+[ext_resource type="Texture2D" uid="uid://oqxhxfh71xq1" path="res://assets/images/gui/slot_frame_2.png" id="15_5kgus"]
 [ext_resource type="Script" uid="uid://dbsm234ow3mtk" path="res://scripts/ui/game_screen/weapon_inventory.gd" id="15_axu6d"]
 [ext_resource type="Resource" uid="uid://btej3lqnjytbl" path="res://resources/item_collection_resources/weapon_inventory.tres" id="16_kq6ag"]
-[ext_resource type="Texture2D" uid="uid://b7o0n6sdmtfb" path="res://addons/top_down/assets/images/gui/slot_frame.png" id="18_mfcqm"]
+[ext_resource type="Texture2D" uid="uid://b7o0n6sdmtfb" path="res://assets/images/gui/slot_frame.png" id="18_mfcqm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bpmqm"]
 
