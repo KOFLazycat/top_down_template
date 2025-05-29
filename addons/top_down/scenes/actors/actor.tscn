@@ -20,7 +20,7 @@
 [ext_resource type="Resource" uid="uid://byppueuo3drya" path="res://resources/sounds/damage.tres" id="11_wwbua"]
 [ext_resource type="Resource" uid="uid://dedx0gi4fowby" path="res://resources/global_resources/axis_multiplication_resource.tres" id="14_7u4bv"]
 [ext_resource type="Script" uid="uid://c12f5cgav5gvf" path="res://scripts/damage/damage_cooldown.gd" id="14_gnke1"]
-[ext_resource type="Script" uid="uid://cb3o2f2gm6jou" path="res://scripts/damage/HoleTrigger.gd" id="16_f6cga"]
+[ext_resource type="Script" uid="uid://cb3o2f2gm6jou" path="res://scripts/damage/hole_trigger.gd" id="16_f6cga"]
 [ext_resource type="Script" uid="uid://bxgoqndb6smld" path="res://scripts/damage/HoleDeath.gd" id="18_634cs"]
 [ext_resource type="Resource" uid="uid://xbek2osd7l4w" path="res://resources/instance_resources/vfx/damage_points_instance_resource.tres" id="22_nljy0"]
 [ext_resource type="Script" uid="uid://dv83lyrd01i1q" path="res://addons/top_down/scripts/actor/DamageDisplay.gd" id="26_oudld"]
