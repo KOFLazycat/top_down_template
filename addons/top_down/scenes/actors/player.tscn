@@ -1,7 +1,7 @@
 [gd_scene load_steps=60 format=3 uid="uid://bmp0g88dtijqw"]
 
 [ext_resource type="PackedScene" uid="uid://botai66n8rwt3" path="res://addons/top_down/scenes/actors/actor.tscn" id="1_mvls6"]
-[ext_resource type="Script" uid="uid://bfrujoe7b8kfv" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNodeItem.gd" id="2_20qkb"]
+[ext_resource type="Script" uid="uid://chy848pcntvu2" path="res://addons/great_games_library/nodes/ResourceNode/ResourceNodeItem.gd" id="2_20qkb"]
 [ext_resource type="Shader" uid="uid://mswl35phaudd" path="res://scripts/shaders/color_flash.gdshader" id="2_wcwdo"]
 [ext_resource type="Script" uid="uid://du71kf2skajm5" path="res://addons/top_down/scripts/actor/ActorStatsResource.gd" id="3_2ebh0"]
 [ext_resource type="Script" uid="uid://dw27p5l2vn2hg" path="res://addons/top_down/scripts/actor/player/PlayerInput.gd" id="4_uihqc"]

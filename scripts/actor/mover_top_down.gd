@@ -44,15 +44,21 @@ func _ready()->void:
 	enabled = false
 	# 从资源节点获取输入资源（确保非空）
 	input_resource = resource_node.get_resource("input")
-	assert(input_resource != null, "输入资源（input）未配置")
+	if input_resource == null:
+		Log.entry("输入资源（input）未配置", LogManager.LogLevel.ERROR)
+		return
 	
 	# 获取移动属性资源（速度、加速度等）
 	actor_stats_resource = resource_node.get_resource("movement")
-	assert(actor_stats_resource != null, "移动属性资源（movement）未配置")
+	if actor_stats_resource == null:
+		Log.entry("移动属性资源（movement）未配置", LogManager.LogLevel.ERROR)
+		return
 	
 	# 获取推力资源并连接脉冲事件（如受到攻击时的击退效果）
 	var _push_resource = resource_node.get_resource("push")
-	assert(_push_resource != null, "推力资源（push）未配置")
+	if _push_resource == null:
+		Log.entry("推力资源（push）未配置", LogManager.LogLevel.ERROR)
+		return
 	_push_resource.impulse_event.connect(add_impulse)
 	
 	# 初始化启用状态
@@ -135,15 +141,15 @@ func _remove_overlap()->void:
 		
 		if _collider is CharacterBody2D:
 			# 处理与其他角色的碰撞（当前角色与目标角色的位置差）
-			var _distance:Vector2 = _point - global_position
+			var _dis:Vector2 = _point - global_position
 			var _character_distance:Vector2 = _collider.global_position - global_position
 			
-			if _character_distance.length_squared() > _distance.length_squared():
+			if _character_distance.length_squared() > _dis.length_squared():
 				# 目标角色在更远的位置，移动当前角色
-				_move_character(_collider, _rect_distance(_distance))
+				_move_character(_collider, _rect_distance(_dis))
 			else:
 				# 双方重叠，简单处理（TODO: 完善复杂碰撞计算）
-				_move_character(_collider, _distance * 2)
+				_move_character(_collider, _dis * 2)
 			continue  # 跳过固体碰撞体处理
 		
 		# 处理固体碰撞体（如墙壁、地板）

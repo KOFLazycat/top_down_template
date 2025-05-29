@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://c4mj55eumewsg" path="res://scripts/damage/health_resource.gd" id="4_ryem0"]
 [ext_resource type="Script" uid="uid://0cwd4fq8k1sb" path="res://addons/top_down/scripts/actor/PushResource.gd" id="6_360t8"]
 [ext_resource type="Script" uid="uid://umnrjhg4tkx8" path="res://scripts/input/InputResource.gd" id="7_r0dvd"]
-[ext_resource type="Script" uid="uid://b22fpyvusjwgn" path="res://addons/great_games_library/resources/ValueResource/BoolResource.gd" id="7_ratbf"]
+[ext_resource type="Script" uid="uid://bywrj5osehdeq" path="res://addons/great_games_library/resources/ValueResource/BoolResource.gd" id="7_ratbf"]
 [ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://addons/top_down/scenes/weapons/zombie_attack.tscn" id="7_tyqu3"]
 [ext_resource type="Resource" uid="uid://bmurrqosq7bec" path="res://resources/sounds/kill_zombie.tres" id="7_uiw1f"]
 [ext_resource type="Script" uid="uid://drjowwxypperd" path="res://scripts/damage/DamageResource.gd" id="8_3mtk0"]
@@ -232,9 +232,6 @@ texture = ExtResource("2_giu7j")
 libraries = {
 &"": SubResource("AnimationLibrary_esakt")
 }
-
-[node name="MoverTopDown2D" parent="." index="5"]
-debug = true
 
 [node name="ActorDamage" parent="." index="11"]
 sound_resource_dead = ExtResource("7_uiw1f")
