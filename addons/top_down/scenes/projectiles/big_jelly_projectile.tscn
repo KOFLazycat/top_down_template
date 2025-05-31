@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="3_ppetm"]
 [ext_resource type="Script" uid="uid://xqvgdt8ts4c2" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileMover.gd" id="4_o10bp"]
 [ext_resource type="Script" uid="uid://bdbat3453sctq" path="res://scripts/damage/properties/DamageDataResource.gd" id="4_ydjpq"]
-[ext_resource type="Script" uid="uid://cd080aexgt50m" path="res://addons/great_games_library/nodes/AreaTransmitter/ShapeCastTransmitter2D.gd" id="5_aq7h1"]
+[ext_resource type="Script" uid="uid://b32hc21y325hs" path="res://addons/great_games_library/nodes/AreaTransmitter/ShapeCastTransmitter2D.gd" id="5_aq7h1"]
 [ext_resource type="Script" uid="uid://dg5sc14fyjex4" path="res://scripts/damage/properties/DamageStatusResource.gd" id="5_mmy6w"]
 [ext_resource type="Script" uid="uid://b0uw7wkj5ulcm" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="6_ylp04"]
 [ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://assets/images/shadows/shadow.png" id="7_lqjr0"]

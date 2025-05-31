@@ -31,6 +31,11 @@ func set_bypass(value:bool)->void:
 	bypass = value
 
 
+func _ready()->void:
+	# creates a signal with it's argument signature
+	area_receiver.add_receiver(transmission_name, receive)
+
+
 # -------------------- 核心逻辑：处理传输资源 --------------------
 ## @brief 接收并处理传输资源（校验状态、触发验证、执行处理）
 ## @param transmission_resource 接收到的传输资源（如 ItemTransmission、HealthTransmission）

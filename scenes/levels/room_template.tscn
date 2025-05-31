@@ -19,13 +19,13 @@
 [ext_resource type="Resource" uid="uid://ceuk0khv7rbvr" path="res://resources/instance_resources/actors/player_instance_resource.tres" id="14_bk0b2"]
 [ext_resource type="Resource" uid="uid://c5cbxaiec2jk1" path="res://resources/global_resources/scene_transition_resource.tres" id="15_j5kfh"]
 [ext_resource type="Script" uid="uid://cuv10g46asj42" path="res://scripts/game/music_setter.gd" id="16_7p4gu"]
-[ext_resource type="Script" uid="uid://fbon5xaremfb" path="res://addons/great_games_library/nodes/DebugPausing/DebugPausing.gd" id="17_j7yji"]
-[ext_resource type="Script" uid="uid://s02u0xm0oepe" path="res://addons/great_games_library/nodes/utility/BackgroundColorSetter.gd" id="18_2cand"]
+[ext_resource type="Script" uid="uid://dq7hp63hdatoc" path="res://addons/great_games_library/nodes/DebugPausing/DebugPausing.gd" id="17_j7yji"]
+[ext_resource type="Script" uid="uid://cofh35hhwfwag" path="res://addons/great_games_library/nodes/utility/BackgroundColorSetter.gd" id="18_2cand"]
 [ext_resource type="Script" uid="uid://cp8rp6wpan64x" path="res://scripts/game/processing_component.gd" id="18_igxve"]
 [ext_resource type="PackedScene" uid="uid://crddbd0tmxp5p" path="res://scenes/map/arena/arena_entry.tscn" id="18_k0tp1"]
 [ext_resource type="Resource" uid="uid://df4nqpa0at8qn" path="res://resources/global_resources/transition_bool_resource.tres" id="20_kwksj"]
 [ext_resource type="Script" uid="uid://dbse7tjd7wax7" path="res://scripts/game/game_over_detect.gd" id="21_sfjnq"]
-[ext_resource type="Script" uid="uid://8ccui6c8j7k5" path="res://addons/great_games_library/nodes/utility/DebugDraw.gd" id="26_l7fet"]
+[ext_resource type="Script" uid="uid://d4mgwop6ohvpb" path="res://addons/great_games_library/nodes/utility/DebugDraw.gd" id="26_l7fet"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_pkurn"]
 points = PackedVector2Array(-16, 0, 0, 8, 16, 0, 0, -8)

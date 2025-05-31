@@ -56,9 +56,13 @@ signal reset_update
 ## 设置最大血量（触发最大血量变更信号）
 ## @param value: 新的最大血量值
 func set_max_hp(value:float)->void:
+	var init_max_hp: float = max_hp
 	max_hp = max(value, 0.0)  # 代码层限制最小值为 0
 	# TODO：最大血量降低导致的前血量降低，是否需要触发damaged、hp_changed、full信号？
-	hp = clamp(hp, 0.0, max_hp)  # 新增：确保当前血量不超过新的最大血量
+	if hp == init_max_hp:
+		hp = max_hp
+	else:
+		hp = clamp(hp, 0.0, max_hp)  # 新增：确保当前血量不超过新的最大血量
 	max_hp_changed.emit()  # 通知外部最大血量已变更
 
 
