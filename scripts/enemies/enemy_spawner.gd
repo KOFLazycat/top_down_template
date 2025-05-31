@@ -21,16 +21,16 @@ var max_allowed_count:int
 func _ready()->void:
 	# 确保关键资源已配置
 	if enemy_count_resource == null:
-		Log.entry("敌人数量资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 敌人数量资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if spawn_point_resource == null:
-		Log.entry("生成点资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 生成点资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if spawn_mark_instance_resource == null:
-		Log.entry("生成标记资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 生成标记资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if fight_mode_resource == null:
-		Log.entry("战斗模式资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 战斗模式资源未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 战斗模式激活时启用_process，关闭时禁用（节省性能）
@@ -78,7 +78,7 @@ func _create_spawn_mark()->void:
 		return  # 无剩余波次时返回
 	
 	if enemy_manager.wave_queue.waves.is_empty():
-		Log.entry("敌人波次为空", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 敌人波次为空", LogManager.LogLevel.ERROR)
 		return
 	var _current_wave:SpawnWaveList = enemy_manager.wave_queue.waves.front()  # 获取当前波次
 	
@@ -89,7 +89,7 @@ func _create_spawn_mark()->void:
 	else:
 		_free_positions = spawn_point_resource.position_list.filter(_filter_free_position)
 	if _free_positions.is_empty():
-		Log.entry("无可用生成点生成敌人", LogManager.LogLevel.ERROR)
+		Log.entry("EnemySpawner: 无可用生成点生成敌人", LogManager.LogLevel.ERROR)
 		return# 无可用生成点时返回
 	
 	var _spawn_position:Vector2 = _free_positions.pick_random()  # 随机选择生成位置
@@ -130,7 +130,7 @@ func _filter_free_position(position:Vector2)->bool:
 	var instance_list:Array[Node2D] = ActiveEnemy.active_instances
 	for inst:Node2D in instance_list:
 		if inst == null:
-			Log.entry("活跃敌人实例为空", LogManager.LogLevel.ERROR)
+			Log.entry("EnemySpawner: 活跃敌人实例为空", LogManager.LogLevel.ERROR)
 			continue
 		var _inst_dist_squared:float = (inst.global_position - position).length_squared()
 		if _inst_dist_squared < _closest_dist_squared:

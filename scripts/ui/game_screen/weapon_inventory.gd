@@ -31,7 +31,7 @@ var icon_list:Array[TextureRect]   # 存储每个槽位中的图标 TextureRect 
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if inventory_resource == null:
-		Log.entry("未配置物品集合资源（inventory_resource）", LogManager.LogLevel.ERROR)
+		Log.entry("WeaponInventory: 未配置物品集合资源（inventory_resource）", LogManager.LogLevel.ERROR)
 		return
 	
 	# 将预制槽位节点打包为 PackedScene（Godot 4 建议使用 PackedScene 替代 ScenePacker）
@@ -55,7 +55,7 @@ func _ready()->void:
 		
 		 # 校验图标节点是否存在
 		if !_slot.has_node(prefab_icon_nodepath):
-			Log.entry("槽位预制体中未找到图标节点：%s" % prefab_icon_nodepath, LogManager.LogLevel.ERROR)
+			Log.entry("WeaponInventory: 槽位预制体中未找到图标节点：%s" % prefab_icon_nodepath, LogManager.LogLevel.ERROR)
 			continue
 		# 获取槽位内的图标节点并保存引用
 		icon_list.append(_slot.get_node(prefab_icon_nodepath))

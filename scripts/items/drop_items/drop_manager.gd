@@ -17,7 +17,7 @@ func _ready()->void:
 # -------------------- 核心逻辑：敌人死亡时生成掉落物 --------------------
 func _on_killed(enemy:ActiveEnemy)->void:
 	if coin_instance == null || health_pickup_instance == null:
-		Log.entry("掉落预制体未配置，请检查资源！", LogManager.LogLevel.ERROR)
+		Log.entry("DropManager: 掉落预制体未配置，请检查资源！", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取敌人死亡时的位置（用于掉落物生成）

@@ -18,8 +18,12 @@ extends Node2D  # 继承自 2D 节点（适用于 2D 场景中的玩家生成）
 # -------------------- 生命周期方法（节点初始化完成时调用） --------------------
 func _ready()->void:
 	# 断言：确保玩家引用资源和实例资源已配置（调试模式校验）
-	assert(player_reference != null, "玩家引用资源未配置")
-	assert(player_instance_resource != null, "玩家实例资源未配置")
+	if player_reference == null:
+		Log.entry("PlayerSpawner: 玩家引用资源未配置", LogManager.LogLevel.ERROR)
+		return
+	if player_instance_resource == null:
+		Log.entry("PlayerSpawner: 玩家实例资源未配置", LogManager.LogLevel.ERROR)
+		return
 	
 	# 连接场景过渡资源的场景切换信号到回调函数
 	scene_transition_resource.change_scene.connect(on_scene_transition)
@@ -40,13 +44,13 @@ func _ready()->void:
 func on_player_scene_entry()->void:
 	# 确保场景过渡资源的入口匹配节点有效
 	if scene_transition_resource.entry_match == null:
-		Log.entry("场景过渡入口节点未配置，玩家位置同步失败", LogManager.LogLevel.ERROR)
+		Log.entry("PlayerSpawner: 场景过渡入口节点未配置，玩家位置同步失败", LogManager.LogLevel.ERROR)
 		return
 	if !scene_transition_resource.entry_match.is_inside_tree():
-		Log.entry("入口节点不在场景树中，使用默认生成位置", LogManager.LogLevel.ERROR)
+		Log.entry("PlayerSpawner: 入口节点不在场景树中，使用默认生成位置", LogManager.LogLevel.ERROR)
 		return
 	if scene_transition_resource.entry_match.is_queued_for_deletion():
-		Log.entry("入口节点已入队删除", LogManager.LogLevel.ERROR)
+		Log.entry("PlayerSpawner: 入口节点已入队删除", LogManager.LogLevel.ERROR)
 		return
 	
 	var _player:Node2D = player_reference.node  # 获取玩家节点引用
@@ -54,7 +58,7 @@ func on_player_scene_entry()->void:
 	_player.global_position = scene_transition_resource.entry_match.global_position
 	
 	if player_instance_resource.parent_reference_resource.node == null:
-		Log.entry("玩家父节点未配置", LogManager.LogLevel.ERROR)
+		Log.entry("PlayerSpawner: 玩家父节点未配置", LogManager.LogLevel.ERROR)
 		return
 	# 将玩家节点添加到实例资源指定的父节点中
 	player_instance_resource.parent_reference_resource.node.add_child(_player)

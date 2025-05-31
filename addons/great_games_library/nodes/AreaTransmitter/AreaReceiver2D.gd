@@ -28,7 +28,7 @@ func _ready()->void:
 func receive(transmission_resource:TransmissionResource)->void:
 	# 修正拼写错误（transmision → transmission）
 	if transmission_resource == null:
-		Log.entry("传输资源为空，无法处理接收请求", LogManager.LogLevel.ERROR)
+		Log.entry("AreaReceiver2D: 传输资源为空，无法处理接收请求", LogManager.LogLevel.ERROR)
 		return
 	
 	var transmission_name = transmission_resource.transmission_name
@@ -38,12 +38,12 @@ func receive(transmission_resource:TransmissionResource)->void:
 		if callback.is_valid():  # 校验回调有效性（避免无效 Callable）
 			callback.call(transmission_resource)
 		else:
-			Log.entry("回调函数无效，传输名称：%s" % transmission_name, LogManager.LogLevel.ERROR)
+			Log.entry("AreaReceiver2D: 回调函数无效，传输名称：%s" % transmission_name, LogManager.LogLevel.ERROR)
 			transmission_resource.failed()
 		return
 	
 	# 未找到匹配的回调时标记传输失败
-	Log.entry("未找到传输名称对应的回调：%s" % transmission_name, LogManager.LogLevel.WARNING)
+	Log.entry("AreaReceiver2D: 未找到传输名称对应的回调：%s" % transmission_name, LogManager.LogLevel.WARNING)
 	transmission_resource.failed()
 
 
@@ -53,18 +53,18 @@ func receive(transmission_resource:TransmissionResource)->void:
 ## @param callback 处理回调函数（需接受 TransmissionResource 作为参数）
 func add_receiver(transmission_name:StringName, callback:Callable)->void:
 	if transmission_name.is_empty():
-		Log.entry("传输名称为空，无法注册回调", LogManager.LogLevel.ERROR)
+		Log.entry("AreaReceiver2D: 传输名称为空，无法注册回调", LogManager.LogLevel.ERROR)
 		return
 	if callback == null || !callback.is_valid():
-		Log.entry("无效的回调函数，传输名称：%s" % transmission_name, LogManager.LogLevel.ERROR)
+		Log.entry("AreaReceiver2D: 无效的回调函数，传输名称：%s" % transmission_name, LogManager.LogLevel.ERROR)
 		return
 	
 	callbacks[transmission_name] = callback  # 添加回调到字典
-	Log.entry("注册传输回调成功：%s" % transmission_name, LogManager.LogLevel.INFO)
+	Log.entry("AreaReceiver2D: 注册传输回调成功：%s" % transmission_name, LogManager.LogLevel.INFO)
 
 
 ## @brief 移除指定传输名称的回调函数
 func remove_receiver(transmission_name:StringName)->void:
 	if callbacks.has(transmission_name):
 		callbacks.erase(transmission_name)
-		Log.entry("移除传输回调：%s" % transmission_name, LogManager.LogLevel.INFO)
+		Log.entry("AreaReceiver2D: 移除传输回调：%s" % transmission_name, LogManager.LogLevel.INFO)

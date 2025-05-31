@@ -19,12 +19,12 @@ const ANIM_TRANSITION_OUT: StringName = "transition_out"  # 过渡动画名称
 func _ready()->void:
 	# 空值检查（避免未绑定导出变量）
 	if not animation_player or not boot_preloader:
-		Log.entry("未绑定 animation_player 或 boot_preloader，启动流程终止！", LogManager.LogLevel.ERROR)
+		Log.entry("BootScreenManager: 未绑定 animation_player 或 boot_preloader，启动流程终止！", LogManager.LogLevel.ERROR)
 		return
 
 	# 检查动画是否存在（使用常量字符串）
 	if not animation_player.has_animation(ANIM_IDLE):
-		Log.entry("动画播放器缺少 %s 动画！" % ANIM_IDLE, LogManager.LogLevel.ERROR)
+		Log.entry("BootScreenManager: 动画播放器缺少 %s 动画！" % ANIM_IDLE, LogManager.LogLevel.ERROR)
 		return
 	# 播放初始 idle 动画（通常是启动画面的静态展示，如 logo 淡入）
 	animation_player.play(ANIM_IDLE)
@@ -44,7 +44,7 @@ func _ready()->void:
 func _transition_out()->void:
 	# 检查过渡动画是否存在（使用常量字符串）
 	if not animation_player.has_animation(ANIM_TRANSITION_OUT):
-		Log.entry("动画播放器缺少 %s 动画！" % ANIM_TRANSITION_OUT, LogManager.LogLevel.ERROR)
+		Log.entry("BootScreenManager: 动画播放器缺少 %s 动画！" % ANIM_TRANSITION_OUT, LogManager.LogLevel.ERROR)
 		return
 
 	# 播放过渡动画（如启动画面淡出、进度条收束），0.5 秒动画混合时间（平滑切换动画状态）

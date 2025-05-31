@@ -26,16 +26,16 @@ func set_enabled(value:bool)->void:
 # -------------------- 核心逻辑：执行数据发送 --------------------
 func send(receiver:AreaReceiver2D)->void:
 	if receiver == null || !receiver.is_inside_tree():
-		Log.entry("接收方无效（已销毁或未加入场景树）", LogManager.LogLevel.ERROR)
+		Log.entry("DataChannelTransmitter: 接收方无效（已销毁或未加入场景树）", LogManager.LogLevel.ERROR)
 		return
 	
 	if !enabled:  # 若传输被禁用，直接返回
-		Log.entry("传输被禁用，直接返回", LogManager.LogLevel.INFO)
+		Log.entry("DataChannelTransmitter: 传输被禁用，直接返回", LogManager.LogLevel.INFO)
 		return
 	
 	# 确保传输资源已配置（调试模式生效）
 	if transmission_resource == null:
-		Log.entry("传输资源（transmission_resource）未配置，无法发送", LogManager.LogLevel.ERROR)
+		Log.entry("DataChannelTransmitter: 传输资源（transmission_resource）未配置，无法发送", LogManager.LogLevel.ERROR)
 		return
 	
 	# 复制传输资源（避免修改原始资源）
@@ -58,7 +58,7 @@ func send(receiver:AreaReceiver2D)->void:
 			# 延迟调用重试逻辑（避免当前帧信号连接未断开导致重复触发）
 			on_try_again.call_deferred(receiver)
 		_:
-			Log.entry("未知传输状态：%s" % _transmission_resource.state, LogManager.LogLevel.ERROR)
+			Log.entry("DataChannelTransmitter: 未知传输状态：%s" % _transmission_resource.state, LogManager.LogLevel.ERROR)
 			pass  # 其他状态（可扩展）
 
 
@@ -79,7 +79,7 @@ func on_try_next_frame(receiver:AreaReceiver2D)->void:
 # -------------------- 辅助逻辑：触发接收方校验 --------------------
 func test_receiver(receiver:AreaReceiver2D)->void:
 	if receiver is not AreaReceiver2D:
-		Log.entry("receiver 类型不正确", LogManager.LogLevel.ERROR)
+		Log.entry("DataChannelTransmitter: receiver 类型不正确", LogManager.LogLevel.ERROR)
 		return
 	check_receiver.emit(receiver)  # 发射校验信号（通知外部校验接收方是否有效）
 

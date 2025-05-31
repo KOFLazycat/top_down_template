@@ -14,10 +14,10 @@ extends Node  # 继承自基础节点类
 func play(animation:StringName, reset:bool = false)->void:
 	# 确保已配置有效的 AnimationPlayer（调试模式生效）
 	if animation_player == null:
-		Log.entry("动画播放器（animation_player）未配置，无法播放动画", LogManager.LogLevel.ERROR)
+		Log.entry("AnimationHelper: 动画播放器（animation_player）未配置，无法播放动画", LogManager.LogLevel.ERROR)
 		return
 	if !animation_player.has_animation(animation):
-		Log.entry("动画播放器缺少目标动画：%s" % animation, LogManager.LogLevel.ERROR)
+		Log.entry("AnimationHelper: 动画播放器缺少目标动画：%s" % animation, LogManager.LogLevel.ERROR)
 		return
 	
 	if reset:  # 若需要重置，先停止当前播放的动画

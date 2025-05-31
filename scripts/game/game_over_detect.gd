@@ -11,10 +11,10 @@ extends Node  # 继承自 Godot 基础节点类
 func _ready()->void:
 	# 校验关键资源（调试模式下触发错误，确保配置正确）
 	if player_reference == null:
-		Log.entry("玩家引用资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 玩家引用资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if game_over_scene_path.is_empty():
-		Log.entry("游戏结束场景路径未配置", LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 游戏结束场景路径未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 监听玩家引用变化（当玩家节点被替换或重新生成时触发回调）
@@ -24,19 +24,19 @@ func _ready()->void:
 func on_reference_changed()->void:
 	# 玩家节点为空时返回（避免空引用）
 	if player_reference.node == null:
-		Log.entry("玩家节点为空，无法绑定健康状态监听", LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 玩家节点为空，无法绑定健康状态监听", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取玩家节点的资源节点（假设玩家节点包含名为 "ResourceNode" 的子节点）
 	var _resource_node:ResourceNode = player_reference.node.get_node("ResourceNode")
 	if _resource_node == null:
-		Log.entry("玩家节点缺少 ResourceNode 子节点", LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 玩家节点缺少 ResourceNode 子节点", LogManager.LogLevel.ERROR)
 		return
 	
 	# 从资源节点中获取健康资源（存储玩家生命值的资源）
 	var _health_resource:HealthResource = _resource_node.get_resource("health")
 	if _health_resource == null:
-		Log.entry("ResourceNode 缺少 health 资源", LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: ResourceNode 缺少 health 资源", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接健康资源的死亡信号（玩家生命值归零触发）
@@ -54,12 +54,12 @@ func on_delay()->void:
 	# 加载游戏结束场景包
 	var next_scene:PackedScene = load(game_over_scene_path)
 	if next_scene == null:
-		Log.entry("游戏结束场景加载失败：%s" % game_over_scene_path, LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 游戏结束场景加载失败：%s" % game_over_scene_path, LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取场景树并切换场景
 	var scene_tree:SceneTree = get_tree()
 	var err:int = scene_tree.change_scene_to_packed(next_scene)
 	if err != OK:
-		Log.entry("场景切换失败，错误码：%d" % err, LogManager.LogLevel.ERROR)
+		Log.entry("GameOverDetect: 场景切换失败，错误码：%d" % err, LogManager.LogLevel.ERROR)
 		return

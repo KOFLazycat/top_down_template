@@ -9,10 +9,10 @@ extends Node  # 继承自 Godot 基础节点类
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if fight_mode == null:
-		Log.entry("战斗模式资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("ArenaStarter: 战斗模式资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if area == null:
-		Log.entry("触发区域未配置", LogManager.LogLevel.ERROR)
+		Log.entry("ArenaStarter: 触发区域未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 当战斗模式激活（变为true）时，延迟销毁当前节点（避免立即移除导致信号未处理）

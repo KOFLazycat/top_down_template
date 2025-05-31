@@ -79,7 +79,7 @@ func _on_parent_updated()->void:
 		# 获取当前单元格的 TileData（存储图块属性和自定义数据）
 		var _tile_data:TileData = tilemap_layer.get_cell_tile_data(_tile_pos)
 		if _tile_data == null:
-			#Log.entry("单元格 %s 未设置 TileData，跳过实例生成" % _tile_pos, LogManager.LogLevel.ERROR)
+			#Log.entry("TileSpawner: 单元格 %s 未设置 TileData，跳过实例生成" % _tile_pos, LogManager.LogLevel.ERROR)
 			continue  # 无 TileData 时跳过
 
 		# 从 TileData 的自定义数据层中获取场景文件路径（如 "res://enemy.tscn"）
@@ -94,12 +94,12 @@ func _on_parent_updated()->void:
 		if not _scene_cache.has(_file_path):
 			# 加载 PackedScene 场景资源（若路径无效会触发错误）
 			if not ResourceLoader.exists(_file_path):
-				Log.entry("场景路径 %s 不存在，跳过实例生成" % _file_path, LogManager.LogLevel.ERROR)
+				Log.entry("TileSpawner: 场景路径 %s 不存在，跳过实例生成" % _file_path, LogManager.LogLevel.ERROR)
 				continue
 			
 			var _scene:PackedScene = load(_file_path)
 			if not _scene.is_class("PackedScene"):
-				Log.entry("%s 不是有效的 PackedScene 资源，跳过实例生成" % _file_path, LogManager.LogLevel.ERROR)
+				Log.entry("TileSpawner: %s 不是有效的 PackedScene 资源，跳过实例生成" % _file_path, LogManager.LogLevel.ERROR)
 				continue
 			_scene_cache[_file_path] = _scene  # 缓存已加载的场景
 

@@ -23,18 +23,15 @@ extends Node  # 继承自 Godot 基础节点类
 
 # -------------------- 生命周期方法（节点初始化与销毁） --------------------
 func _ready()->void:
-	# 断言：确保关键资源已配置（调试模式校验）
-	assert(fight_mode_resource != null, "战斗模式资源未配置")
-	assert(remaining_wave_count_resource != null, "剩余波次计数资源未配置")
-	assert(enemy_count_resource != null, "敌人数量资源未配置")
+	# 确保关键资源已配置（调试模式校验）
 	if fight_mode_resource == null:
-		Log.entry("战斗模式资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemyWaveManager: 战斗模式资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if remaining_wave_count_resource == null:
-		Log.entry("剩余波次计数资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemyWaveManager: 剩余波次计数资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if enemy_count_resource == null:
-		Log.entry("敌人数量资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("EnemyWaveManager: 敌人数量资源未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 信号连接：战斗模式激活时初始化波次计数（Setup 1）

@@ -13,11 +13,11 @@ extends TransmissionResource  # 继承自基础传输资源类（包含传输状
 ## @param resource_node 接收方的资源节点（用于获取目标背包）
 func process(resource_node:ResourceNode)->void:
 	if item_resource == null:
-		Log.entry("物品资源（item_resource）未配置，传输失败", LogManager.LogLevel.ERROR)
+		Log.entry("ItemTransmission: 物品资源（item_resource）未配置，传输失败", LogManager.LogLevel.ERROR)
 		failed()
 		return
 	if resource_node == null:
-		Log.entry("资源节点（resource_node）为空，传输失败", LogManager.LogLevel.ERROR)
+		Log.entry("ItemTransmission: 资源节点（resource_node）为空，传输失败", LogManager.LogLevel.ERROR)
 		failed()
 		return
 	
@@ -27,7 +27,7 @@ func process(resource_node:ResourceNode)->void:
 			_weapon(resource_node)  # 调用武器类型传输逻辑
 		# 其他类型可在此扩展（如 CONSUMABLE、ARMOR 等）
 		_:
-			Log.entry("未支持的物品类型：%s" % item_resource.type, LogManager.LogLevel.ERROR)
+			Log.entry("ItemTransmission: 未支持的物品类型：%s" % item_resource.type, LogManager.LogLevel.ERROR)
 			failed()  # 默认标记为传输失败
 
 
@@ -38,13 +38,13 @@ func _weapon(resource_node:ResourceNode)->void:
 	# 从资源节点中获取名为 "weapons" 的武器背包（ItemCollectionResource 类型）
 	var _weapon_inventory:ItemCollectionResource = resource_node.get_resource(target_inventory_name)
 	if _weapon_inventory == null:
-		Log.entry("资源节点缺少武器背包（weapons），传输失败", LogManager.LogLevel.ERROR)
+		Log.entry("ItemTransmission: 资源节点缺少武器背包（weapons），传输失败", LogManager.LogLevel.ERROR)
 		failed()
 		return
 	
 	# 检查武器背包是否已满（容量超过最大值）
 	if _weapon_inventory.list.size() >= _weapon_inventory.max_items:
-		Log.entry("传输失败：背包（%s）已满（容量：%d/%d）" % [
+		Log.entry("ItemTransmission: 传输失败：背包（%s）已满（容量：%d/%d）" % [
 			target_inventory_name,
 			_weapon_inventory.list.size(),
 			_weapon_inventory.max_items

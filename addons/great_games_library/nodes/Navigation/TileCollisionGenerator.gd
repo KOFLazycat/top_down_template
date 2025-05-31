@@ -47,13 +47,13 @@ func cleanup() -> void:
 ## 核心方法：根据图块数据生成碰撞体
 func setup_colliders()->void:
 	if tilemap_layer == null:
-		Log.entry("tilemap_layer 未配置", LogManager.LogLevel.ERROR)
+		Log.entry("TileCollisionGenerator: tilemap_layer 未配置", LogManager.LogLevel.ERROR)
 		return
 	if static_body == null:
-		Log.entry("static_body 未配置", LogManager.LogLevel.ERROR)
+		Log.entry("TileCollisionGenerator: static_body 未配置", LogManager.LogLevel.ERROR)
 		return
 	if tile_shape == null:
-		Log.entry("tile_shape 未配置", LogManager.LogLevel.ERROR)
+		Log.entry("TileCollisionGenerator: tile_shape 未配置", LogManager.LogLevel.ERROR)
 		return
 	# -------------------- 步骤1：检查自定义数据层是否存在 --------------------
 	#var _tile_data_count:int = tilemap_layer.tile_set.get_custom_data_layers_count()
@@ -65,7 +65,7 @@ func setup_colliders()->void:
 	var _has_offset:bool = tilemap_layer.tile_set.has_custom_data_layer_by_name(data_name) # 检查目标数据层是否存在
 
 	if !_has_offset:
-		Log.entry("目标数据层不存在", LogManager.LogLevel.ERROR)
+		Log.entry("TileCollisionGenerator: 目标数据层不存在", LogManager.LogLevel.ERROR)
 		return
 
 	# -------------------- 步骤2：收集所有需要生成碰撞体的图块坐标 --------------------

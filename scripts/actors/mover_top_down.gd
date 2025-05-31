@@ -38,26 +38,26 @@ func set_enabled_process(value:bool)->void:
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("资源节点（resource_node）未配置，无法初始化", LogManager.LogLevel.ERROR)
+		Log.entry("MoverTopDown: 资源节点（resource_node）未配置，无法初始化", LogManager.LogLevel.ERROR)
 		return
 	# 禁用默认的ShapeCast2D碰撞检测（使用自定义碰撞处理）
 	enabled = false
 	# 从资源节点获取输入资源（确保非空）
 	input_resource = resource_node.get_resource("input")
 	if input_resource == null:
-		Log.entry("输入资源（input）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("MoverTopDown: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取移动属性资源（速度、加速度等）
 	actor_stats_resource = resource_node.get_resource("movement")
 	if actor_stats_resource == null:
-		Log.entry("移动属性资源（movement）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("MoverTopDown: 移动属性资源（movement）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取推力资源并连接脉冲事件（如受到攻击时的击退效果）
 	var _push_resource = resource_node.get_resource("push")
 	if _push_resource == null:
-		Log.entry("推力资源（push）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("MoverTopDown: 推力资源（push）未配置", LogManager.LogLevel.ERROR)
 		return
 	_push_resource.impulse_event.connect(add_impulse)
 	

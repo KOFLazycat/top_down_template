@@ -14,16 +14,16 @@ extends Area2D  # 继承自 2D 区域节点（用于物理碰撞检测）
 func _ready()->void:
 	# 确保关键标签和路径已配置（调试模式生效）
 	if tag.is_empty():
-		Log.entry("场景入口标签（tag）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SceneEntry: 场景入口标签（tag）未配置", LogManager.LogLevel.ERROR)
 		return
 	if connect_tag.is_empty():
-		Log.entry("连接标签（connect_tag）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SceneEntry: 连接标签（connect_tag）未配置", LogManager.LogLevel.ERROR)
 		return
 	if scene_path.is_empty():
-		Log.entry("连接标签（connect_tag）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SceneEntry: 连接标签（connect_tag）未配置", LogManager.LogLevel.ERROR)
 		return
 	if scene_transition_resource == null:
-		Log.entry("场景过渡资源（scene_transition_resource）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("SceneEntry: 场景过渡资源（scene_transition_resource）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	
 	# 配置区域禁用模式：暂停时保持活动状态（避免物理线程中断导致检测失效）

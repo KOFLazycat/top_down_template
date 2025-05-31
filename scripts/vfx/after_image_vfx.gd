@@ -31,11 +31,11 @@ func setup(
 	world_position:Vector2
 )->void:
 	if sprite == null:
-		Log.entry("残像精灵（sprite）未配置，setup 失败", LogManager.LogLevel.ERROR)
+		Log.entry("AfterImageVFX: 残像精灵（sprite）未配置，setup 失败", LogManager.LogLevel.ERROR)
 		return
 	# 其他参数校验（示例：纹理不能为空）
 	if texture == null:
-		Log.entry("残像纹理（texture）为空，可能导致显示异常", LogManager.LogLevel.ERROR)
+		Log.entry("AfterImageVFX: 残像纹理（texture）为空，可能导致显示异常", LogManager.LogLevel.ERROR)
 		return
 	
 	# 配置精灵纹理与帧信息
@@ -60,7 +60,7 @@ func _ready() -> void:
 	
 	# 校验动画是否存在
 	if !animation_player.has_animation(animation):
-		Log.entry("动画（%s）不存在，残像无法播放" % animation, LogManager.LogLevel.ERROR)
+		Log.entry("AfterImageVFX: 动画（%s）不存在，残像无法播放" % animation, LogManager.LogLevel.ERROR)
 		pool_node.pool_return()  # 无动画时直接回收
 		return
 	animation_player.play(animation)  # 播放配置的残像动画（如淡入淡出）

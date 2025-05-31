@@ -23,7 +23,7 @@ func _ready() -> void:
 		#var _slider: Slider = node.get_node("Slider")  # 获取子节点Slider
 		var _slider := node.get_node_or_null("Slider") as Slider
 		if not _slider:
-			Log.entry("Slider not found in container: %s" % node.name, LogManager.LogLevel.ERROR)
+			Log.entry("AudioManager: Slider not found in container: %s" % node.name, LogManager.LogLevel.ERROR)
 			continue
 		
 		# 连接滑块值变化信号（注意这里实际连接的是 value_changed）
@@ -47,6 +47,6 @@ func on_value_changed(value: float, _bus_name: String, slider: Slider) -> void:
 ## 保存音频设置
 func save() -> void:
 	if not audio_settings_resource:
-		Log.entry("AudioSettingsResource not assigned!", LogManager.LogLevel.ERROR)
+		Log.entry("AudioManager: AudioSettingsResource not assigned!", LogManager.LogLevel.ERROR)
 		return
 	audio_settings_resource.save_resource()

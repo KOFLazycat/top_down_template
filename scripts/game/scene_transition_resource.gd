@@ -18,16 +18,16 @@ var entry_match:Node2D  # 匹配的场景入口节点（由 SceneEntry 节点在
 func set_next_scene(scene_path:String, entry:String)->void:
 	# 确保关键参数有效（调试模式生效）
 	if player_reference == null:
-		Log.entry("玩家引用资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SceneTransitionResource: 玩家引用资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if player_reference.node == null:
-		Log.entry("玩家节点为空，无法完成切换场景", LogManager.LogLevel.ERROR)
+		Log.entry("SceneTransitionResource: 玩家节点为空，无法完成切换场景", LogManager.LogLevel.ERROR)
 		return
 	if scene_path.is_empty():
-		Log.entry("下一场景路径为空", LogManager.LogLevel.ERROR)
+		Log.entry("SceneTransitionResource: 下一场景路径为空", LogManager.LogLevel.ERROR)
 		return
 	if entry.is_empty():
-		Log.entry("入口标签为空", LogManager.LogLevel.ERROR)
+		Log.entry("SceneTransitionResource: 入口标签为空", LogManager.LogLevel.ERROR)
 		return
 	# 赋值场景切换参数
 	next_scene_path = scene_path

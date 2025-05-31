@@ -14,13 +14,13 @@ extends Node  # 继承自基础节点类
 func _ready()->void:
 	# 空值校验（发布版本也能捕获错误）
 	if data_transmitter == null:
-		Log.entry("数据传输器（data_transmitter）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("EffectConsume: 数据传输器（data_transmitter）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	if animation_player == null:
-		Log.entry("动画播放器（animation_player）未配置，将无法播放消耗动画", LogManager.LogLevel.ERROR)
+		Log.entry("EffectConsume: 动画播放器（animation_player）未配置，将无法播放消耗动画", LogManager.LogLevel.ERROR)
 		return
 	if sounds_resource == null:
-		Log.entry("音效资源（sounds_resource）未配置，将无法播放消耗音效", LogManager.LogLevel.ERROR)
+		Log.entry("EffectConsume: 音效资源（sounds_resource）未配置，将无法播放消耗音效", LogManager.LogLevel.ERROR)
 		return
 	
 	# 启用数据传输器（允许触发传输逻辑）
@@ -38,7 +38,7 @@ func _on_success()->void:
 	
 	# 播放消耗音效（自动管理音效生命周期）
 	if sounds_resource == null:
-		Log.entry("音效资源未加载或路径错误，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("EffectConsume: 音效资源未加载或路径错误，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	else:
 		sounds_resource.play_managed()

@@ -28,7 +28,7 @@ var has_offset:bool
 # -------------------- 生命周期方法（节点初始化完成时调用） --------------------
 func _ready()-> void:
 	if astargrid_resource == null:
-		Log.entry("AstarGridResource 未正确设置！", LogManager.LogLevel.ERROR)
+		Log.entry("TileAstargridObstacle: AstarGridResource 未正确设置！", LogManager.LogLevel.ERROR)
 		return
 	
 	# -------------------- 步骤1：检查自定义数据层是否存在 --------------------
@@ -100,7 +100,7 @@ func setup_obstacles()->void:
 			_offset_list = _tile_data.get_custom_data(data_name)
 		
 		if _offset_list == null || !(_offset_list is PackedVector2Array):
-			Log.entry("单元格 %s 的自定义数据层 {data_name} 无有效偏移量，跳过" % _tile_pos, LogManager.LogLevel.INFO)
+			Log.entry("TileAstargridObstacle: 单元格 %s 的自定义数据层 {data_name} 无有效偏移量，跳过" % _tile_pos, LogManager.LogLevel.INFO)
 			continue
 
 		# 遍历偏移量列表（每个偏移量对应一个障碍物点）

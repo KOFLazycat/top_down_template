@@ -29,7 +29,7 @@ func _ready() -> void:
 	if moved_node == null || area == null \
 	|| point_resource == null || pool_node == null \
 	|| player_reference == null || sound_collect == null:
-		Log.entry("关键导出变量未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("CollectingPoint: 关键导出变量未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	
 	area.collision_mask = 0  # 初始禁用区域碰撞（避免未完成生成时触发收集）
@@ -73,7 +73,7 @@ func _on_reference_update()->void:
 # -------------------- 核心逻辑：物体进入区域时触发收集 --------------------
 func _on_body_enter(_body:Node2D)->void:
 	if player_reference.node == null:
-		Log.entry("玩家引用为空，无法执行收集逻辑", LogManager.LogLevel.ERROR)
+		Log.entry("CollectingPoint: 玩家引用为空，无法执行收集逻辑", LogManager.LogLevel.ERROR)
 		return
 	area.collision_mask = 0  # 禁用区域碰撞（防止重复触发收集）
 	if tween != null:  # 终止当前未完成的动画
@@ -106,7 +106,7 @@ func _tween_position(t:float, from:Vector2, to:Vector2)->void:
 # -------------------- 辅助逻辑：补间动画-目标位置插值 --------------------
 func _tween_target_position(t:float, from:Vector2)->void:
 	if player_reference.node == null:
-		Log.entry("玩家引用为空，tween动画失效", LogManager.LogLevel.ERROR)
+		Log.entry("CollectingPoint: 玩家引用为空，tween动画失效", LogManager.LogLevel.ERROR)
 		return
 	# 从偏移位置向玩家位置插值（最终被玩家收集）
 	moved_node.global_position = from.lerp(player_reference.node.global_position, t)

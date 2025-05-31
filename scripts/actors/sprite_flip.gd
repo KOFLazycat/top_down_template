@@ -24,16 +24,16 @@ var input_resource:InputResource
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SpriteFlip: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取输入资源（确保非空）
 	input_resource = resource_node.get_resource("input")
 	if input_resource == null:
-		Log.entry("输入资源（input）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("SpriteFlip: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	if flip_node == null:
-		Log.entry("翻转节点（flip_node）未配置，无法执行翻转逻辑", LogManager.LogLevel.ERROR)
+		Log.entry("SpriteFlip: 翻转节点（flip_node）未配置，无法执行翻转逻辑", LogManager.LogLevel.ERROR)
 		return
 	
 	# 确保节点准备完成（配合对象池使用）

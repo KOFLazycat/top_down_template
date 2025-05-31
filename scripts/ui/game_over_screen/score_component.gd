@@ -12,13 +12,13 @@ extends Node  # 继承自 Godot 基础节点类
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if score_resource == null:
-		Log.entry("未配置分数资源（score_resource）", LogManager.LogLevel.ERROR)
+		Log.entry("ScoreComponent: 未配置分数资源（score_resource）", LogManager.LogLevel.ERROR)
 		return
 	if score_label == null:
-		Log.entry("未配置分数标签（score_label）", LogManager.LogLevel.ERROR)
+		Log.entry("ScoreComponent: 未配置分数标签（score_label）", LogManager.LogLevel.ERROR)
 		return
 	if try_again_button == null:
-		Log.entry("未配置重试按钮（try_again_button）", LogManager.LogLevel.ERROR)
+		Log.entry("ScoreComponent: 未配置重试按钮（try_again_button）", LogManager.LogLevel.ERROR)
 		return
 	
 	# 延迟让重试按钮获取焦点（确保界面渲染完成后操作）

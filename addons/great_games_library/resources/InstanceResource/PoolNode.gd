@@ -34,7 +34,7 @@ func _ready()->void:
 	# 连接监听节点的信号（触发回收）
 	if listen_node != null:
 		if !listen_node.has_signal(signal_name):
-			Log.entry("监听节点缺少目标信号：%s" % signal_name, LogManager.LogLevel.ERROR)
+			Log.entry("PoolNode: 监听节点缺少目标信号：%s" % signal_name, LogManager.LogLevel.ERROR)
 			return
 		
 		if !listen_node.is_connected(signal_name, pool_return):
