@@ -21,7 +21,7 @@ extends Node2D  # 继承自 2D 节点（支持位置、变换等 2D 属性）
 ## @param is_critical 是否为暴击伤害（true：暴击，false：普通伤害）
 func set_displayed_points(points:int, is_critical:bool)->void:
 	if label == null:
-		Log.entry("DamagePoints: 伤害标签（label）未配置，无法显示伤害数值", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamagePoints: 伤害标签（label）未配置，无法显示伤害数值", LogManager.LogLevel.ERROR)
 		return  # 避免后续操作崩溃
 	# 根据暴击状态设置标签颜色（暴击为黄色，普通为白色）
 	if is_critical:
@@ -40,7 +40,7 @@ func set_displayed_points(points:int, is_critical:bool)->void:
 # -------------------- 生命周期方法（节点初始化与动画启动） --------------------
 func _ready()->void:
 	if pool_node == null:
-		Log.entry("DamagePoints: 对象池节点（pool_node）未配置，无法回收节点", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamagePoints: 对象池节点（pool_node）未配置，无法回收节点", LogManager.LogLevel.ERROR)
 		return  # 无对象池时不启动动画（或直接销毁节点）
 	# 生成随机角度（范围：0.6*TAU 到 0.9*TAU，约 216° 到 324°，即偏向斜上方）
 	var _angle:float = randf_range(angle_min, angle_max) * TAU  # TAU = 2π（360°）

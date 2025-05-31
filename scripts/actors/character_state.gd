@@ -29,12 +29,12 @@ var input_resource:InputResource
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("CharacterStates: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CharacterStates: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取输入资源（确保非空）
 	input_resource = resource_node.get_resource("input")
 	if input_resource == null:
-		Log.entry("CharacterStates: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CharacterStates: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 初始化状态机启用状态

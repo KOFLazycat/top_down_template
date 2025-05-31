@@ -25,13 +25,13 @@ extends Node  # 继承自 Godot 基础节点类
 func _ready()->void:
 	# 确保关键资源已配置（调试模式校验）
 	if fight_mode_resource == null:
-		Log.entry("EnemyWaveManager: 战斗模式资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "EnemyWaveManager: 战斗模式资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if remaining_wave_count_resource == null:
-		Log.entry("EnemyWaveManager: 剩余波次计数资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "EnemyWaveManager: 剩余波次计数资源未配置", LogManager.LogLevel.ERROR)
 		return
 	if enemy_count_resource == null:
-		Log.entry("EnemyWaveManager: 敌人数量资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "EnemyWaveManager: 敌人数量资源未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 信号连接：战斗模式激活时初始化波次计数（Setup 1）

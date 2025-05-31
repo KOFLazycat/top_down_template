@@ -79,7 +79,7 @@ func reset_resource()->void:
 ## @param data: 存档的 HealthResource 实例（需包含 is_dead、hp、max_hp）
 func prepare_load(data:Resource)->void:
 	if !data is HealthResource:
-		Log.entry("HealthResource: 存档数据类型错误：期望 HealthResource，实际 %s" % [data.get_class()], LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HealthResource: 存档数据类型错误：期望 HealthResource，实际 %s" % [data.get_class()], LogManager.LogLevel.ERROR)
 		return
 	is_dead = data.is_dead  # 加载死亡状态
 	hp = data.hp  # 加载当前血量

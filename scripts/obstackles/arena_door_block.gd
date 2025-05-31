@@ -23,16 +23,16 @@ func _ready()->void:
 # 更新门的状态
 func update()->void:
 	if position_node == null or animation_player == null:
-		Log.entry("ArenaDoorBlock: position_node或animation_player未设置，无法更新门状态", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ArenaDoorBlock: position_node或animation_player未设置，无法更新门状态", LogManager.LogLevel.ERROR)
 		return
 	
 	if not animation_player.has_animation(animation_on) or not animation_player.has_animation(animation_off):
-		Log.entry("ArenaDoorBlock: 动画名称无效：animation_on=%s, animation_off=%s" % [animation_on, animation_off], LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ArenaDoorBlock: 动画名称无效：animation_on=%s, animation_off=%s" % [animation_on, animation_off], LogManager.LogLevel.ERROR)
 		return
 	
 	# 检查A*网格资源是否有效
 	if astargrid_resource.value == null:
-		Log.entry("ArenaDoorBlock: A*网格资源无效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ArenaDoorBlock: A*网格资源无效", LogManager.LogLevel.ERROR)
 		return
 	
 	# 根据战斗状态确定新的门状态
@@ -40,7 +40,7 @@ func update()->void:
 	
 	# 如果状态没有变化，则不执行任何操作
 	if _new_state == state:
-		Log.entry("ArenaDoorBlock: 状态没有变化，不执行任何操作", LogManager.LogLevel.INFO)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ArenaDoorBlock: 状态没有变化，不执行任何操作", LogManager.LogLevel.INFO)
 		return
 	
 	# 更新状态

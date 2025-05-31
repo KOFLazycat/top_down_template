@@ -46,19 +46,19 @@ func _ready() -> void:
 	# 遍历所有绑定按钮，连接其点击信号到 `_on_button` 回调（传递按钮实例）
 	for _button: BindingButton in button_list:
 		if not _button:
-			Log.entry("BindingMenu: 绑定按钮列表中存在空值，可能导致功能异常", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BindingMenu: 绑定按钮列表中存在空值，可能导致功能异常", LogManager.LogLevel.ERROR)
 			continue
 		_button.pressed.connect(_on_button.bind(_button))
 	
 	if !new_button || !delete_button || !cancel_button:
-		Log.entry("BindingMenu: 选择按钮未配置，菜单功能将失效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BindingMenu: 选择按钮未配置，菜单功能将失效", LogManager.LogLevel.ERROR)
 
 
 # -------------------- 绑定按钮点击回调（选择待配置的按钮） --------------------
 func _on_button(button: BindingButton) -> void:
 	# 校验按钮实例有效性（避免空引用）
 	if not is_instance_valid(button):
-		Log.entry("BindingMenu: 无效的按钮实例", LogManager.LogLevel.ERROR)  # 输出错误日志（假设 Log 为自定义日志工具）
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BindingMenu: 无效的按钮实例", LogManager.LogLevel.ERROR)  # 输出错误日志（假设 Log 为自定义日志工具）
 		return
 	
 	# 记录当前操作的绑定按钮

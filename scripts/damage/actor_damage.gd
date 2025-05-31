@@ -28,18 +28,18 @@ signal actor_died
 # -------------------- 生命周期方法（节点初始化与信号绑定） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("ActorDamage: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	if sprite_flip == null:
-		Log.entry("ActorDamage: 精灵翻转控制器（sprite_flip）未配置，无法设置死亡特效方向", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 精灵翻转控制器（sprite_flip）未配置，无法设置死亡特效方向", LogManager.LogLevel.ERROR)
 		return
 	if flash_animation_player == null:
-		Log.entry("ActorDamage: 闪烁动画播放器（flash_animation_player）未配置，无法播放受击动画", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 闪烁动画播放器（flash_animation_player）未配置，无法播放受击动画", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取健康资源（用于监听受击和死亡事件）
 	var _health_resource:HealthResource = resource_node.get_resource("health")
 	if _health_resource == null:
-		Log.entry("ActorDamage: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 连接健康资源的受击信号（受击时触发闪烁动画和音效）
 	_health_resource.damaged.connect(_play_damaged)
@@ -77,7 +77,7 @@ func _play_damaged(_d: float)->void:
 	flash_animation_player.play(flash_animation)
 	# 播放受击音效（使用SoundResource的managed播放模式，自动管理音效实例）
 	if sound_resource_damage == null:
-		Log.entry("ActorDamage: 受击音效资源（sound_resource_damage）未配置，无法播放音效", LogManager.LogLevel.WARNING)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 受击音效资源（sound_resource_damage）未配置，无法播放音效", LogManager.LogLevel.WARNING)
 	else:
 		sound_resource_damage.play_managed()
 
@@ -86,7 +86,7 @@ func _play_damaged(_d: float)->void:
 ## @brief 死亡时播放死亡音效、生成死亡特效并通知外部
 func _play_dead()->void:
 	if sound_resource_dead == null:
-		Log.entry("ActorDamage: 死亡音效资源（sound_resource_dead）未配置，无法播放音效", LogManager.LogLevel.WARNING)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ActorDamage: 死亡音效资源（sound_resource_dead）未配置，无法播放音效", LogManager.LogLevel.WARNING)
 	else:
 		# 播放死亡音效（managed模式自动管理音效实例）
 		sound_resource_dead.play_managed()

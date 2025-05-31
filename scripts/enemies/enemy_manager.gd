@@ -10,7 +10,7 @@ func _ready()->void:
 		return  # 若未配置波次队列，直接返回
 	
 	if wave_queue.waves.is_empty():
-		Log.entry("EnemyManager: 波次队列为空，无敌人可生成", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "EnemyManager: 波次队列为空，无敌人可生成", LogManager.LogLevel.ERROR)
 		return
 	
 	## BUG 修复：解决 PackedScene 中资源引用的浅拷贝问题
@@ -23,7 +23,7 @@ func _ready()->void:
 	
 	for i:int in wave_queue.waves.size():
 		if wave_queue.waves[i] is not SpawnWaveList:
-			Log.entry("EnemyManager: 第 %d 波数据类型不是 SpawnWaveList" % i, LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "EnemyManager: 第 %d 波数据类型不是 SpawnWaveList" % i, LogManager.LogLevel.ERROR)
 			continue
 		# 对每个波次进行深拷贝（确保每个波次的数据独立）
 		wave_queue.waves[i] = wave_queue.waves[i].duplicate()

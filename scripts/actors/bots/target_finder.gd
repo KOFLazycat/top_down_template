@@ -26,10 +26,10 @@ var target_count:int
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if shape_cast == null:
-		Log.entry("TargetFinder: 形状投射节点（shape_cast）未配置，目标检测初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetFinder: 形状投射节点（shape_cast）未配置，目标检测初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if bot_input == null:
-		Log.entry("TargetFinder: 机器人输入节点（bot_input）未配置，目标检测初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetFinder: 机器人输入节点（bot_input）未配置，目标检测初始化失败", LogManager.LogLevel.ERROR)
 		return
 	# 初始化目标列表为固定大小（避免动态扩容开销）
 	target_list.resize(MAX_TARGETS)

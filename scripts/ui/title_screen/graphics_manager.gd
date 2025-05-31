@@ -5,7 +5,7 @@ extends Node
 @export var graphics_resource: GraphicsResource:
 	set(value):
 		if not value is GraphicsResource:
-			Log.entry("GraphicsManager: 必须设置 GraphicsResource 类型", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "GraphicsManager: 必须设置 GraphicsResource 类型", LogManager.LogLevel.ERROR)
 			return
 		graphics_resource = value
 
@@ -26,7 +26,7 @@ const LOCALIZATION_KEYS := {
 
 func _ready() -> void:
 	if not graphics_resource:
-		Log.entry("GraphicsManager: 未配置 GraphicsResource", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "GraphicsManager: 未配置 GraphicsResource", LogManager.LogLevel.ERROR)
 		return
 	# 初始化文案
 	fullscreen_label.text = LOCALIZATION_KEYS["fullscreen_on"]

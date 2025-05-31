@@ -22,24 +22,24 @@ func set_value(_value:float)->void:
 func process(resource_node:ResourceNode)->void:
 	# 校验传输名称是否有效（继承自父类 TransmissionResource）
 	if transmission_name.is_empty():
-		Log.entry("HealthTransmission: 传输名称（transmission_name）未配置，无法获取健康资源", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HealthTransmission: 传输名称（transmission_name）未配置，无法获取健康资源", LogManager.LogLevel.ERROR)
 		failed()
 		return
 	# 校验资源节点是否为空
 	if resource_node == null:
-		Log.entry("HealthTransmission: 资源节点（resource_node）为空，传输失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HealthTransmission: 资源节点（resource_node）为空，传输失败", LogManager.LogLevel.ERROR)
 		failed()
 		return
 	# 从资源节点中获取与传输名称匹配的健康资源（transmission_name 继承自父类）
 	var _health_resource:HealthResource = resource_node.get_resource(transmission_name)
 	if _health_resource == null:
-		Log.entry("HealthTransmission: 资源节点缺少健康资源（%s），传输失败" % transmission_name, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HealthTransmission: 资源节点缺少健康资源（%s），传输失败" % transmission_name, LogManager.LogLevel.ERROR)
 		failed()
 		return
 	
 	# 检查目标健康状态：是否已满（如生命值已满）或已死亡（如生命值为0）
 	if _health_resource.is_full() || _health_resource.is_dead:
-		Log.entry("HealthTransmission: 目标健康状态是已满或者死亡，不再接受生命处理", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HealthTransmission: 目标健康状态是已满或者死亡，不再接受生命处理", LogManager.LogLevel.ERROR)
 		failed()  # 健康状态不允许修改，标记传输失败
 		return
 	

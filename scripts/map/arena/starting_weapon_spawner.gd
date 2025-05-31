@@ -49,10 +49,10 @@ func _place_pickups()->void:
 	
 	 # 校验武器列表和位置列表有效性（非断言方式，发布版本仍能处理）
 	if _item_list.is_empty():
-		Log.entry("StartingWeaponSpawner: 武器数据库中无可用未解锁武器", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StartingWeaponSpawner: 武器数据库中无可用未解锁武器", LogManager.LogLevel.ERROR)
 		return
 	if position_nodes.is_empty():
-		Log.entry("StartingWeaponSpawner: 未配置武器生成位置节点", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StartingWeaponSpawner: 未配置武器生成位置节点", LogManager.LogLevel.ERROR)
 		return
 	
 	# 计算实际生成数量（取位置数量与武器数量的较小值，避免位置或武器不足）
@@ -62,7 +62,7 @@ func _place_pickups()->void:
 	for i:int in pickup_count:
 		var _node:Node2D = position_nodes[i]
 		if _node == null || !_node.is_inside_tree():  # 跳过无效节点
-			Log.entry("StartingWeaponSpawner: 位置节点 %d 无效，跳过生成" % i, LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StartingWeaponSpawner: 位置节点 %d 无效，跳过生成" % i, LogManager.LogLevel.ERROR)
 			continue
 		var _position:Vector2 = _node.global_position  # 获取第 i 个位置的全局坐标
 		var _item:WeaponItemResource = _item_list[i]  # 获取第 i 个武器资源

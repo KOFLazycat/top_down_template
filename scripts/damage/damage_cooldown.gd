@@ -25,18 +25,18 @@ var damage_resource:DamageResource  # 伤害资源（控制是否可接收伤害
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("DamageCooldown: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageCooldown: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取健康资源（用于监听受击事件）
 	health_resource = resource_node.get_resource("health")
 	if health_resource == null:
-		Log.entry("DamageCooldown: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageCooldown: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 从资源节点获取伤害资源（用于控制可受击状态）
 	damage_resource = resource_node.get_resource("damage")
 	if damage_resource == null:
-		Log.entry("DamageCooldown: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageCooldown: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接健康资源的受击信号（受击时触发冷却）
@@ -55,7 +55,7 @@ func _ready()->void:
 func _start_cooldown(_d: float)->void:
 	# 若冷却时间为0，直接返回（无冷却逻辑）
 	if cooldown_time == 0.0:
-		Log.entry("DamageCooldown: 冷却时间（cooldown_time）为0，冷却逻辑未启动", LogManager.LogLevel.WARNING)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageCooldown: 冷却时间（cooldown_time）为0，冷却逻辑未启动", LogManager.LogLevel.WARNING)
 		return
 	
 	# 禁止接收伤害（通过伤害资源标记）

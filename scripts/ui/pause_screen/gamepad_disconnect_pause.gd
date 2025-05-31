@@ -19,7 +19,7 @@ func _ready()->void:
 # -------------------- 手柄连接状态变更回调 --------------------
 func on_joy_connection_changed(_device: int, connected: bool)->void:
 	if pause_resource == null:
-		Log.entry("GamepadDisconnectPause: 未配置暂停状态资源（pause_resource），无法处理手柄断开事件", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "GamepadDisconnectPause: 未配置暂停状态资源（pause_resource），无法处理手柄断开事件", LogManager.LogLevel.ERROR)
 		return
 	# 若手柄已连接（connected 为 true），直接返回（不处理连接事件）
 	if connected:

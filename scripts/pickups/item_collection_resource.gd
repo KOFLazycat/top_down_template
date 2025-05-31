@@ -41,7 +41,7 @@ func set_selected(value:int)->void:
 ## @param value 要添加的物品资源
 func append(value:ItemResource)->void:
 	if max_items > 0 && list.size() >= max_items:
-		Log.entry("ItemCollectionResource: 物品列表已满（最大容量：%d），无法添加新物品" % max_items, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemCollectionResource: 物品列表已满（最大容量：%d），无法添加新物品" % max_items, LogManager.LogLevel.ERROR)
 		return
 	
 	list.append(value)  # 添加物品到列表末尾

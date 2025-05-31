@@ -38,13 +38,13 @@ var actor_stats:ActorStatsResource
 # -------------------- 生命周期方法（节点准备完成） --------------------
 func _ready()->void:
 	if target_finder == null:
-		Log.entry("TargetDirection: 目标检测节点（target_finder）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetDirection: 目标检测节点（target_finder）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if raycast == null:
-		Log.entry("TargetDirection: 射线检测节点（raycast）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetDirection: 射线检测节点（raycast）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if tile_navigation == null:
-		Log.entry("TargetDirection: 瓷砖导航节点（tile_navigation）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetDirection: 瓷砖导航节点（tile_navigation）未配置，方向控制初始化失败", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接目标更新信号（目标变更时触发方向计算）
@@ -54,11 +54,11 @@ func _ready()->void:
 	# 从机器人输入节点的资源节点中获取移动属性资源
 	var _resource_node:ResourceNode = bot_input.resource_node
 	if _resource_node == null:
-		Log.entry("TargetDirection: 资源节点（resource_node）为空", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetDirection: 资源节点（resource_node）为空", LogManager.LogLevel.ERROR)
 		return
 	actor_stats = _resource_node.get_resource("movement")
 	if actor_stats == null:
-		Log.entry("TargetDirection: 移动资源节点（movement）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetDirection: 移动资源节点（movement）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 确保节点准备完成（配合对象池使用）

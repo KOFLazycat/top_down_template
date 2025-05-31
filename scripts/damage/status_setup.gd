@@ -18,7 +18,7 @@ var damage_resource:DamageResource
 # -------------------- 生命周期方法（节点初始化与状态设置） --------------------
 func _ready() -> void:
 	if resource_node == null:
-		Log.entry("StatusSetup: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StatusSetup: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# BUG 修复：解决 Godot 引擎数组复制的已知问题（https://github.com/godotengine/godot/issues/96181）
 	# 对导出数组进行深拷贝，避免编辑器修改影响运行时数据同步
@@ -38,7 +38,7 @@ func _setup_status()->void:
 	# 从资源节点获取伤害资源（用于存储和管理状态效果）
 	damage_resource = resource_node.get_resource("damage")
 	if damage_resource == null:
-		Log.entry("StatusSetup: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StatusSetup: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 检查是否已连接store_status信号（避免重复连接）
@@ -52,7 +52,7 @@ func _setup_status()->void:
 	# 遍历初始状态列表，处理每个状态效果（如激活状态、应用初始效果）
 	for _status:DamageStatusResource in status_list:
 		if _status == null:
-			Log.entry("StatusSetup: 状态效果资源不能为空", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "StatusSetup: 状态效果资源不能为空", LogManager.LogLevel.ERROR)
 			return
 		# 调用状态效果的process方法（具体逻辑由DamageStatusResource实现）
 		# 参数说明：resource_node（资源节点）、null（无目标节点）、true（是否为初始化）

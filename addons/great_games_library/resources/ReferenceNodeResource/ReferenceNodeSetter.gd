@@ -39,11 +39,11 @@ func _ready()->void:
 		if loaded_resource is ReferenceNodeResource and loaded_resource != null:
 			reference_resource = loaded_resource
 		else:
-			Log.entry("ReferenceNodeSetter: 资源路径 %s 加载失败或类型错误（需为 ReferenceNodeResource）" % reference_resource_path, LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ReferenceNodeSetter: 资源路径 %s 加载失败或类型错误（需为 ReferenceNodeResource）" % reference_resource_path, LogManager.LogLevel.ERROR)
 			return  # 提前返回避免后续逻辑出错
 
 	if reference_node == null || !reference_node.is_inside_tree():
-		Log.entry("ReferenceNodeSetter: reference_node 未配置或已失效，跳过引用绑定", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ReferenceNodeSetter: reference_node 未配置或已失效，跳过引用绑定", LogManager.LogLevel.ERROR)
 		return
 
 	# 核心逻辑：调用 ReferenceNodeResource 的 set_reference 方法，设置节点引用

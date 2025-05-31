@@ -28,19 +28,19 @@ var is_replaced:bool = false  # 替换状态标记（避免重复触发替换）
 # -------------------- 生命周期方法（节点初始化与信号连接） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("CriticalDamageReplace: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取健康资源（确保非空，否则无法获取血量和死亡状态）
 	health_resource = resource_node.get_resource("health")
 	if health_resource == null:
-		Log.entry("CriticalDamageReplace: 健康资源（health）未配置，临界替换逻辑失效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 健康资源（health）未配置，临界替换逻辑失效", LogManager.LogLevel.ERROR)
 		return
 	
 	# 获取伤害资源并连接受击信号（暴击伤害触发替换逻辑）
 	var _damage_resource:DamageResource = resource_node.get_resource("damage")
 	if _damage_resource == null:
-		Log.entry("CriticalDamageReplace: 伤害资源（damage）未配置，无法监听受击事件", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 伤害资源（damage）未配置，无法监听受击事件", LogManager.LogLevel.ERROR)
 		return
 	_damage_resource.received_damage.connect(_on_damage)  # 受击时触发替换检查
 	
@@ -83,20 +83,20 @@ func _on_damage(damage:DamageDataResource)->void:
 	var _ready_callback:Callable = func (inst:Node)->void:
 		var _resource_node:ResourceNode = inst.get_node("ResourceNode")  # 获取新实例的资源节点
 		if _resource_node == null:
-			Log.entry("CriticalDamageReplace: 新实例缺少ResourceNode节点", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 新实例缺少ResourceNode节点", LogManager.LogLevel.ERROR)
 			return
 		
 		# 同步血量（触发伤害闪烁效果）
 		var _health_resource:HealthResource = _resource_node.get_resource("health")
 		if _health_resource == null:
-			Log.entry("CriticalDamageReplace: 新实例 健康资源（health）未配置", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 新实例 健康资源（health）未配置", LogManager.LogLevel.ERROR)
 			return
 		_health_resource.add_hp.call_deferred(_current_hp - _health_resource.hp)  # 差值补血
 		
 		# 应用击退效果（通过推挤资源添加冲量）
 		var _push_resource:PushResource = _resource_node.get_resource("push")
 		if _push_resource == null:
-			Log.entry("CriticalDamageReplace: 新实例 推挤资源（push）未配置", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CriticalDamageReplace: 新实例 推挤资源（push）未配置", LogManager.LogLevel.ERROR)
 			return
 		else:
 			_push_resource.add_impulse(_push_vector)

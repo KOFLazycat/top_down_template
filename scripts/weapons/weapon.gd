@@ -21,10 +21,10 @@ signal enabled_changed(enabled:bool)
 # -------------------- 生命周期方法（节点准备完成） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("Weapon: 资源节点（resource_node）未配置，武器初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "Weapon: 资源节点（resource_node）未配置，武器初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if damage_data_resource == null:
-		Log.entry("Weapon: 伤害数据资源（damage_data_resource）未配置，武器无法报告伤害", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "Weapon: 伤害数据资源（damage_data_resource）未配置，武器无法报告伤害", LogManager.LogLevel.ERROR)
 		return
 	
 	set_enabled(enabled)  # 初始化启用状态（同步可见性和信号）
@@ -32,7 +32,7 @@ func _ready()->void:
 	# 获取伤害资源（用于报告伤害数值到角色系统）
 	var _damage_resource:DamageResource = resource_node.get_resource("damage")
 	if _damage_resource == null:
-		Log.entry("Weapon: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "Weapon: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 将伤害数据资源的回调指向伤害资源的报告方法（建立伤害传递链路）

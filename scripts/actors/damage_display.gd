@@ -24,15 +24,15 @@ var total_points:float = 0.0  # 累计伤害值（用于合并连续伤害）
 # -------------------- 生命周期方法（节点初始化与信号连接） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("DamageDisplay: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageDisplay: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	if damage_points_instance_resource == null:
-		Log.entry("DamageDisplay: 受伤显示实例资源（damage_points_instance_resource）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageDisplay: 受伤显示实例资源（damage_points_instance_resource）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取伤害资源（用于监听伤害数值事件）
 	var _damage_resource:DamageResource = resource_node.get_resource("damage")
 	if _damage_resource == null:
-		Log.entry("DamageDisplay: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageDisplay: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接伤害资源的received_damage_points信号（伤害数值到达时触发）

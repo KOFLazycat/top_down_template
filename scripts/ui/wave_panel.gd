@@ -45,7 +45,7 @@ func _ready()->void:
 # -------------------- 战斗模式变更回调（显示/隐藏波次标签） --------------------
 func _on_fight_mode_changed()->void:
 	if label == null || fight_mode_resource == null:
-		Log.entry("WavePanel: 波次标签或战斗模式资源未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "WavePanel: 波次标签或战斗模式资源未配置", LogManager.LogLevel.ERROR)
 		return
 	# 根据战斗模式资源的值显示或隐藏标签
 	label.visible = fight_mode_resource.value
@@ -56,7 +56,7 @@ func _on_fight_mode_changed()->void:
 # -------------------- 波次变更回调（更新显示并触发动画） --------------------
 func _on_wave_changed()->void:
 	if label == null || wave_count_resource == null || tweened_node == null:
-		Log.entry("WavePanel: 波次标签、波次资源或动画节点未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "WavePanel: 波次标签、波次资源或动画节点未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 更新波次标签文本（格式："Wave: X"，X 为当前波次数）

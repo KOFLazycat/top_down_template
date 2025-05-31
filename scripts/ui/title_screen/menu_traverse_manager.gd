@@ -72,7 +72,7 @@ func directory_grab_focus(value: String) -> void:
 	
 	var node_path: NodePath = focused_node[value]
 	if !has_node(node_path):
-		Log.entry("MenuTraverseManager: 焦点节点路径不存在: %s" % node_path, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "MenuTraverseManager: 焦点节点路径不存在: %s" % node_path, LogManager.LogLevel.ERROR)
 	var node: Control = get_node(node_path)
 	if node != null:
 		node.set_focus_mode(Control.FOCUS_ALL)

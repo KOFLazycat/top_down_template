@@ -16,12 +16,12 @@ signal hole_touched
 # -------------------- 生命周期方法（节点初始化与资源绑定） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("HoleTrigger: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleTrigger: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# 从资源节点获取名为"hole"的布尔资源（用于监听状态变更）
 	var _hole_bool:BoolResource = resource_node.get_resource("hole")
 	if _hole_bool == null:
-		Log.entry("HoleTrigger: 布尔资源（hole）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleTrigger: 布尔资源（hole）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接布尔资源的updated信号（资源值变更时触发）

@@ -38,11 +38,11 @@ enum ErrorType {
 # -------------------- 核心方法：执行传输逻辑 --------------------
 func send_transmission(receiver:AreaReceiver2D)->bool:
 	if transmission_name.is_empty():
-		Log.entry("TransmissionResource: 传输名称（transmission_name）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TransmissionResource: 传输名称（transmission_name）未配置", LogManager.LogLevel.ERROR)
 		state = ErrorType.FAILED
 		return false
 	if receiver == null:
-		Log.entry("TransmissionResource: 接收方（receiver）为空，无法执行传输", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TransmissionResource: 接收方（receiver）为空，无法执行传输", LogManager.LogLevel.ERROR)
 		state = ErrorType.FAILED
 		return false
 	receiver.receive(self)  # 调用接收方的接收方法，传递当前传输资源

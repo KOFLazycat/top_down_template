@@ -29,10 +29,10 @@ func set_finish_reached(value:bool)->void:
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if position_node == null:
-		Log.entry("TileNavigationGetter: 位置节点（position_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TileNavigationGetter: 位置节点（position_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	if astargrid_resource == null:
-		Log.entry("TileNavigationGetter: A*寻路网格资源 （astargrid_resource） 未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TileNavigationGetter: A*寻路网格资源 （astargrid_resource） 未配置", LogManager.LogLevel.ERROR)
 		return
 	## 设置线条为顶级节点（独立于父节点变换，保持世界坐标不变）
 	top_level = true  

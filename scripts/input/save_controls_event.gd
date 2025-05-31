@@ -18,10 +18,10 @@ func _ready()->void:
 	assert(action_resource != null)
 	assert(rebinding_panel != null)
 	if action_resource == null:
-		Log.entry("SaveControlsEvent: 未配置动作资源（action_resource），保存功能将失效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "SaveControlsEvent: 未配置动作资源（action_resource），保存功能将失效", LogManager.LogLevel.ERROR)
 		return
 	if rebinding_panel == null:
-		Log.entry("SaveControlsEvent: 未配置重绑定面板（rebinding_panel），保存功能将失效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "SaveControlsEvent: 未配置重绑定面板（rebinding_panel），保存功能将失效", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接重绑定面板的可见性变更信号到 `on_visibility_changed` 回调
@@ -36,7 +36,7 @@ func on_visibility_changed()->void:
 	
 	# 断言确保动作资源的存储路径不为空（未配置路径时抛出错误）
 	if action_resource.resource_path.is_empty():
-		Log.entry("SaveControlsEvent: 动作资源的存储路径（resource_path）未配置，无法保存", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "SaveControlsEvent: 动作资源的存储路径（resource_path）未配置，无法保存", LogManager.LogLevel.ERROR)
 		return
 	
 	# 调用动作资源的保存方法（将输入绑定写入文件）

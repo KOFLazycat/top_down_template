@@ -24,7 +24,7 @@ extends Node  # 继承自 Godot 基础节点类
 # -------------------- 生命周期方法（节点初始化完成时调用） --------------------
 func _ready()->void:
 	if pause_bool_resource == null:
-		Log.entry("PausingManager: 未配置暂停状态资源（pause_bool_resource）", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "PausingManager: 未配置暂停状态资源（pause_bool_resource）", LogManager.LogLevel.ERROR)
 		return
 	# 重置暂停状态资源（确保初始状态为未暂停）
 	pause_bool_resource.reset_resource()
@@ -43,7 +43,7 @@ func _ready()->void:
 # -------------------- 输入事件处理（响应暂停/恢复操作） --------------------
 func _input(event:InputEvent)->void:
 	if action_resource == null || pause_bool_resource == null || menu_traverse_manager == null:
-		Log.entry("PausingManager: 关键资源未配置，无法处理暂停输入", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "PausingManager: 关键资源未配置，无法处理暂停输入", LogManager.LogLevel.ERROR)
 		return
 	
 	# 检查是否释放了暂停动作或 "ui_cancel" 输入（如 ESC 键）

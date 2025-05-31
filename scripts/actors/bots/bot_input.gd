@@ -29,10 +29,10 @@ var input_resource:InputResource
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("BotInput: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BotInput: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	if axis_multiplier_resource == null || axis_multiplier_resource.value == Vector2.ZERO:
-		Log.entry("BotInput: axis_multiplier_resource 未正确配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BotInput: axis_multiplier_resource 未正确配置", LogManager.LogLevel.ERROR)
 		return
 	# 设置物理帧处理优先级（数值越小越先执行，确保输入处理早于移动逻辑）
 	process_physics_priority -= 1  # 优先于移动节点处理输入
@@ -43,7 +43,7 @@ func _ready()->void:
 	# 从资源节点获取输入资源（确保非空）
 	input_resource = resource_node.get_resource("input")
 	if input_resource == null:
-		Log.entry("BotInput: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "BotInput: 输入资源（input）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 初始化输入处理启用状态

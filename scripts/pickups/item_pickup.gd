@@ -17,16 +17,16 @@ signal success  # 物品拾取成功时触发（供外部逻辑监听，如更�
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready() -> void:
 	if item_resource == null:
-		Log.entry("ItemPickup: 物品资源（item_resource）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemPickup: 物品资源（item_resource）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	if icon_sprite == null:
-		Log.entry("ItemPickup: 图标精灵（icon_sprite）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemPickup: 图标精灵（icon_sprite）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	if data_transmitter == null:
-		Log.entry("ItemPickup: 数据传输器（data_transmitter）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemPickup: 数据传输器（data_transmitter）未配置，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	if sound_resource == null:
-		Log.entry("ItemPickup: 音效资源（sound_resource）未配置，拾取时无音效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemPickup: 音效资源（sound_resource）未配置，拾取时无音效", LogManager.LogLevel.ERROR)
 		return
 	
 	# 设置物品图标（从物品资源中获取纹理）
@@ -60,7 +60,7 @@ func _delay_enable()->void:
 # -------------------- 核心逻辑：准备移除物品（拾取成功后） --------------------
 func prepare_remove()->void:
 	if !item_resource.unlocked:
-		Log.entry("ItemPickup: 物品未解锁，无法拾取，节点：%s" % name, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ItemPickup: 物品未解锁，无法拾取，节点：%s" % name, LogManager.LogLevel.ERROR)
 		return
 	data_transmitter.set_enabled(false)  # 禁用数据传输器（防止重复拾取）
 	sound_resource.play_managed()  # 播放拾取音效（自动管理音效生命周期）

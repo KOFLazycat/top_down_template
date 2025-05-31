@@ -18,7 +18,7 @@ var damage_resource:DamageResource
 # -------------------- 生命周期方法（节点初始化与抗性设置） --------------------
 func _ready() -> void:
 	if resource_node == null:
-		Log.entry("DamageSetup: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageSetup: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	# BUG 修复：解决 Godot 引擎数组复制的已知问题（https://github.com/godotengine/godot/issues/96181）
 	# 对导出数组进行深拷贝，避免编辑器修改影响运行时数据
@@ -38,7 +38,7 @@ func _setup_resistance()->void:
 	# 从资源节点获取伤害资源（用于存储抗性数值）
 	damage_resource = resource_node.get_resource("damage")
 	if damage_resource == null:
-		Log.entry("DamageSetup: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageSetup: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 设置伤害资源的所属节点（通常为当前节点的父节点，如角色根节点）
@@ -53,7 +53,7 @@ func _setup_resistance()->void:
 	for _resistance:DamageTypeResource in resistance_list:
 		var type_index = _resistance.type
 		if type_index < 0 || type_index >= DamageTypeResource.DamageType.COUNT:
-			Log.entry("DamageSetup: 抗性类型索引 %d 越界（总类型数：%d），跳过该抗性" % [type_index, DamageTypeResource.DamageType.COUNT], LogManager.LogLevel.WARNING)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageSetup: 抗性类型索引 %d 越界（总类型数：%d），跳过该抗性" % [type_index, DamageTypeResource.DamageType.COUNT], LogManager.LogLevel.WARNING)
 			continue
 		
 		# 注意：若存在相同类型的抗性，数值会累加（如多个火焰抗性装备）
@@ -65,7 +65,7 @@ func _setup_resistance()->void:
 ## @param resistance 要添加的抗性资源（包含类型和数值）
 func add_resistance(resistance:DamageTypeResource)->void:
 	if resistance.type < 0 || resistance.type >= DamageTypeResource.DamageType.COUNT:
-		Log.entry("DamageSetup: 无效的抗性类型（索引：%d），无法添加" % resistance.type, LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DamageSetup: 无效的抗性类型（索引：%d），无法添加" % resistance.type, LogManager.LogLevel.ERROR)
 		return
 	# 将新抗性添加到本地列表
 	resistance_list.append(resistance)

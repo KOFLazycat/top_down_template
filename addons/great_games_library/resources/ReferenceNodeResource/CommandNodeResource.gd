@@ -28,7 +28,7 @@ func set_callable(value:Callable)->void:
 func callback(value_list:Array)->void:
 	# 确保回调函数有效（发布模式下断言会被忽略）
 	if callable.is_null():
-		Log.entry("CommandNodeResource: 回调函数未设置，无法执行", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CommandNodeResource: 回调函数未设置，无法执行", LogManager.LogLevel.ERROR)
 		return
 
 	if value_list.is_empty():
@@ -44,10 +44,10 @@ func callback(value_list:Array)->void:
 func command(method:StringName, value_list:Array)->void:
 	# 确保节点引用有效（继承自 ReferenceNodeResource 的 node 变量）
 	if node == null || !node.is_instance_valid():
-		Log.entry("CommandNodeResource: 节点引用无效（未设置或已销毁）", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CommandNodeResource: 节点引用无效（未设置或已销毁）", LogManager.LogLevel.ERROR)
 		return
 	if !node.has_method(method):
-		Log.entry("CommandNodeResource: 节点 %s 未实现方法 %s" % [node.name, method], LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CommandNodeResource: 节点 %s 未实现方法 %s" % [node.name, method], LogManager.LogLevel.ERROR)
 		return
 
 	# 调用节点的方法（callv 支持通过数组传递参数）

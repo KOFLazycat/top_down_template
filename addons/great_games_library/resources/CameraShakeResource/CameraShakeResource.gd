@@ -40,7 +40,7 @@ var dir:Vector2
 func play()->void:
 	# 确保全局启用设置已配置
 	if enabled_settings == null:
-		Log.entry("CameraShakeResource: 未配置全局启用设置（enabled_settings）", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CameraShakeResource: 未配置全局启用设置（enabled_settings）", LogManager.LogLevel.ERROR)
 		return
 
 	# 若全局禁用震动，直接返回
@@ -49,7 +49,7 @@ func play()->void:
 
 	# 若相机引用无效（节点未设置或已销毁），直接返回
 	if camera_reference == null || camera_reference.node == null:
-		Log.entry("CameraShakeResource: 相机引用无效（未设置或已销毁）", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CameraShakeResource: 相机引用无效（未设置或已销毁）", LogManager.LogLevel.ERROR)
 		return
 
 	# 生成随机震动方向：在 angleFrom 到 angleto 范围内随机选取角度
@@ -72,11 +72,11 @@ func play()->void:
 # -------------------- 核心方法（计算每帧偏移量） --------------------
 func sample(t:float)->void:
 	if camera_reference.node == null:
-		Log.entry("CameraShakeResource: 相机引用无效已销毁", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CameraShakeResource: 相机引用无效已销毁", LogManager.LogLevel.ERROR)
 		return  # 相机节点已销毁时停止计算偏移
 	if frequency == null || amplitude == null:
 		camera_reference.node.offset = Vector2.ZERO  # 无曲线时重置偏移
-		Log.entry("CameraShakeResource: 相机引用无效已销毁", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "CameraShakeResource: 相机引用无效已销毁", LogManager.LogLevel.ERROR)
 		return
 	
 	# 计算当前频率：通过 frequency 曲线采样（t 为 0~1 时间进度）

@@ -15,10 +15,10 @@ extends Node  # 继承自基础节点类
 # -------------------- 生命周期方法（节点准备完成） --------------------
 func _ready()->void:
 	if bot_input == null:
-		Log.entry("TargetAim: 机器人输入节点（bot_input）未配置，瞄准控制初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetAim: 机器人输入节点（bot_input）未配置，瞄准控制初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if target_finder == null:
-		Log.entry("TargetAim: 目标检测节点（target_finder）未配置，瞄准控制初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "TargetAim: 目标检测节点（target_finder）未配置，瞄准控制初始化失败", LogManager.LogLevel.ERROR)
 		return
 	# 连接目标更新信号（目标变更时触发瞄准方向计算）
 	target_finder.target_update.connect(_on_target_update)

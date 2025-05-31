@@ -31,10 +31,10 @@ func _enter_tree() -> void:
 # -------------------- 生命周期方法（节点准备完成） --------------------
 func _ready()->void:
 	if target_finder == null:
-		Log.entry("ProximityAttack: 目标检测节点（target_finder）未配置，近程攻击初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ProximityAttack: 目标检测节点（target_finder）未配置，近程攻击初始化失败", LogManager.LogLevel.ERROR)
 		return
 	if bot_input == null:
-		Log.entry("ProximityAttack: 机器人输入节点（bot_input）未配置，近程攻击初始化失败", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ProximityAttack: 机器人输入节点（bot_input）未配置，近程攻击初始化失败", LogManager.LogLevel.ERROR)
 		return
 	
 	# 连接目标更新信号（目标变更时触发攻击判断）

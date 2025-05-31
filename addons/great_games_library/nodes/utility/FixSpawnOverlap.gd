@@ -14,7 +14,7 @@ var extent:Vector2  # 碰撞形状的半尺寸（用于计算移动距离）
 # -------------------- 生命周期方法（节点初始化） --------------------
 func _ready()->void:
 	if move_node == null:
-		Log.entry("FixSpawnOverlap: 未配置目标节点（move_node），无法执行重叠修正", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "FixSpawnOverlap: 未配置目标节点（move_node），无法执行重叠修正", LogManager.LogLevel.ERROR)
 		return
 	
 	enabled = false  # 禁用形状投射的持续检测（仅执行一次初始化修正）
@@ -27,7 +27,7 @@ func _ready()->void:
 # -------------------- 核心逻辑：修正重叠位置 --------------------
 func _fix()->void:
 	if !is_colliding():  # 若未检测到碰撞，直接返回
-		Log.entry("FixSpawnOverlap: 未检测到碰撞，无需修正", LogManager.LogLevel.INFO)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "FixSpawnOverlap: 未检测到碰撞，无需修正", LogManager.LogLevel.INFO)
 		return
 	
 	var _solid_distance:Vector2 = Vector2.ZERO  # 累计移动距离（初始化为零向量）
@@ -44,7 +44,7 @@ func _fix()->void:
 	
 	# 调整目标节点的位置（移出碰撞区域）
 	move_node.global_position += _solid_distance
-	Log.entry("FixSpawnOverlap: 修正完成，移动距离：%s" % _solid_distance, LogManager.LogLevel.INFO)
+	Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "FixSpawnOverlap: 修正完成，移动距离：%s" % _solid_distance, LogManager.LogLevel.INFO)
 
 
 # -------------------- 辅助逻辑：计算矩形碰撞的修正距离 --------------------

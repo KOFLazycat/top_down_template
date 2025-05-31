@@ -71,7 +71,7 @@ func _ready()->void:
 ## 更新分数标签（格式：分数值 + "G" 后缀）
 func update_score_label()->void:
 	if score_resource == null || score_label == null:
-		Log.entry("InfoTracker: 分数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "InfoTracker: 分数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
 		return
 	# 将分数资源的 value 转换为字符串，并添加 "G" 后缀（如 "100G"）
 	score_label.text = str(score_resource.value) + SCORE_SUFFIX
@@ -80,7 +80,7 @@ func update_score_label()->void:
 ## 更新战斗模式标签（格式："Fight Mode: ON" 或 "Fight Mode: OFF"）
 func update_fight_mode_label()->void:
 	if fight_mode_resource == null || fight_mode_label == null:
-		Log.entry("InfoTracker: 战斗模式资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "InfoTracker: 战斗模式资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
 		return
 	# 根据战斗模式资源的 value（布尔值）显示 "ON" 或 "OFF"
 	fight_mode_label.text = FIGHT_MODE_PREFIX + ("ON" if fight_mode_resource.value else "OFF")
@@ -89,7 +89,7 @@ func update_fight_mode_label()->void:
 ## 更新波次计数标签（格式："Waves: 3"，假设当前波次为 3）
 func update_wave_count_label()->void:
 	if wave_count_resource == null || wave_count_label == null:
-		Log.entry("InfoTracker: 波次计数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "InfoTracker: 波次计数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
 		return
 	# 将波次计数资源的 value 转换为字符串，并添加前缀 "Waves: "
 	wave_count_label.text = WAVE_PREFIX + str(wave_count_resource.value)
@@ -98,7 +98,7 @@ func update_wave_count_label()->void:
 ## 更新剩余敌人标签（格式："Remaining Enemies: 5"，假设剩余 5 个敌人）
 func update_enemy_count_label()->void:
 	if enemy_count_resource == null || enemy_count_label == null:
-		Log.entry("InfoTracker: 敌人计数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "InfoTracker: 敌人计数资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
 		return
 	# 将敌人计数资源的 value 转换为字符串，并添加前缀 "Remaining Enemies: "
 	enemy_count_label.text = ENEMY_PREFIX + str(enemy_count_resource.value)
@@ -107,7 +107,7 @@ func update_enemy_count_label()->void:
 ## 更新活跃敌人标签（格式："Active: 2"，假设当前活跃敌人数量为 2）
 func update_active_count_label()->void:
 	if enemy_instance_resource == null || active_count_label == null:
-		Log.entry("InfoTracker: 敌人实例资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "InfoTracker: 敌人实例资源或标签未配置，无法更新", LogManager.LogLevel.ERROR)
 		return
 	# 检查 active_list 是否为有效数组（非 null）
 	if enemy_instance_resource.active_list == null:

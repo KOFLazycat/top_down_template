@@ -15,10 +15,10 @@ extends Node  # 继承自基础节点类
 # -------------------- 生命周期方法（节点初始化与信号连接） --------------------
 func _ready()->void:
 	if resource_node == null:
-		Log.entry("HoleDeath: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleDeath: 资源节点（resource_node）未配置", LogManager.LogLevel.ERROR)
 		return
 	if hole_trigger == null:
-		Log.entry("HoleDeath: 节点（hole_trigger）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleDeath: 节点（hole_trigger）未配置", LogManager.LogLevel.ERROR)
 		return
 	if !enabled:  # 节点禁用时直接返回
 		return
@@ -42,7 +42,7 @@ func _insta_kill()->void:
 	# 获取健康资源（确保非空）
 	var _health_resource:HealthResource = resource_node.get_resource("health")
 	if _health_resource == null:
-		Log.entry("HoleDeath: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleDeath: 健康资源（health）未配置", LogManager.LogLevel.ERROR)
 		return
 	
 	# 记录当前生命值（用于伤害数据）
@@ -59,6 +59,6 @@ func _insta_kill()->void:
 	# 获取伤害资源并传递伤害数据
 	var _damage:DamageResource = resource_node.get_resource("damage")
 	if _damage == null:
-		Log.entry("HoleDeath: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "HoleDeath: 伤害资源（damage）未配置", LogManager.LogLevel.ERROR)
 		return
 	_damage.receive(_damage_data)    # 通知伤害系统处理死亡伤害

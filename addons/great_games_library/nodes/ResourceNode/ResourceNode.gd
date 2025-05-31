@@ -27,15 +27,15 @@ func _ready()->void:
 	for item:ResourceNodeItem in list:
 		# 资源名称非空（作为字典的键）
 		if item.resource_name.is_empty():
-			Log.entry("ResourceNode: resource_name 为空，无法作为字典键", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: resource_name 为空，无法作为字典键", LogManager.LogLevel.ERROR)
 			return
 		# 资源引用非空（避免空值错误）
 		if item.resource == null:
-			Log.entry("ResourceNode: resource 未配置，资源条目无效", LogManager.LogLevel.ERROR)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: resource 未配置，资源条目无效", LogManager.LogLevel.ERROR)
 			return
 		# 资源名称重复
 		if dictionary.has(item.resource_name):
-			Log.entry("ResourceNode: 资源名称重复，%s 重复加入字典" % item.resource_name, LogManager.LogLevel.WARNING)
+			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: 资源名称重复，%s 重复加入字典" % item.resource_name, LogManager.LogLevel.WARNING)
 		# 复制资源条目（避免修改原始配置）
 		var _new_item:ResourceNodeItem = item.duplicate()
 		
@@ -60,15 +60,15 @@ func _ready()->void:
 func add_resource(item:ResourceNodeItem)->void:
 	# 资源名称非空（作为字典的键）
 	if item.resource_name.is_empty():
-		Log.entry("ResourceNode: resource_name 为空，无法作为字典键", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: resource_name 为空，无法作为字典键", LogManager.LogLevel.ERROR)
 		return
 	# 资源引用非空（避免空值错误）
 	if item.resource == null:
-		Log.entry("ResourceNode: resource 未配置，资源条目无效", LogManager.LogLevel.ERROR)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: resource 未配置，资源条目无效", LogManager.LogLevel.ERROR)
 		return
 	# 资源名称重复
 	if dictionary.has(item.resource_name):
-		Log.entry("ResourceNode: add_resource: 资源名称重复，%s 重复加入字典" % item.resource_name, LogManager.LogLevel.WARNING)
+		Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "ResourceNode: add_resource: 资源名称重复，%s 重复加入字典" % item.resource_name, LogManager.LogLevel.WARNING)
 	
 	# 根据 make_unique 生成资源实例
 	if item.make_unique:
