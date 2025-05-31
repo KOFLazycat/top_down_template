@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Zomby crawler instance"
 script = ExtResource("2_8yrvd")
-scene_path = "res://addons/top_down/scenes/actors/zombie_crawler.tscn"
+scene_path = "res://scenes/actors/zombie_crawler.tscn"
 parent_reference_resource = ExtResource("1_7c4jf")

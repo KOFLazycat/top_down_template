@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Slime Small instance resource"
 script = ExtResource("2_mq1og")
-scene_path = "res://addons/top_down/scenes/actors/slime_small.tscn"
+scene_path = "res://scenes/actors/slime_small.tscn"
 parent_reference_resource = ExtResource("1_umhq4")
