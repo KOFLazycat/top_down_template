@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Player instance resource"
 script = ExtResource("2_gj7wq")
-scene_path = "res://addons/top_down/scenes/actors/player.tscn"
+scene_path = "res://scenes/actors/player.tscn"
 parent_reference_resource = ExtResource("1_nbpyu")
