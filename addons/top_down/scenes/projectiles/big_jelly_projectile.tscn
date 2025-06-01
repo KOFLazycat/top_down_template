@@ -20,7 +20,7 @@
 [ext_resource type="Script" uid="uid://b1wpp2syfxb5w" path="res://addons/top_down/scripts/weapon_system/projectile/LerpProjectileTrajectory.gd" id="17_b78gi"]
 [ext_resource type="Resource" uid="uid://lm63dcddpjhf" path="res://resources/instance_resources/vfx/dead/slime_dead_instance.tres" id="18_7elpp"]
 [ext_resource type="Resource" uid="uid://pvw6k1ntsles" path="res://resources/sounds/zombie_split.tres" id="19_628eu"]
-[ext_resource type="Script" uid="uid://bbei488f1hm54" path="res://addons/top_down/scripts/actor/boss/BigJellySlimeSpawner.gd" id="21_dshqe"]
+[ext_resource type="Script" uid="uid://bbei488f1hm54" path="res://scripts/actors/boss/big_jelly_slime_spawner.gd" id="21_dshqe"]
 [ext_resource type="Resource" uid="uid://bwaqqrp3vlmbc" path="res://resources/instance_resources/actors/slime_small_instance_resource.tres" id="22_cwnqt"]
 
 [sub_resource type="Resource" id="Resource_crd4l"]

@@ -11,21 +11,21 @@
 [ext_resource type="Resource" uid="uid://c05ys7ybsfv4u" path="res://resources/instance_resources/actors/zomby_instance_resource.tres" id="8_vssl0"]
 [ext_resource type="Resource" uid="uid://bnupsvhj8s0d5" path="res://resources/instance_resources/actors/boss_slime_instance_resource.tres" id="9_j0tke"]
 
-[sub_resource type="Resource" id="Resource_iyyns"]
-script = ExtResource("5_7frwm")
-is_boss = false
-count = 10
-instance_list = Array[ExtResource("6_t3b7o")]([ExtResource("7_8b3ag"), ExtResource("8_vssl0")])
-
 [sub_resource type="Resource" id="Resource_2ifak"]
 script = ExtResource("5_7frwm")
 is_boss = true
 count = 1
 instance_list = Array[ExtResource("6_t3b7o")]([ExtResource("9_j0tke")])
 
+[sub_resource type="Resource" id="Resource_iyyns"]
+script = ExtResource("5_7frwm")
+is_boss = false
+count = 10
+instance_list = Array[ExtResource("6_t3b7o")]([ExtResource("7_8b3ag"), ExtResource("8_vssl0")])
+
 [sub_resource type="Resource" id="Resource_4rfok"]
 script = ExtResource("4_dd1v5")
-waves = Array[ExtResource("5_7frwm")]([SubResource("Resource_iyyns"), SubResource("Resource_2ifak")])
+waves = Array[ExtResource("5_7frwm")]([SubResource("Resource_2ifak"), SubResource("Resource_iyyns")])
 
 [node name="Room" instance=ExtResource("1_rhar3")]
 

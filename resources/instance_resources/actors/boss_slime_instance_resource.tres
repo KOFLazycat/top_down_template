@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Big Jelly instance resource"
 script = ExtResource("2_wptt0")
-scene_path = "res://addons/top_down/scenes/actors/boss_big_jelly.tscn"
+scene_path = "res://scenes/actors/boss_big_jelly.tscn"
 parent_reference_resource = ExtResource("1_od36u")

@@ -56,7 +56,8 @@ func send(receiver:AreaReceiver2D)->void:
 			on_denied()  # 触发拒绝信号
 		TransmissionResource.ErrorType.TRY_AGAIN:
 			# 延迟调用重试逻辑（避免当前帧信号连接未断开导致重复触发）
-			on_try_again.call_deferred(receiver)
+			if receiver != null and receiver.is_inside_tree():
+				on_try_again(receiver)
 		_:
 			Log.entry("[" + get_script().resource_path.get_file().get_basename() + ".gd] " + "[" + str(get_stack()[0]["line"] if get_stack()[0].size() > 0 else -1) + "] " + "DataChannelTransmitter: 未知传输状态：%s" % _transmission_resource.state, LogManager.LogLevel.ERROR)
 			pass  # 其他状态（可扩展）
