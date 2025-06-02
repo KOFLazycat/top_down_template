@@ -1,7 +1,7 @@
 class_name LerpProjectileTrajectory
 extends Node
 
-@export var projectile:Projectile2D
+@export var projectile:Projectile
 
 @export var projectile_mover:ProjectileMover
 

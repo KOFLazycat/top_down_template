@@ -10,7 +10,7 @@ static var active_enemy_branch:ActiveEnemyResource
 
 # -------------------- 导出变量（编辑器可视化配置） --------------------
 ## 弹丸引用：触发生成事件的弹丸（如史莱姆发射的子弹，退出时触发生成）
-@export var projectile:Projectile2D  
+@export var projectile:Projectile  
 ## 实例资源：用于生成史莱姆敌人的预制体资源（包含敌人的场景或脚本）
 @export var instance_resource:InstanceResource  
 ## 生成角度数组：相对于弹丸方向的角度偏移（单位：度，例如[30, -30]表示左右各30度）

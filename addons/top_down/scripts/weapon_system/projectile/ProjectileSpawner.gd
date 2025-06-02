@@ -54,7 +54,7 @@ func spawn()->void:
 		new_damage_resource = damage_data_resource
 	
 	for angle:float in projectile_angles:
-		var _config_callback:Callable = func (inst:Projectile2D)->void:
+		var _config_callback:Callable = func (inst:Projectile)->void:
 			# TODO: maybe there's better solution
 			var _angle_delta:Vector2 = (direction.rotated(deg_to_rad(angle)) - direction) * axis_multiplication_resource.value
 			
@@ -63,4 +63,4 @@ func spawn()->void:
 			inst.collision_mask = Bitwise.append_flags(inst.collision_mask, collision_mask)
 			inst.global_position = initial_distance * direction * axis_multiplication_resource.value + projectile_position
 		
-		var _inst:Projectile2D = projectile_instance_resource.instance(_config_callback)
+		var _inst:Projectile = projectile_instance_resource.instance(_config_callback)

@@ -4,7 +4,7 @@ extends Node  # 继承自基础节点类
 
 
 # -------------------- 导出变量（编辑器可视化配置） --------------------
-## 弹丸实例资源：用于生成射击弹丸的预制体（需包含Projectile2D组件）
+## 弹丸实例资源：用于生成射击弹丸的预制体（需包含Projectile组件）
 @export var projectile_instance:InstanceResource  
 ## 发射原点节点：弹丸生成的参考位置节点（通常为史莱姆的发射口节点）
 @export var origin_node:Node2D  
@@ -59,7 +59,7 @@ func shoot(target_position:Vector2)->bool:
 	var _pos:Vector2 = origin_node.global_position + (spawn_radius * _direction * axis_multiply.value)
 	
 	# 定义弹丸实例化配置回调：设置弹丸位置和目标点
-	var _config_callback:Callable = func (inst:Projectile2D)->void:
+	var _config_callback:Callable = func (inst:Projectile)->void:
 		inst.global_position = _pos  # 设置弹丸生成位置
 		inst.destination = target_position  # 设置弹丸目标位置
 		# WARNING: 若史莱姆在弹丸活跃期间死亡，可能导致引用失效

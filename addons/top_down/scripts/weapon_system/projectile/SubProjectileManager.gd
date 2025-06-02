@@ -1,7 +1,7 @@
 class_name SubProjectileManager
 extends Node
 
-@export var projectile:Projectile2D
+@export var projectile:Projectile
 @export var projectile_spawner:ProjectileSpawner
 @export var start_projectile_instance_resource:InstanceResource
 @export var end_projectile_instance_resource:InstanceResource

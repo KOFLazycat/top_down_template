@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cm7673sbsnyya"]
 
-[ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://addons/top_down/scenes/projectiles/projectile.tscn" id="1_5ra58"]
+[ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://scenes/projectiles/projectile.tscn" id="1_5ra58"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_0t18r"]
 [ext_resource type="Texture2D" uid="uid://c2nunltmorsky" path="res://assets/images/vfx/slash_2_strip5.png" id="2_eg08h"]
 

@@ -1,7 +1,7 @@
 class_name ProjectileImpact
 extends Node
 
-@export var projectile:Projectile2D
+@export var projectile:Projectile
 @export var projectile_mover:ProjectileMover
 @export var data_transmitter:DataChannelTransmitter
 @export var impact_instance_resource:InstanceResource
