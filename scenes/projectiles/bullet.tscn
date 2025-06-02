@@ -1,41 +1,41 @@
 [gd_scene load_steps=8 format=3 uid="uid://dc8ulx4o43ue3"]
 
-[ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://scenes/projectiles/projectile.tscn" id="1_omfnw"]
-[ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_6qsna"]
-[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://assets/images/shadows/shadow.png" id="2_gpamq"]
-[ext_resource type="Texture2D" uid="uid://durppj2ty5lr7" path="res://assets/images/projectile/bullet_1.png" id="3_8p5j6"]
-[ext_resource type="PackedScene" uid="uid://djobi3eqlcjvo" path="res://scenes/vfx/trail_particle.tscn" id="3_f731g"]
+[ext_resource type="PackedScene" uid="uid://beifde6xst23w" path="res://scenes/projectiles/projectile.tscn" id="1_kxxn2"]
+[ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_jobuq"]
+[ext_resource type="Texture2D" uid="uid://cmjtj4u11aieb" path="res://assets/images/shadows/shadow.png" id="3_s83xh"]
+[ext_resource type="PackedScene" uid="uid://djobi3eqlcjvo" path="res://scenes/vfx/trail_particle.tscn" id="4_lwnxk"]
+[ext_resource type="Texture2D" uid="uid://durppj2ty5lr7" path="res://assets/images/projectile/bullet_1.png" id="5_4lonb"]
 
 [sub_resource type="Resource" id="Resource_0qe4y"]
-script = ExtResource("2_6qsna")
+script = ExtResource("2_jobuq")
 value = 10.0
 type = 0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pv4mq"]
 radius = 2.0
 
-[node name="Bullet" instance=ExtResource("1_omfnw")]
+[node name="Bullet" instance=ExtResource("1_kxxn2")]
 
 [node name="ProjectileSetup" parent="." index="0"]
-base_damage = Array[ExtResource("2_6qsna")]([SubResource("Resource_0qe4y")])
+base_damage = Array[ExtResource("2_jobuq")]([SubResource("Resource_0qe4y")])
 kickback = 60.0
 
 [node name="Shadow" type="Sprite2D" parent="." index="1"]
 modulate = Color(1, 0.983333, 0, 0.168627)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_gpamq")
+texture = ExtResource("3_s83xh")
 
 [node name="ProjectileMover" parent="." index="2"]
 movement_type = 1
 max_bounce = 3
 collision_shape = SubResource("CircleShape2D_pv4mq")
 
-[node name="TrailParticle" parent="RotatedNode" index="0" instance=ExtResource("3_f731g")]
+[node name="TrailParticle" parent="RotatedNode" index="0" instance=ExtResource("4_lwnxk")]
 amount = 12
 
 [node name="Sprite2D" parent="RotatedNode" index="1"]
 scale = Vector2(1, 1)
-texture = ExtResource("3_8p5j6")
+texture = ExtResource("5_4lonb")
 
 [node name="PoolNode" parent="." index="9" node_paths=PackedStringArray("ready_nodes", "particle2d_list")]
 ready_nodes = [NodePath(".."), NodePath("../ProjectileSetup"), NodePath("../ProjectileLifetime"), NodePath("../HitLimit"), NodePath("../ProjectileRotation"), NodePath("../RotatedNode/TrailParticle"), NodePath("../ProjectileMover")]

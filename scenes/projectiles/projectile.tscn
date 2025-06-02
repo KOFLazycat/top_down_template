@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://b0uw7wkj5ulcm" path="res://addons/great_games_library/nodes/AreaTransmitter/DataChannelTransmitter.gd" id="6_6u51s"]
 [ext_resource type="Texture2D" uid="uid://dfvekqbad4tnk" path="res://assets/images/projectile/bullet_0.png" id="7_b5ems"]
 [ext_resource type="Script" uid="uid://c0rlarvn6k2xk" path="res://scripts/weapons/projectile/projectile_rotation.gd" id="8_p6iq5"]
-[ext_resource type="Script" uid="uid://dmxb4fk0c8r25" path="res://addons/top_down/scripts/weapon_system/projectile/ProjectileImpact.gd" id="9_ryu04"]
+[ext_resource type="Script" uid="uid://dmxb4fk0c8r25" path="res://scripts/weapons/projectile/projectile_impact.gd" id="9_ryu04"]
 [ext_resource type="Resource" uid="uid://s3oxaww7qjgi" path="res://resources/instance_resources/vfx/impact_instance_resource.tres" id="10_51lkr"]
 [ext_resource type="Script" uid="uid://cnuohxqf70gpv" path="res://scripts/weapons/projectile/hit_limit.gd" id="11_wxo80"]
 [ext_resource type="Script" uid="uid://us7f4xcg15qt" path="res://scripts/weapons/projectile/projectile_lifetime.gd" id="12_benel"]

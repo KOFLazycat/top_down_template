@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Sword projectile"
 script = ExtResource("1_uheix")
-scene_path = "res://addons/top_down/scenes/projectiles/sword_projectile.tscn"
+scene_path = "res://scenes/projectiles/sword_projectile.tscn"
 parent_reference_resource = ExtResource("1_u4ap8")

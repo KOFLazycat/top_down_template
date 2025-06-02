@@ -6,5 +6,5 @@
 [resource]
 resource_name = "Big Jelly projectile"
 script = ExtResource("2_enjyo")
-scene_path = "res://addons/top_down/scenes/projectiles/big_jelly_projectile.tscn"
+scene_path = "res://scenes/projectiles/big_jelly_projectile.tscn"
 parent_reference_resource = ExtResource("1_ktu33")
