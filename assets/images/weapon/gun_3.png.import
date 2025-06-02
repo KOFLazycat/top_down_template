@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnvah06v42nag"
-path="res://.godot/imported/bone_16x16_strip4.png-f92bfdceed548d17e93ca4cf33c4b3c4.ctex"
+uid="uid://hvvhfycd2fie"
+path="res://.godot/imported/gun_3.png-79fe6e47de65857bb0d2bb857b6c58f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/top_down/assets/images/projectile/bone_16x16_strip4.png"
-dest_files=["res://.godot/imported/bone_16x16_strip4.png-f92bfdceed548d17e93ca4cf33c4b3c4.ctex"]
+source_file="res://assets/images/weapon/gun_3.png"
+dest_files=["res://.godot/imported/gun_3.png-79fe6e47de65857bb0d2bb857b6c58f6.ctex"]
 
 [params]
 

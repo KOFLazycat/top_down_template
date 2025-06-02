@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ActorStatsResource" load_steps=2 format=3 uid="uid://bgj1j2b6mc1u7"]
 
-[ext_resource type="Script" uid="uid://du71kf2skajm5" path="res://addons/top_down/scripts/actor/ActorStatsResource.gd" id="1_ggmfy"]
+[ext_resource type="Script" uid="uid://du71kf2skajm5" path="res://scripts/actors/actor_stats_resource.gd" id="1_ggmfy"]
 
 [resource]
 resource_name = "Zombie Stats"

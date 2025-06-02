@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hvvhfycd2fie"
-path="res://.godot/imported/gun_3.png-1de1a3e2524b992d3a7bc0311517349d.ctex"
+uid="uid://dl37x5a3wo6bu"
+path="res://.godot/imported/palette_journey.png-a1a7bfb091c21bc65cc780a935f82306.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/top_down/assets/images/weapon/gun_3.png"
-dest_files=["res://.godot/imported/gun_3.png-1de1a3e2524b992d3a7bc0311517349d.ctex"]
+source_file="res://assets/images/palette_journey.png"
+dest_files=["res://.godot/imported/palette_journey.png-a1a7bfb091c21bc65cc780a935f82306.ctex"]
 
 [params]
 

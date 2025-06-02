@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl37x5a3wo6bu"
-path="res://.godot/imported/palette_journey.png-15b3507c19c2c4f2b897570a9cb610ef.ctex"
+uid="uid://dfvekqbad4tnk"
+path="res://.godot/imported/bullet_0.png-a39cc9e3f4da00adb621d0a264b597ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/top_down/assets/images/palette_journey.png"
-dest_files=["res://.godot/imported/palette_journey.png-15b3507c19c2c4f2b897570a9cb610ef.ctex"]
+source_file="res://assets/images/projectile/bullet_0.png"
+dest_files=["res://.godot/imported/bullet_0.png-a39cc9e3f4da00adb621d0a264b597ef.ctex"]
 
 [params]
 
