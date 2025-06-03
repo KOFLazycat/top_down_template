@@ -13,7 +13,7 @@
 [ext_resource type="Resource" uid="uid://bmurrqosq7bec" path="res://resources/sounds/kill_zombie.tres" id="11_txxd1"]
 [ext_resource type="Resource" uid="uid://bx3gvcma6vvg" path="res://resources/instance_resources/vfx/dead/zomby_crawler_dead_instance.tres" id="12_pxhva"]
 [ext_resource type="PackedScene" uid="uid://cenq1bawfywu8" path="res://scenes/actors/ai/enemy_ai.tscn" id="13_c4d0m"]
-[ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://addons/top_down/scenes/weapons/zombie_attack.tscn" id="14_qvwbm"]
+[ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://scenes/weapons/zombie_attack.tscn" id="14_qvwbm"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="15_lbdku"]
 [ext_resource type="Script" uid="uid://d14gll06lnke3" path="res://scripts/actors/bots/active_enemy.gd" id="16_ivqti"]
 [ext_resource type="Script" uid="uid://qqlwo4q2vpkv" path="res://scripts/actors/bots/blood_trail.gd" id="17_lqv77"]

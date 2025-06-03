@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://lm63dcddpjhf" path="res://resources/instance_resources/vfx/dead/slime_dead_instance.tres" id="12_q0hf6"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="13_8g1xa"]
 [ext_resource type="PackedScene" uid="uid://cenq1bawfywu8" path="res://scenes/actors/ai/enemy_ai.tscn" id="14_ltfl4"]
-[ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://addons/top_down/scenes/weapons/zombie_attack.tscn" id="15_6ouvf"]
+[ext_resource type="PackedScene" uid="uid://baisjmcsnk3on" path="res://scenes/weapons/zombie_attack.tscn" id="15_6ouvf"]
 [ext_resource type="Script" uid="uid://c505hy2cj5vwa" path="res://addons/great_games_library/resources/InstanceResource/PoolNode.gd" id="16_f4ujk"]
 [ext_resource type="Script" uid="uid://d14gll06lnke3" path="res://scripts/actors/bots/active_enemy.gd" id="17_gdaba"]
 [ext_resource type="Script" uid="uid://t7ptgtvmaiop" path="res://scripts/actors/bots/slime_split.gd" id="18_kvflq"]

@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://baisjmcsnk3on"]
+
+[ext_resource type="PackedScene" uid="uid://do8p6aamuv46h" path="res://scenes/weapons/weapon.tscn" id="1_gw7cx"]
+[ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_748lk"]
+[ext_resource type="Script" uid="uid://bdbat3453sctq" path="res://scripts/damage/properties/DamageDataResource.gd" id="3_eispv"]
+[ext_resource type="Script" uid="uid://dg5sc14fyjex4" path="res://scripts/damage/properties/DamageStatusResource.gd" id="4_w1a1q"]
+[ext_resource type="Resource" uid="uid://cmxblo8l2xfeq" path="res://resources/sounds/zombie_slash.tres" id="5_50epd"]
+[ext_resource type="Resource" uid="uid://d1e4s216ukuhw" path="res://resources/instance_resources/projectiles/zombie_slash_instance_resource.tres" id="6_ofcom"]
+
+[sub_resource type="Resource" id="Resource_jm7i8"]
+script = ExtResource("3_eispv")
+base_damage = Array[ExtResource("2_748lk")]([])
+critical_chance = 0.3
+critical_multiply = 1.5
+status_list = Array[ExtResource("4_w1a1q")]([])
+hit_list = []
+report_callback = Callable()
+kickback_strength = 0.0
+transmission_name = &""
+state = -1
+valid = true
+version = 0
+not_saved = false
+
+[node name="ZombieAttack" instance=ExtResource("1_gw7cx")]
+damage_data_resource = SubResource("Resource_jm7i8")
+
+[node name="RotatedNode" parent="." index="0"]
+visible = false
+
+[node name="WeaponTrigger" parent="." index="3"]
+sound_resource = ExtResource("5_50epd")
+
+[node name="ProjectileSpawner" parent="." index="4"]
+projectile_instance_resource = ExtResource("6_ofcom")
+
+[node name="SpreadShot" parent="ProjectileSpawner" index="0"]
+random_angle_offset = 0.0
