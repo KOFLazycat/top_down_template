@@ -24,6 +24,7 @@ TransitionManager="*res://common/autoloads/transition_manager.tscn"
 PersistentData="*res://common/autoloads/persistent_data.tscn"
 Log="*res://addons/GoLogger/Log.tscn"
 LogManager="*res://common/autoloads/log_manager.tscn"
+ImGuiRoot="*res://addons/imgui-godot/data/ImGuiRoot.tscn"
 
 [display]
 
@@ -40,7 +41,7 @@ movie_writer/movie_file="O:/Projects/Godot/Tutorials/Zombie Shooter/bug.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GoLogger/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/resource_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/GoLogger/plugin.cfg", "res://addons/imgui-godot/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/resource_manager/plugin.cfg")
 
 [input]
 
