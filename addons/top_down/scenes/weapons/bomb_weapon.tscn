@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cv46qtfeg636h"]
 
-[ext_resource type="PackedScene" uid="uid://do8p6aamuv46h" path="res://addons/top_down/scenes/weapons/weapon.tscn" id="1_7xga0"]
+[ext_resource type="PackedScene" uid="uid://do8p6aamuv46h" path="res://scenes/weapons/weapon.tscn" id="1_7xga0"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_p0rb8"]
 [ext_resource type="Script" uid="uid://bdbat3453sctq" path="res://scripts/damage/properties/DamageDataResource.gd" id="3_v8v2x"]
 [ext_resource type="Script" uid="uid://dg5sc14fyjex4" path="res://scripts/damage/properties/DamageStatusResource.gd" id="4_h4rmp"]

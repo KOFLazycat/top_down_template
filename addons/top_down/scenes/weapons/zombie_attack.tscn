@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://baisjmcsnk3on"]
 
-[ext_resource type="PackedScene" uid="uid://do8p6aamuv46h" path="res://addons/top_down/scenes/weapons/weapon.tscn" id="1_tygi1"]
+[ext_resource type="PackedScene" uid="uid://do8p6aamuv46h" path="res://scenes/weapons/weapon.tscn" id="1_tygi1"]
 [ext_resource type="Script" uid="uid://bphd2malk5asy" path="res://scripts/damage/properties/DamageTypeResource.gd" id="2_g4imc"]
 [ext_resource type="Script" uid="uid://bdbat3453sctq" path="res://scripts/damage/properties/DamageDataResource.gd" id="3_0vfyh"]
 [ext_resource type="Resource" uid="uid://cmxblo8l2xfeq" path="res://resources/sounds/zombie_slash.tres" id="3_4gid6"]

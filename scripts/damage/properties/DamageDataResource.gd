@@ -103,6 +103,7 @@ func process(resource_node:ResourceNode)->void:
 		# Dealt damage
 		for _damage:DamageTypeResource in base_damage:
 			total_damage += max(_damage.value * damage_multiply - _damage_resource.resistance_value_list[_damage.type], 0.0)
+			#prints(total_damage, _damage.value, damage_multiply, base_damage.size())
 	
 		_health_resource.add_hp( -total_damage )
 		is_kill = _health_resource.is_dead
